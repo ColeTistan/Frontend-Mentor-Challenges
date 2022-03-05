@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Outfit:wght@500&family=Playfair+Display&display=swap');
+
+$white: hsl(0, 0%, 100%);
+$light-gray: hsl(212, 45%, 89%);
+$gray-blue: hsl(220, 15%, 55%);
+$dark-blue: hsl(218, 44%, 22%);
+
+$font-size: 15px;
+
+$font-weight-normal: 400;
+$font-weight-bold: 700;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Outfit', sans-serif;
+}
+
+body {
+    background-color: $light-gray;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.container {
+    max-width: 75%;
+    margin: 0 auto;
+}
+
+.card {
+    background-color: $white;
+    box-shadow: 0 4px 7px -6px $dark-blue;
+    width: 100%;
+    max-width: 450px;
+    border-radius: 20px;
+
+    .card-image {
+        max-width: 100%;
+        padding: 17px;
+        border-radius: 30px;
+    }
+
+    .card-details {
+        padding: 5px 15px 15px 15px;
+
+        .card-title {
+            font-size: $font-size + 10px;
+            letter-spacing: 1px;
+            text-align: center;
+        }
+
+        .card-description {
+            font-size: $font-size + 3px;
+            font-weight: $font-weight-normal;
+            color: $gray-blue;
+            text-align: center;
+            padding: 20px 15px 40px 15px;
+        }
+    }
+}
