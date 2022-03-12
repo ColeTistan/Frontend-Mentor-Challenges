@@ -1,0 +1,134 @@
+// # Front-end Style Guide
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Outfit:wght@300;400;600&family=Playfair+Display&display=swap');
+
+/*
+* global variables and mixins
+*/
+
+// Primary Colors
+
+$soft-blue: hsl(215, 51%, 70%);
+$cyan: hsl(178, 100%, 50%);
+
+// Neutral Colors
+$primary-dark-blue: hsl(217, 54%, 11%);
+$secondary-dark-blue: hsl(216, 50%, 16%);
+$ternary-dark-blue: hsl(215, 32%, 27%);
+$white: hsl(0, 0%, 100%);
+
+// font size
+$default-font-size: 18px;
+
+// spacing
+$padding: 16px;
+
+
+@mixin display-flex($justify-content, $align-items) {
+    display: flex;
+    justify-content: $justify-content;
+    align-items: $align-items;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Outfit', sans-serif;
+}
+
+body {
+    @include display-flex(center, center);
+    min-height: 100vh;
+    padding: $padding + 4px;
+    background-color: $primary-dark-blue;
+    color: $white;  
+}
+
+p {
+    @include display-flex(center, center);
+    color: $soft-blue;
+}
+
+a {
+    color: $white;
+    text-decoration: none;
+    transition: 200ms ease-in-out;
+
+    &:hover {
+        color: $cyan;
+    }
+}
+
+hr {
+    border: 1px solid $ternary-dark-blue;
+    outline: none;
+    width: 85%;
+    margin: 0 auto;
+}
+
+main {
+    .card {
+        border-radius: 16px;
+        max-width: 20rem;
+        background-color: $secondary-dark-blue;
+
+        .card-image {
+            
+            svg {
+                // display: none;
+                position: absolute;
+            }
+            img {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                padding: $padding + 4px;
+                height: auto;
+                border-radius: 1.75em;
+            }
+        }
+
+        .card-body {
+            padding: 0px 25px 15px 25px;
+
+            .card-title {
+                font-size: $default-font-size + 8px;
+                font-weight: 600;
+            }
+
+            .card-desc {
+                padding: $padding - 2px 0 $padding 0;
+                line-height: 1.75rem;
+                font-weight: 300;
+            }
+
+            .card-aside {
+                @include display-flex(space-between, center);
+
+                svg {
+                    margin-right: 7px;
+                }
+                p:nth-child(1) a {
+                    color: $cyan;
+                }
+            }
+        }
+
+        .card-footer {
+            @include display-flex(left, center);
+            padding: $padding - 1px 0 $padding + 7px $padding + 9px;
+            color: $soft-blue;
+
+            .avatar-image {
+                border: 0.13rem solid $white;
+                border-radius: 50%;
+                width: 2rem;
+                margin-right: 20px;
+                height: auto;
+            }
+        }
+    }
+}
+
