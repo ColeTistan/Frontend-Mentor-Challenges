@@ -18,53 +18,74 @@ main {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
+  width: 85%;
+  margin: 0 auto;
+}
+
+a {
+  color: hsl(0, 0%, 100%);
+  font-weight: 500;
+  text-decoration: none;
+  transition: 250ms ease-in-out;
+}
+a:hover {
+  color: hsl(178, 100%, 50%);
+}
+
+img {
+  border-radius: 0.75rem;
 }
 
 .card {
   background-color: hsl(216, 50%, 16%);
-  width: 20%;
+  width: 400px;
   padding: 25px;
   border-radius: 0.75rem;
   color: hsl(0, 0%, 100%);
 }
-.card img {
-  width: 100%;
-  height: 100%;
-  border-radius: 0.75rem;
-}
-.card h2 {
-  line-height: 4.75rem;
-  font-weight: 600;
-}
 .card p {
-  color: #b3b3b3;
+  color: rgb(140, 172, 217);
   font-weight: 600;
   line-height: 1.75rem;
   font-size: 1.1rem;
 }
+.card .card-header {
+  line-height: 4.5rem;
+  font-weight: 600;
+  font-size: 1.6rem;
+}
 .card .description {
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   font-weight: 300;
 }
 .card .card-details {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  padding: 1rem 0;
+  padding: 1.1rem 0;
+  border-bottom: 0.05rem solid hsl(215, 32%, 27%);
 }
 .card .card-details .price {
   color: hsl(178, 100%, 50%);
   font-weight: 600;
+  text-align: center;
+  margin: 0 130px 0 10px;
 }
 .card .card-details .duration {
+  margin-left: 10px;
   font-weight: 500;
 }
 .card .creator {
+  display: flex;
+  align-items: center;
   padding-top: 1rem;
-  font-size: 1.05rem;
-  font-weight: 300;
-}
-.card .creator span {
-  color: hsl(0, 0%, 100%);
+  font-size: 1.1rem;
   font-weight: 500;
+}
+.card .creator img {
+  width: 40px;
+  height: auto;
+  margin-right: 20px;
+  border: 2px solid hsl(0, 0%, 100%);
+  border-radius: 50%;
 }/*# sourceMappingURL=style.css.map */
