@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap');
+
+// ---- Sass Variables ----
+// Primary Colors
+
+// - Light red: hsl(0, 100%, 67%)
+$light-red: hsl(0, 100%, 67%);
+// - Orangey yellow: hsl(39, 100%, 56%)
+$orange-yellow: hsl(39, 100%, 56%);
+// - Green teal: hsl(166, 100%, 37%)
+$green-teal: hsl(166, 100%, 37%);
+// - Cobalt blue: hsl(234, 85%, 45%)
+$cobalt-blue: hsl(234, 85%, 45%);
+
+// Gradients
+
+// - Light slate blue (background): hsl(252, 100%, 67%)
+$light-slate-blue: hsl(252, 100%, 67%);
+// - Light royal blue (background): hsl(241, 81%, 54%)
+$light-royal-blue: hsl(241, 81%, 54%);
+
+// - Violet blue (circle): hsla(256, 72%, 46%, 1)
+$violet-blue: hsla(256, 72%, 46%, 1);
+// - Persian blue (circle): hsla(241, 72%, 46%, 0)
+$persian-blue: hsla(241, 72%, 46%, 0);
+
+
+
+// Neutral Colors
+
+// - White: hsl(0, 0%, 100%)
+$white: hsl(0, 0%, 100%);
+// - Pale blue: hsl(221, 100%, 96%)
+$pale-blue: hsl(221, 100%, 96%);
+// - Light lavender: hsl(241, 100%, 89%)
+$light-lavender: hsl(241, 100%, 89%);
+// - Dark gray blue: hsl(224, 30%, 27%)
+$dark-gray-blue: hsl(224, 30%, 27%);
+// - black: rgba(0, 0, 0, 1)
+$black: rgba(0, 0, 0, 1);
+
+// - Font size (paragraphs): 18px
+$default-font-size: 18px;
+
+// - Mixins
+@mixin vertical-gradient-bg($first, $second) {
+    background: linear-gradient(180deg, $first, $second);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Hanken Grotesk', sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+footer {
+    margin-top: auto;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+a {
+    color: $black;;
+    text-decoration: none;
+    transition: 300ms ease-in-out;
+
+    &:hover {
+        color: $violet-blue;
+    }
+}
+
+button {
+    padding: 1rem;
+    font-size: $default-font-size;
+    font-weight: 700;
+    background: $dark-gray-blue;
+    color: $white;
+    border: none;
+    border-radius: 2rem;
+    cursor: pointer;
+
+    &:hover {
+        @include vertical-gradient-bg($light-slate-blue, $light-royal-blue);
+    }
+}
+
+.card {
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 100%;
+
+    .card-results {
+        @include vertical-gradient-bg($light-slate-blue, $light-royal-blue);
+        padding: 0 5rem 2.75rem 5rem;
+        text-align: center;
+        color: $light-lavender;
+        border-radius: 0 0 2.5rem 2.5rem;
+
+        .card-results-heading {
+            padding: 1.75rem;
+            font-size: 1.25rem;
+        }
+
+        .user-results-heading {
+            padding: 1.5rem 0 0.75rem 0;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: $white;
+        }
+
+        p {
+            font-size: 1rem;
+        }
+    }
+
+    .card-details {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        padding: 0 2.5rem;
+
+        h3 {
+            font-size: 1.25rem;
+            padding: 1.75rem 0 0.5rem 0;
+        }
+    }
+    // box-shadow: 2.4px 2.4px 3.2px
+}
+
+.card-score {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 0 auto;
+    @include vertical-gradient-bg($violet-blue, $persian-blue);
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    font-weight: 800;
+
+    span {
+        font-size: 3.5rem;
+
+        &:first-child {
+            color: $white;
+        }
+
+        &:last-child {
+            font-size: 18px;
+        }
+    }
+}
+
+.summary-description {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    vertical-align: middle;
+    margin: 0 auto;
+    background: $pale-blue;
+    padding: 1.5rem;
+    border-radius: 0.75rem;
+    margin: 0.75rem 0;
+    font-size: $default-font-size;
+
+    &span:first-child {
+        margin-left: auto;
+    }
+}

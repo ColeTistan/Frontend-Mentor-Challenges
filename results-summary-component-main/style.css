@@ -1,0 +1,116 @@
+@import url("https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Hanken Grotesk", sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+footer {
+  margin-top: auto;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+a {
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  transition: 300ms ease-in-out;
+}
+a:hover {
+  color: hsl(256, 72%, 46%);
+}
+
+button {
+  padding: 1rem;
+  font-size: 18px;
+  font-weight: 700;
+  background: hsl(224, 30%, 27%);
+  color: hsl(0, 0%, 100%);
+  border: none;
+  border-radius: 2rem;
+  cursor: pointer;
+}
+button:hover {
+  background: linear-gradient(180deg, hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+}
+
+.card {
+  display: grid;
+  grid-template-columns: 1fr;
+  width: 100%;
+}
+.card .card-results {
+  background: linear-gradient(180deg, hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+  padding: 0 5rem 2.75rem 5rem;
+  text-align: center;
+  color: hsl(241, 100%, 89%);
+  border-radius: 0 0 2.5rem 2.5rem;
+}
+.card .card-results .card-results-heading {
+  padding: 1.75rem;
+  font-size: 1.25rem;
+}
+.card .card-results .user-results-heading {
+  padding: 1.5rem 0 0.75rem 0;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: hsl(0, 0%, 100%);
+}
+.card .card-results p {
+  font-size: 1rem;
+}
+.card .card-details {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0 2.5rem;
+}
+.card .card-details h3 {
+  font-size: 1.25rem;
+  padding: 1.75rem 0 0.5rem 0;
+}
+
+.card-score {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 0 auto;
+  background: linear-gradient(180deg, hsl(256, 72%, 46%), hsla(241, 72%, 46%, 0));
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  font-weight: 800;
+}
+.card-score span {
+  font-size: 3.5rem;
+}
+.card-score span:first-child {
+  color: hsl(0, 0%, 100%);
+}
+.card-score span:last-child {
+  font-size: 18px;
+}
+
+.summary-description {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  vertical-align: middle;
+  margin: 0 auto;
+  background: hsl(221, 100%, 96%);
+  padding: 1.5rem;
+  border-radius: 0.75rem;
+  margin: 0.75rem 0;
+  font-size: 18px;
+}
+.summary-descriptionspan:first-child {
+  margin-left: auto;
+}/*# sourceMappingURL=style.css.map */
