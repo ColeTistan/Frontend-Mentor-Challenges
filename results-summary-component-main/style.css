@@ -6,14 +6,21 @@
   font-family: "Hanken Grotesk", sans-serif;
 }
 
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  container-type: inline-size;
+}
+
 p {
   color: hsl(241, 100%, 89%);
 }
 
 .card {
   display: grid;
-  justify-items: center;
-  min-height: 100vh;
+  grid-template-columns: 1fr;
+  width: 100%;
   background: hsla(241, 72%, 46%, 0);
 }
 
@@ -21,20 +28,21 @@ p {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
   background: linear-gradient(180deg, hsl(252, 100%, 67%), hsl(241, 81%, 54%));
   flex-direction: column;
-  padding-bottom: 2.25rem;
   border-radius: 0 0 2rem 2rem;
 }
-.card-results h3 {
+.card-results h2 {
   color: hsl(241, 100%, 89%);
   text-align: center;
-  padding: 1.5rem 0;
+  padding: 2rem 0;
 }
 .card-results .circle {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
   background: linear-gradient(180deg, hsl(256, 72%, 46%), hsla(241, 72%, 46%, 0));
   flex-direction: column;
   border-radius: 50%;
@@ -53,6 +61,7 @@ p {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
   flex-direction: column;
   color: hsl(241, 100%, 89%);
 }
@@ -64,7 +73,7 @@ p {
 }
 .card-results .result-details > p:last-child {
   text-align: center;
-  padding: 0 7rem;
+  padding: 0 4rem 2rem 4rem;
 }
 
 .card-summary {
@@ -73,7 +82,7 @@ p {
   width: 85%;
   margin: 0 auto;
 }
-.card-summary h3 {
+.card-summary h2 {
   padding: 1.5rem 0 1rem 0;
 }
 .card-summary .summary-result {
@@ -114,12 +123,6 @@ p {
   list-style: none;
 }
 
-footer {
-  margin-top: auto;
-  margin-bottom: 15px;
-  text-align: center;
-}
-
 a {
   color: rgb(0, 0, 0);
   text-decoration: none;
@@ -142,4 +145,41 @@ button {
 }
 button:hover {
   background: linear-gradient(180deg, hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+}
+
+@container (width > 50rem) {
+  .card {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, 50%);
+    grid-template-columns: repeat(2, 1fr);
+    width: 55%;
+    border-radius: 2rem;
+    box-shadow: #cccccc 0px 2px 8px 0px;
+  }
+  .card .card-results {
+    height: 100%;
+    border-radius: 2rem;
+    margin-right: 18px;
+  }
+  .card .card-results .circle {
+    width: 175px;
+    height: 175px;
+  }
+  .card .result-details {
+    margin: 1.75rem 0;
+  }
+  .card .result-details > p:first-child {
+    font-size: 28px;
+  }
+  .card .result-details > p:last-child {
+    font-size: 18px;
+  }
+  .card .card-summary {
+    padding: 0.5rem;
+  }
+  button {
+    margin: 1.75rem 0 2.25rem 0;
+  }
 }/*# sourceMappingURL=style.css.map */
