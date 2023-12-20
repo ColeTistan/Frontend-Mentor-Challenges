@@ -16,31 +16,78 @@
   <body>
     <main>
       <article class="card">
-        <div class="card-results">
-          <h3 class="card-results-heading">Your Result</h3>
-          <div class="card-score"><span>76</span><span>of 100</span></div>
-          <h3 class="user-results-heading">Great</h3>
-          <p>
-            You scored higher than 65% of the people who have taken these tests.
-          </p>
-        </div>
-        <div class="card-details">
-          <h3>Summary</h3>
-          <div class="summary-description" id="reaction">
-              <img src="./assets/images/icon-reaction.svg" alt="reaction" /><span>Reaction</span>
-              <span>80</span>&nbsp;/&nbsp;100
+        <section class="card-container">
+          <div class="card-results">
+            <h3>Your Result</h3>
+            <div class="circle">
+              <p>76</p>
+              <p>of 100</p>
+            </div>
+            <div class="result-details">
+              <p>Great</p>
+              <p>
+                You scored higher than 65% of the people who have taken these
+                tests.
+              </p>
+            </div>
           </div>
-          <!-- <div class="summary-description memory"> -->
-            <!-- Memory<span><span>92</span>&nbsp;/&nbsp;100</span>
+          <div class="card-summary">
+            <h3>Summary</h3>
+            <div class="summary-result" id="reaction">
+              <ul>
+                <li>
+                  <img src="./assets/images/icon-reaction.svg" alt="reaction" />
+                </li>
+                <li>
+                  Reaction&nbsp;
+                </li>
+              </ul>
+              <p>80&nbsp;<span>/ 100</span></p>
+            </div>
+            <div class="summary-result" id="memory">
+              <ul>
+                <li>
+                  <img
+                  src="./assets/images/icon-memory.svg"
+                  alt="memory"
+                />
+                </li>
+                <li>
+                  Memory&nbsp;
+                </li>
+              </ul>
+              <p>92&nbsp;<span>/ 100</span></p>
+            </div>
+            <div class="summary-result" id="verbal">
+              <ul>
+                <li>
+                  <img
+                  src="./assets/images/icon-verbal.svg"
+                  alt="verbal"
+                />
+                </li>
+                <li>
+                  Verbal&nbsp;
+                </li>
+              </ul>
+              <p>61&nbsp;<span>/ 100</span></p>
+            </div>
+            <div class="summary-result" id="visual">
+              <ul>
+                <li>
+                  <img
+                  src="./assets/images/icon-visual.svg"
+                  alt="visual"
+                />
+                </li>
+                <li>
+                  Visual&nbsp;
+                </li>
+              </ul>
+              <p>72&nbsp;<span>/ 100</span></p>
           </div>
-          <div class="summary-description verbal">
-            Verbal<span><span>61</span>&nbsp;/&nbsp;100</span>
-          </div>
-          <div class="summary-description visual">
-            Visual<span><span>72</span>&nbsp;/&nbsp;100</span>
-          </div> -->
           <button>Continue</button>
-        </div>
+        </section>
       </article>
     </main>
     <footer class="attribution">

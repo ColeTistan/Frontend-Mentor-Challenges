@@ -6,10 +6,112 @@
   font-family: "Hanken Grotesk", sans-serif;
 }
 
-body {
+p {
+  color: hsl(241, 100%, 89%);
+}
+
+.card {
+  display: grid;
+  justify-items: center;
+  min-height: 100vh;
+  background: hsla(241, 72%, 46%, 0);
+}
+
+.card-results {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(180deg, hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+  flex-direction: column;
+  padding-bottom: 2.25rem;
+  border-radius: 0 0 2rem 2rem;
+}
+.card-results h3 {
+  color: hsl(241, 100%, 89%);
+  text-align: center;
+  padding: 1.5rem 0;
+}
+.card-results .circle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(180deg, hsl(256, 72%, 46%), hsla(241, 72%, 46%, 0));
+  flex-direction: column;
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+}
+.card-results .circle > p:first-child {
+  font-size: 58px;
+  font-weight: 800;
+  color: hsl(0, 0%, 100%);
+}
+.card-results .circle > p:last-child {
+  color: hsl(241, 100%, 89%);
+}
+.card-results .result-details {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: hsl(241, 100%, 89%);
+}
+.card-results .result-details > p:first-child {
+  font-size: 21px;
+  font-weight: 700;
+  color: hsl(0, 0%, 100%);
+  padding: 1.25rem 0 0.75rem 0;
+}
+.card-results .result-details > p:last-child {
+  text-align: center;
+  padding: 0 7rem;
+}
+
+.card-summary {
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
+  width: 85%;
+  margin: 0 auto;
+}
+.card-summary h3 {
+  padding: 1.5rem 0 1rem 0;
+}
+.card-summary .summary-result {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  font-weight: 700;
+  margin: 0.5rem 0;
+  border-radius: 0.75rem;
+}
+.card-summary .summary-result p {
+  color: rgb(0, 0, 0);
+}
+.card-summary .summary-result span {
+  color: #737373;
+}
+.card-summary .summary-result img {
+  padding-right: 0.75rem;
+}
+.card-summary .summary-result#reaction {
+  background: #fff0f0;
+  color: hsl(0, 100%, 67%);
+}
+.card-summary .summary-result#memory {
+  background: #fff8eb;
+  color: hsl(39, 100%, 56%);
+}
+.card-summary .summary-result#verbal {
+  background: #f0fffb;
+  color: hsl(166, 100%, 37%);
+}
+.card-summary .summary-result#visual {
+  background: #f5f2fd;
+  color: hsl(256, 72%, 46%);
+}
+.card-summary ul {
+  display: flex;
+  list-style: none;
 }
 
 footer {
@@ -21,7 +123,7 @@ footer {
 a {
   color: rgb(0, 0, 0);
   text-decoration: none;
-  transition: 300ms ease-in-out;
+  transition: 250ms ease-in-out;
 }
 a:hover {
   color: hsl(256, 72%, 46%);
@@ -29,6 +131,7 @@ a:hover {
 
 button {
   padding: 1rem;
+  margin: 1rem 0;
   font-size: 18px;
   font-weight: 700;
   background: hsl(224, 30%, 27%);
@@ -39,78 +142,4 @@ button {
 }
 button:hover {
   background: linear-gradient(180deg, hsl(252, 100%, 67%), hsl(241, 81%, 54%));
-}
-
-.card {
-  display: grid;
-  grid-template-columns: 1fr;
-  width: 100%;
-}
-.card .card-results {
-  background: linear-gradient(180deg, hsl(252, 100%, 67%), hsl(241, 81%, 54%));
-  padding: 0 5rem 2.75rem 5rem;
-  text-align: center;
-  color: hsl(241, 100%, 89%);
-  border-radius: 0 0 2.5rem 2.5rem;
-}
-.card .card-results .card-results-heading {
-  padding: 1.75rem;
-  font-size: 1.25rem;
-}
-.card .card-results .user-results-heading {
-  padding: 1.5rem 0 0.75rem 0;
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: hsl(0, 0%, 100%);
-}
-.card .card-results p {
-  font-size: 1rem;
-}
-.card .card-details {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  padding: 0 2.5rem;
-}
-.card .card-details h3 {
-  font-size: 1.25rem;
-  padding: 1.75rem 0 0.5rem 0;
-}
-
-.card-score {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  margin: 0 auto;
-  background: linear-gradient(180deg, hsl(256, 72%, 46%), hsla(241, 72%, 46%, 0));
-  border-radius: 50%;
-  width: 150px;
-  height: 150px;
-  font-weight: 800;
-}
-.card-score span {
-  font-size: 3.5rem;
-}
-.card-score span:first-child {
-  color: hsl(0, 0%, 100%);
-}
-.card-score span:last-child {
-  font-size: 18px;
-}
-
-.summary-description {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  vertical-align: middle;
-  margin: 0 auto;
-  background: hsl(221, 100%, 96%);
-  padding: 1.5rem;
-  border-radius: 0.75rem;
-  margin: 0.75rem 0;
-  font-size: 18px;
-}
-.summary-descriptionspan:first-child {
-  margin-left: auto;
 }/*# sourceMappingURL=style.css.map */

@@ -47,6 +47,12 @@ $default-font-size: 18px;
     background: linear-gradient(180deg, $first, $second);
 }
 
+@mixin d-flex-center() {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -54,10 +60,123 @@ $default-font-size: 18px;
     font-family: 'Hanken Grotesk', sans-serif;
 }
 
-body {
+p {
+    color: $light-lavender;
+}
+
+.card {
+    display: grid;
+    justify-items: center;
+    min-height: 100vh;
+    background: $persian-blue;
+}
+
+.card-results {
+    @include d-flex-center();
+    @include vertical-gradient-bg($light-slate-blue, $light-royal-blue);
+    flex-direction: column;
+    padding-bottom: 2.25rem;
+    border-radius: 0 0 2rem 2rem;
+
+    h3 {
+        color: $light-lavender;
+        text-align: center;
+        padding: 1.5rem 0;
+    }
+
+    .circle {
+        @include d-flex-center();
+        @include vertical-gradient-bg($violet-blue, $persian-blue);
+        flex-direction: column;
+        border-radius: 50%;
+        width: 150px;
+        height: 150px;
+
+        & > p:first-child {
+            font-size: $default-font-size + 40px;
+            font-weight: 800;
+            color: $white;
+        }
+
+        & > p:last-child {
+            color: $light-lavender;
+        }
+    }
+
+    .result-details {
+        @include d-flex-center();
+        flex-direction: column;
+        color: $light-lavender;
+
+        & > p:first-child {
+            font-size: $default-font-size + 3px;
+            font-weight: 700;
+            color: $white;
+            padding: 1.25rem 0 0.75rem 0;
+        }
+
+        & > p:last-child {
+            text-align: center;
+            padding: 0 7rem;
+        }
+    }
+}
+
+.card-summary {
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
+    width: 85%;
+    margin: 0 auto;
+
+    h3 {
+        padding: 1.5rem 0 1rem 0;
+    }
+
+    .summary-result {
+        display: flex;
+        justify-content: space-between;
+        padding: 1rem;
+        font-weight: 700;
+        margin: 0.5rem 0;
+        border-radius: 0.75rem;
+
+        p {
+            color: $black;
+        }
+
+        span {
+            color: lighten($black, 45%);
+        }
+
+        img {
+            padding-right: 0.75rem;
+        }
+
+        &#reaction {
+            background: lighten($light-red, 30%);
+            color: $light-red;
+        }
+
+        &#memory {
+            background: lighten($orange-yellow, 40%);
+            color: $orange-yellow;
+        }
+
+        &#verbal {
+            background: lighten($green-teal, 60%);
+            color: $green-teal;
+        }
+
+        &#visual {
+            background: lighten($violet-blue, 51%);
+            color: $violet-blue;
+        }
+    }
+
+    ul {
+        display: flex;
+        list-style: none;
+    }
 }
 
 footer {
@@ -67,9 +186,9 @@ footer {
 }
 
 a {
-    color: $black;;
+    color: $black;
     text-decoration: none;
-    transition: 300ms ease-in-out;
+    transition: 250ms ease-in-out;
 
     &:hover {
         color: $violet-blue;
@@ -78,6 +197,7 @@ a {
 
 button {
     padding: 1rem;
+    margin: 1rem 0;
     font-size: $default-font-size;
     font-weight: 700;
     background: $dark-gray-blue;
@@ -88,90 +208,5 @@ button {
 
     &:hover {
         @include vertical-gradient-bg($light-slate-blue, $light-royal-blue);
-    }
-}
-
-.card {
-    display: grid;
-    grid-template-columns: 1fr;
-    width: 100%;
-
-    .card-results {
-        @include vertical-gradient-bg($light-slate-blue, $light-royal-blue);
-        padding: 0 5rem 2.75rem 5rem;
-        text-align: center;
-        color: $light-lavender;
-        border-radius: 0 0 2.5rem 2.5rem;
-
-        .card-results-heading {
-            padding: 1.75rem;
-            font-size: 1.25rem;
-        }
-
-        .user-results-heading {
-            padding: 1.5rem 0 0.75rem 0;
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: $white;
-        }
-
-        p {
-            font-size: 1rem;
-        }
-    }
-
-    .card-details {
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-        padding: 0 2.5rem;
-
-        h3 {
-            font-size: 1.25rem;
-            padding: 1.75rem 0 0.5rem 0;
-        }
-    }
-    // box-shadow: 2.4px 2.4px 3.2px
-}
-
-.card-score {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    margin: 0 auto;
-    @include vertical-gradient-bg($violet-blue, $persian-blue);
-    border-radius: 50%;
-    width: 150px;
-    height: 150px;
-    font-weight: 800;
-
-    span {
-        font-size: 3.5rem;
-
-        &:first-child {
-            color: $white;
-        }
-
-        &:last-child {
-            font-size: 18px;
-        }
-    }
-}
-
-.summary-description {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    vertical-align: middle;
-    margin: 0 auto;
-    background: $pale-blue;
-    padding: 1.5rem;
-    border-radius: 0.75rem;
-    margin: 0.75rem 0;
-    font-size: $default-font-size;
-
-    &span:first-child {
-        margin-left: auto;
     }
 }
