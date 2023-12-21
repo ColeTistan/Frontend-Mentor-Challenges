@@ -154,7 +154,7 @@ button:hover {
     top: 50%;
     transform: translate(-50%, 50%);
     grid-template-columns: repeat(2, 1fr);
-    width: 55%;
+    width: 45%;
     border-radius: 2rem;
     box-shadow: #cccccc 0px 2px 8px 0px;
   }
