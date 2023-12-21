@@ -16,6 +16,8 @@ body {
   align-items: center;
   min-height: 100vh;
   background: hsl(225, 100%, 94%);
+  width: 90%;
+  margin: 0 auto;
 }
 
 .card {

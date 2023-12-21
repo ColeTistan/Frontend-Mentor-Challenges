@@ -60,6 +60,8 @@ body {
     @include d-flex(center, center);
     min-height: 100vh;
     background: $pale-blue-primary;
+    width: 90%;
+    margin: 0 auto;
 }
 
 .card {
