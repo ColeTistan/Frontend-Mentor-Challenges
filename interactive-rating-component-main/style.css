@@ -1,0 +1,146 @@
+@import url("https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Overpass", sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: rgb(18, 20, 23);
+}
+
+button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  cursor: pointer;
+}
+
+.star-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 1rem;
+  border-radius: 50%;
+  background: #303a47;
+}
+
+.confirmation-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-group {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 1rem;
+}
+.btn-group .rating-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgb(148, 157, 171);
+  font-weight: 700;
+  transition: 200ms ease-in;
+}
+.btn-group .rating-btn:hover {
+  background: rgb(148, 157, 171);
+  color: rgb(255, 255, 255);
+}
+.btn-group .active {
+  background: rgb(250, 115, 18);
+  color: rgb(255, 255, 255);
+}
+
+.card {
+  background: rgb(38, 46, 56);
+  color: rgb(255, 255, 255);
+  border: 2px solid rgb(38, 46, 56);
+  padding: 1.75rem;
+  width: 400px;
+  border-radius: 1.5rem;
+}
+.card .card-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+}
+.card .card-container .message-box {
+  background: #303a47;
+  color: rgb(250, 115, 18);
+  font-weight: 400;
+  text-align: center;
+  border-radius: 2rem;
+}
+.card .card-container .confirmation-results {
+  padding: 0.5rem;
+  margin: 0 4.25rem;
+}
+.card .card-container .rating-message-box {
+  margin: 0;
+  padding: 0.75rem;
+}
+.card .card-container .confirmation-details {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  gap: 1rem;
+}
+.card .card-container .confirmation-details p {
+  font-weight: 400;
+}
+.card .card-container .card-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+.card .card-container h1 {
+  font-size: 27px;
+}
+.card .card-container p {
+  color: rgb(148, 157, 171);
+  font-weight: 700;
+  line-height: 1.5rem;
+}
+.card .card-container .submit-btn {
+  background: rgb(250, 115, 18);
+  color: rgb(255, 255, 255);
+  padding: 0.75rem;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 2px;
+  border-radius: 1.5rem;
+  transition: 200ms ease-in;
+}
+.card .card-container .submit-btn:hover {
+  background: rgb(255, 255, 255);
+  color: rgb(250, 115, 18);
+}
+
+.circle {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  padding: 1rem;
+  font-size: 17px;
+  text-align: center;
+  background: #303a47;
+}
+
+.hidden {
+  display: none;
+}/*# sourceMappingURL=style.css.map */
