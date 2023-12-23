@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Interactive rating component</title>
+  </head>
+  <body>
+    <!-- Card Rating - Start -->
+    <article class="card rating">
+      <div class="card-container">
+        <div class="star-icon">
+          <img src="./images/icon-star.svg" alt="star" />
+        </div>
+        <section class="card-details">
+          <h1>How did we do?</h1>
+          <p>
+            Please let us know how we did with your support request. All
+            feedback is appreciated to help us improve our offering!
+          </p>
+        </section>
+        <section class="btn-group">
+          <button class="rating-btn circle">1</button>
+          <button class="rating-btn circle">2</button>
+          <button class="rating-btn circle">3</button>
+          <button class="rating-btn circle">4</button>
+          <button class="rating-btn circle">5</button>
+        </section>
+        <button class="submit-btn">Submit</button>
+      </div>
+    </article>
+    <!-- Card Rating - End -->
+
+    <!-- Confirmation Card - Start -->
+    <article class="card confirmation hidden">
+      <div class="card-container">
+        <img
+          src="./images/illustration-thank-you.svg"
+          alt="thank you illustration"
+        />
+        <p>You selected 4 out of 5</p>
+        <section class="confirmation-details">
+          <h1>Thank you!</h1>
+          <p>
+            We appreciate you taking the time to give a rating. If you ever need
+            more support, don&apos;t hesitate to get in touch!
+          </p>
+        </section>
+      </div>
+    </article>
+    <!-- Confirmation Card - End -->
+  </body>
+</html>
