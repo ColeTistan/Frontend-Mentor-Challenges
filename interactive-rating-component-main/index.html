@@ -11,7 +11,7 @@
       sizes="32x32"
       href="./images/favicon-32x32.png"
     />
-
+    <script src="./app.js" defer></script>
     <title>Frontend Mentor | Interactive rating component</title>
   </head>
   <body>
@@ -29,11 +29,11 @@
           </p>
         </section>
         <section class="btn-group">
-          <button class="rating-btn circle">1</button>
-          <button class="rating-btn circle">2</button>
-          <button class="rating-btn circle">3</button>
-          <button class="rating-btn circle">4</button>
-          <button class="rating-btn circle">5</button>
+          <button class="rating-btn circle" value="1">1</button>
+          <button class="rating-btn circle" value="2">2</button>
+          <button class="rating-btn circle" value="3">3</button>
+          <button class="rating-btn circle" value="4">4</button>
+          <button class="rating-btn circle" value="5">5</button>
         </section>
         <button class="submit-btn">Submit</button>
       </div>
@@ -43,11 +43,13 @@
     <!-- Confirmation Card - Start -->
     <article class="card confirmation hidden">
       <div class="card-container">
-        <img
-          src="./images/illustration-thank-you.svg"
-          alt="thank you illustration"
-        />
-        <p>You selected 4 out of 5</p>
+        <div class="confirmation-img">
+          <img
+            src="./images/illustration-thank-you.svg"
+            alt="thank you illustration"
+          />
+        </div>
+        <p class="confirmation-results message-box"></p>
         <section class="confirmation-details">
           <h1>Thank you!</h1>
           <p>

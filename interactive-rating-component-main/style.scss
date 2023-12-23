@@ -78,6 +78,10 @@ button {
     background: lighten($dark-blue, 5%);
 }
 
+.confirmation-img {
+    @include d-flex(center, center);
+}
+
 .btn-group {
     @include d-flex(space-around, center);
     gap: 1rem;
@@ -109,6 +113,34 @@ button {
         display: flex;
         flex-direction: column;
         gap: 1.75rem;
+
+        .message-box {
+            @include color-group(lighten($dark-blue, 5%), $orange);
+            font-weight: $font-weight-light;
+            text-align: center;
+            border-radius: 2rem;
+        }
+
+        .confirmation-results {
+            padding: 0.5rem;
+            margin: 0 4.25rem;
+        }
+
+        .rating-message-box {
+            margin: 0;
+            padding: 0.75rem;
+        }
+
+        .confirmation-details {
+            @include d-flex(center, center);
+            flex-direction: column;
+            text-align: center;
+            gap: 1rem;
+
+            p {
+                font-weight: $font-weight-light;
+            }
+        }
 
         .card-details {
             display: flex;

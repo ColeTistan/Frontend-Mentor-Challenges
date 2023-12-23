@@ -33,6 +33,12 @@ button {
   background: #303a47;
 }
 
+.confirmation-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .btn-group {
   display: flex;
   justify-content: space-around;
@@ -68,6 +74,32 @@ button {
   display: flex;
   flex-direction: column;
   gap: 1.75rem;
+}
+.card .card-container .message-box {
+  background: #303a47;
+  color: rgb(250, 115, 18);
+  font-weight: 400;
+  text-align: center;
+  border-radius: 2rem;
+}
+.card .card-container .confirmation-results {
+  padding: 0.5rem;
+  margin: 0 4.25rem;
+}
+.card .card-container .rating-message-box {
+  margin: 0;
+  padding: 0.75rem;
+}
+.card .card-container .confirmation-details {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  gap: 1rem;
+}
+.card .card-container .confirmation-details p {
+  font-weight: 400;
 }
 .card .card-container .card-details {
   display: flex;
