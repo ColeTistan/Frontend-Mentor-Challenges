@@ -1,0 +1,134 @@
+// Family: [Figtree](https://fonts.google.com/specimen/Figtree)
+@import url('https://fonts.googleapis.com/css2?family=Figtree:wght@600;800&display=swap');
+
+// Colors - Primary
+// Yellow: hsl(47, 88%, 63%)
+$yellow: rgb(244, 208, 78);
+
+// Colors - Neutral
+// White: hsl(0, 0%, 100%)
+$white: rgb(255, 255, 255);
+
+// Grey: hsl(0, 0%, 50%)
+$grey: rgb(128, 128, 128);
+
+// Black: hsl(0, 0%, 7%)
+$black: rgb(18, 18, 18);
+
+// Font size (paragraph): 16px
+$default-font-size: 16px;
+
+// Weights: 600, 800
+$font-weight-semibold: 600;
+$font-weight-bold: 800;
+
+@mixin display-group($display, $justify-content, $align-items) {
+    display: $display;
+    justify-content: $justify-content;
+    align-items: $align-items;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Figtree', sans-serif;
+}
+
+body {
+    @include display-group(flex, center, center);
+    min-height: 100vh;
+    background: $yellow;
+}
+
+.card {
+    background: $white;
+    border: 2px solid $black;
+    width: 24rem;
+    border-radius: 1.25rem;
+    box-shadow: 10px 12px 0px 0px $black;
+
+    .card-container {
+        padding: 1.5rem;
+    }
+
+    .card-img {
+        width: 100%;
+        object-fit: cover;
+        border-radius: 0.75rem;
+        margin-bottom: 1.3rem;
+    }
+}
+
+.card-details {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+
+    .category {
+        background: $yellow;
+        font-size: $default-font-size - 2px;
+        font-weight: $font-weight-bold;
+        padding: 0.4rem 0.75rem;
+        width: 25%;
+        text-align: center;
+        border-radius: 0.25rem;
+    }
+
+    .publication-date {
+        font-weight: $font-weight-semibold;
+    }
+
+    .card-title {
+        font-size: $default-font-size + 8px;
+        font-weight: $font-weight-bold;
+        text-decoration: none;
+        color: $black;
+        transition: 200ms ease-in;
+
+        &:hover {
+            color: $yellow;
+        }
+    }
+
+    .card-description {
+        color: $grey;
+        line-height: 1.5rem;
+    }
+
+    .card-footer {
+        display: flex;
+        align-items: center;
+
+        img {
+            width: 35px;
+            margin-right: 0.8rem;
+        }
+
+        .author-name {
+            font-weight: $font-weight-bold;
+        }
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .card {
+        width: 17rem;
+
+        .card-container {
+            padding: 1rem;
+        }
+
+        .card-details {
+            padding: 0.5rem;
+
+            .category {
+                width: 40%;
+            }
+
+            .card-title {
+                font-size: $default-font-size + 5px;
+            }
+        }
+    }
+}
