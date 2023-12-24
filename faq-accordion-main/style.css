@@ -1,0 +1,33 @@
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Work Sans", sans-serif;
+}
+
+body {
+  background-image: url("./assets/images/background-pattern-mobile.svg");
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: 100%;
+  background-color: rgb(249, 240, 255);
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 85%;
+  margin: 0 auto;
+  min-height: 100vh;
+}
+
+.card {
+  background: rgb(255, 255, 255);
+  color: rgb(47, 20, 51);
+  border-radius: 0.5rem;
+}
+.card .card-container {
+  padding: 1.5rem;
+}/*# sourceMappingURL=style.css.map */
