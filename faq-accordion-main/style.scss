@@ -61,5 +61,77 @@ main {
 
     .card-container {
         padding: 1.5rem;
+        // gap: 1rem;
+
+        .card-header {
+            display: flex;
+            align-items: center;
+            font-size: $default-font-size + 10px;
+            margin: 0rem 1.5rem 1.25rem 0rem;
+
+            img {
+                margin-right: 1.5rem;
+                width: 1.5rem;
+                height: auto;
+            }
+        }
+    }
+}
+
+.questions {
+    @include d-flex(center, center);
+    flex-direction: column;
+    gap: 1.5rem;
+
+    .question {
+        @include d-flex(center, center);
+        flex-direction: column;
+        gap: 1.25rem;
+
+        .question-box {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: transparent;
+            border: none;
+            
+            .question-title {
+                font-size: $default-font-size;
+                margin-right: 5rem;
+                text-align: left;
+            }
+
+            .img-container {
+
+                img:first-child {
+                    display: block;
+                }
+
+                img:last-child {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+.question-box-test {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: left;
+    background: transparent;
+    border: none;
+
+    .question-title {
+        font-size: $default-font-size + 2px;
+        margin-right: 7.5rem;
+    }
+
+    .img-container {
+
+        img:last-child {
+            display: none;
+        }
     }
 }
