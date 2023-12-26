@@ -1,0 +1,93 @@
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Work Sans", sans-serif;
+}
+
+body {
+  background-image: url("./assets/images/background-pattern-mobile.svg");
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: 100%;
+  background-color: rgb(249, 240, 255);
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 85%;
+  margin: 0 auto;
+  min-height: 100vh;
+}
+
+.card {
+  background: rgb(255, 255, 255);
+  color: rgb(47, 20, 51);
+  border-radius: 0.5rem;
+}
+.card .card-container {
+  padding: 1.5rem;
+}
+.card .card-container .card-header {
+  display: flex;
+  align-items: center;
+  font-size: 26px;
+  margin: 0rem 1.5rem 1.25rem 0rem;
+}
+.card .card-container .card-header img {
+  margin-right: 1.5rem;
+  width: 1.5rem;
+  height: auto;
+}
+
+.questions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.questions .question {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+.questions .question .question-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: transparent;
+  border: none;
+}
+.questions .question .question-box .question-title {
+  font-size: 16px;
+  margin-right: 5rem;
+  text-align: left;
+}
+.questions .question .question-box .img-container img:first-child {
+  display: block;
+}
+.questions .question .question-box .img-container img:last-child {
+  display: none;
+}
+
+.question-box-test {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  text-align: left;
+  background: transparent;
+  border: none;
+}
+.question-box-test .question-title {
+  font-size: 18px;
+  margin-right: 7.5rem;
+}
+.question-box-test .img-container img:last-child {
+  display: none;
+}/*# sourceMappingURL=style.css.map */

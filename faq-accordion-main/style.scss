@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600;700&display=swap');
+// The designs were created to the following widths:
+
+// Mobile: 375px
+// Desktop: 1440px
+
+// Colors
+// White: hsl(0, 0%, 100%)
+$white: rgb(255, 255, 255);
+// Light pink: hsl(275, 100%, 97%)
+$light-pink: rgb(249, 240, 255);
+// Grayish purple: hsl(292, 16%, 49%)
+$grayish-purple: rgb(140, 105, 145);
+// Dark purple: hsl(292, 42%, 14%)
+$dark-purple: rgb(47, 20, 51);
+
+// Font size (paragraphs): 16px
+$default-font-size: 16px;
+
+// Font
+// Family: [Work Sans](https://fonts.google.com/specimen/Work+Sans)
+// Weights: 400, 600, 700
+
+$font-family: 'Work Sans', sans-serif;
+$font-weight-regular: 400;
+$font-weight-semibold: 600;
+$font-weight-bold: 700;
+
+@mixin d-flex($justify-content, $align-items) {
+    display: flex;
+    justify-content: $justify-content;
+    align-items: $align-items;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: $font-family;
+}
+
+body {
+    background-image: url('./assets/images/background-pattern-mobile.svg');
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: 100%;
+    background-color: $light-pink;
+}
+
+main {
+    @include d-flex(center, center);
+    width: 85%;
+    margin: 0 auto;
+    min-height: 100vh;
+}
+
+.card {
+    background: $white;
+    color: $dark-purple;
+    border-radius: 0.5rem;
+
+    .card-container {
+        padding: 1.5rem;
+        // gap: 1rem;
+
+        .card-header {
+            display: flex;
+            align-items: center;
+            font-size: $default-font-size + 10px;
+            margin: 0rem 1.5rem 1.25rem 0rem;
+
+            img {
+                margin-right: 1.5rem;
+                width: 1.5rem;
+                height: auto;
+            }
+        }
+    }
+}
+
+.questions {
+    @include d-flex(center, center);
+    flex-direction: column;
+    gap: 1.5rem;
+
+    .question {
+        @include d-flex(center, center);
+        flex-direction: column;
+        gap: 1.25rem;
+
+        .question-box {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: transparent;
+            border: none;
+            
+            .question-title {
+                font-size: $default-font-size;
+                margin-right: 5rem;
+                text-align: left;
+            }
+
+            .img-container {
+
+                img:first-child {
+                    display: block;
+                }
+
+                img:last-child {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+.question-box-test {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: left;
+    background: transparent;
+    border: none;
+
+    .question-title {
+        font-size: $default-font-size + 2px;
+        margin-right: 7.5rem;
+    }
+
+    .img-container {
+
+        img:last-child {
+            display: none;
+        }
+    }
+}
