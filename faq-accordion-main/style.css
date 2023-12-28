@@ -12,6 +12,7 @@ body {
   background-position: top;
   background-size: 100%;
   background-color: rgb(249, 240, 255);
+  container-type: inline-size;
 }
 
 main {
@@ -19,14 +20,15 @@ main {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  width: 85%;
+  width: 95%;
   margin: 0 auto;
 }
 
 .accordion {
   background: rgb(255, 255, 255);
   border-radius: 0.5rem;
-  padding: 1.5rem 1.75rem;
+  padding: 2rem 1.75rem;
+  margin: 1.5rem 0;
 }
 .accordion .accordion-header {
   display: flex;
@@ -46,6 +48,11 @@ main {
   align-items: center;
   flex-direction: column;
 }
+.accordion .accordion-item hr {
+  width: 100%;
+  border: 1px solid #e6e6e6;
+  margin: 1.75rem 0;
+}
 .accordion .accordion-item .accordion-btn {
   display: flex;
   justify-content: space-between;
@@ -53,12 +60,16 @@ main {
   background: transparent;
   border: none;
   width: 100%;
-  padding-bottom: 1rem;
+  cursor: pointer;
+  transition: 200ms ease-in;
 }
-.accordion .accordion-item .accordion-btn label {
+.accordion .accordion-item .accordion-btn .accordion-question {
   font-size: 1.1rem;
   font-weight: 600;
   text-align: left;
+}
+.accordion .accordion-item .accordion-btn:hover {
+  color: #ad28eb;
 }
 .accordion .accordion-item .img-group {
   padding-left: 3rem;
@@ -66,12 +77,39 @@ main {
 .accordion .accordion-item .img-group .plus {
   display: block;
 }
+.accordion .accordion-item .img-group .plus.hidden {
+  display: none;
+}
 .accordion .accordion-item .img-group .minus {
+  display: block;
+}
+.accordion .accordion-item .img-group .minus.hidden {
   display: none;
 }
 .accordion .accordion-item .answer {
-  display: none;
+  margin-top: 1.5rem;
   line-height: 1.5rem;
   color: gray;
   font-size: 17px;
+  transition: all 250ms ease-in;
+}
+.accordion .accordion-item .answer.hidden {
+  display: none;
+}
+
+@media screen and (min-width: 900px) {
+  body {
+    background-image: url("./assets/images/background-pattern-desktop.svg");
+  }
+  .accordion {
+    width: 35%;
+    height: auto;
+  }
+  .accordion .accordion-header .logo {
+    width: 65px;
+    padding-right: 1.75rem;
+  }
+  .accordion .accordion-header .accordion-heading {
+    font-size: 46px;
+  }
 }/*# sourceMappingURL=style.css.map */
