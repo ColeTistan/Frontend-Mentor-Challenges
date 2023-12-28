@@ -18,76 +18,60 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
+  min-height: 100vh;
   width: 85%;
   margin: 0 auto;
-  min-height: 100vh;
 }
 
-.card {
+.accordion {
   background: rgb(255, 255, 255);
-  color: rgb(47, 20, 51);
   border-radius: 0.5rem;
+  padding: 1.5rem 1.75rem;
 }
-.card .card-container {
-  padding: 1.5rem;
-}
-.card .card-container .card-header {
+.accordion .accordion-header {
   display: flex;
   align-items: center;
-  font-size: 26px;
-  margin: 0rem 1.5rem 1.25rem 0rem;
+  margin-bottom: 1.75rem;
 }
-.card .card-container .card-header img {
-  margin-right: 1.5rem;
-  width: 1.5rem;
-  height: auto;
+.accordion .accordion-header .logo {
+  width: 55px;
+  padding-right: 1.75rem;
 }
-
-.questions {
+.accordion .accordion-header .accordion-heading {
+  font-size: 31px;
+}
+.accordion .accordion-item {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  gap: 1.5rem;
 }
-.questions .question {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  gap: 1.25rem;
-}
-.questions .question .question-box {
+.accordion .accordion-item .accordion-btn {
   display: flex;
   justify-content: space-between;
   align-items: center;
   background: transparent;
   border: none;
+  width: 100%;
+  padding-bottom: 1rem;
 }
-.questions .question .question-box .question-title {
-  font-size: 16px;
-  margin-right: 5rem;
+.accordion .accordion-item .accordion-btn label {
+  font-size: 1.1rem;
+  font-weight: 600;
   text-align: left;
 }
-.questions .question .question-box .img-container img:first-child {
+.accordion .accordion-item .img-group {
+  padding-left: 3rem;
+}
+.accordion .accordion-item .img-group .plus {
   display: block;
 }
-.questions .question .question-box .img-container img:last-child {
+.accordion .accordion-item .img-group .minus {
   display: none;
 }
-
-.question-box-test {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  text-align: left;
-  background: transparent;
-  border: none;
-}
-.question-box-test .question-title {
-  font-size: 18px;
-  margin-right: 7.5rem;
-}
-.question-box-test .img-container img:last-child {
+.accordion .accordion-item .answer {
   display: none;
+  line-height: 1.5rem;
+  color: gray;
+  font-size: 17px;
 }/*# sourceMappingURL=style.css.map */

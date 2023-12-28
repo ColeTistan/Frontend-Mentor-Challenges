@@ -49,89 +49,155 @@ body {
 
 main {
     @include d-flex(center, center);
+    min-height: 100vh;
     width: 85%;
     margin: 0 auto;
-    min-height: 100vh;
 }
 
-.card {
+.accordion {
     background: $white;
-    color: $dark-purple;
     border-radius: 0.5rem;
+    padding: 1.5rem 1.75rem;
 
-    .card-container {
-        padding: 1.5rem;
-        // gap: 1rem;
+    .accordion-header {
+        display: flex;
+        align-items: center;
+        margin-bottom: 1.75rem;
 
-        .card-header {
-            display: flex;
-            align-items: center;
-            font-size: $default-font-size + 10px;
-            margin: 0rem 1.5rem 1.25rem 0rem;
+        .logo {
+            width: 55px;
+            padding-right: 1.75rem;
+        }
 
-            img {
-                margin-right: 1.5rem;
-                width: 1.5rem;
-                height: auto;
-            }
+        .accordion-heading {
+            font-size: $default-font-size + 15px;
         }
     }
-}
 
-.questions {
-    @include d-flex(center, center);
-    flex-direction: column;
-    gap: 1.5rem;
-
-    .question {
+    .accordion-item {
         @include d-flex(center, center);
         flex-direction: column;
-        gap: 1.25rem;
 
-        .question-box {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+        .accordion-btn {
+            @include d-flex(space-between, center);
             background: transparent;
             border: none;
-            
-            .question-title {
-                font-size: $default-font-size;
-                margin-right: 5rem;
+            width: 100%;
+            padding-bottom: 1rem;
+
+            label {
+                font-size: 1.1rem;
+                font-weight: $font-weight-semibold;
                 text-align: left;
             }
+        }
 
-            .img-container {
+        .img-group {
+            padding-left: 3rem;
+            
+            .plus {
+                display: block;
+            }
 
-                img:first-child {
-                    display: block;
-                }
-
-                img:last-child {
-                    display: none;
-                }
+            .minus {
+                display: none;
             }
         }
-    }
-}
 
-.question-box-test {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    text-align: left;
-    background: transparent;
-    border: none;
-
-    .question-title {
-        font-size: $default-font-size + 2px;
-        margin-right: 7.5rem;
-    }
-
-    .img-container {
-
-        img:last-child {
+        .answer {
             display: none;
+            line-height: 1.5rem;
+            color: lighten(black, 50%);
+            font-size: $default-font-size + 1px;
         }
     }
 }
+
+// .card {
+//     background: $white;
+//     color: $dark-purple;
+//     border-radius: 0.5rem;
+
+//     .card-container {
+//         padding: 1.5rem;
+//         // gap: 1rem;
+
+//         .card-header {
+//             display: flex;
+//             align-items: center;
+//             font-size: $default-font-size + 10px;
+//             margin: 0rem 1.5rem 1.25rem 0rem;
+
+//             img {
+//                 margin-right: 1.5rem;
+//                 width: 1.5rem;
+//                 height: auto;
+//             }
+//         }
+//     }
+// }
+
+// .questions {
+//     @include d-flex(center, center);
+//     flex-direction: column;
+//     gap: 1.5rem;
+
+//     .question {
+//         @include d-flex(center, center);
+//         flex-direction: column;
+//         gap: 1.25rem;
+
+//         .question-box {
+//             display: flex;
+//             justify-content: space-between;
+//             align-items: center;
+//             background: transparent;
+//             border: none;
+            
+//             .question-title {
+//                 font-size: $default-font-size;
+//                 margin-right: 5rem;
+//                 text-align: left;
+//             }
+
+//             .img-container {
+
+//                 img:first-child {
+//                     display: block;
+//                 }
+
+//                 img:last-child {
+//                     display: none;
+//                 }
+//             }
+//         }
+
+//         .answer-box {
+
+//             .answer {
+//                 display: none;
+//             }
+//         }
+//     }
+// }
+
+// .question-box-test {
+//     display: flex;
+//     justify-content: space-around;
+//     align-items: center;
+//     text-align: left;
+//     background: transparent;
+//     border: none;
+
+//     .question-title {
+//         font-size: $default-font-size + 2px;
+//         margin-right: 7.5rem;
+//     }
+
+//     .img-container {
+
+//         img:last-child {
+//             display: none;
+//         }
+//     }
+// }
