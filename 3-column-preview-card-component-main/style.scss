@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+// Colors - Primary
+// Bright orange: hsl(31, 77%, 52%)
+$bright-orange: rgb(227, 136, 38);
+
+// Dark cyan: hsl(184, 100%, 22%)
+$dark-cyan: rgb(0, 105, 112);
+
+// Very dark cyan: hsl(179, 100%, 13%)
+$darker-cyan: rgb(0, 66, 65);
+
+// Color - Neutral
+// Transparent white (paragraphs): hsla(0, 0%, 100%, 0.75)
+$transparent-white: rgba(255, 255, 255, 0.75);
+
+// Very light gray (background, headings, buttons): hsl(0, 0%, 95%)
+// Use for background, headings and buttons.
+$lighter-gray: rgb(242, 242, 242);
+
+// Font size: 15px
+$default-font-size: 15px;
+
+// Weights: 400
+$font-weight-regular: 400;
+
+// Weights: 700
+$font-weight-bold: 700;
+
+// Mixins for card component(s)
+@mixin font-family-group($primary-font, $secondary-font) {
+    font-family: $primary-font, $secondary-font;
+}
+
+@mixin d-flex-group($justify-content, $align-items) {
+    display: flex;
+    justify-content: $justify-content;
+    align-items: $align-items;
+}
+
+// @mixin d-grid-group($place-items, $grid-template-columns) {
+//     display: grid;
+//     place-items: $place-items;
+//     grid-template-columns: $grid-template-columns;
+// }
+
+* {
+    @include font-family-group('Lexend Deca', sans-serif);
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    @include d-flex-group(center, center);
+    min-height: 100vh;
+}
+
+.container {
+    display: flex;
+    width: 900px;
+    margin: 0 auto;
+}
+
+.card {
+    @include d-flex-group(space-around, flex-start);
+    flex-flow: column wrap;
+    padding: 50px;
+    color: $lighter-gray;
+
+    .card-title {
+        font-family: 'Big Shoulders Display', sans-serif;
+        font-size: $default-font-size + 25px;
+        text-transform: uppercase;
+        margin: 1.9rem 0;
+    }
+
+    .card-description {
+        font-size: $default-font-size;
+        color: darken($lighter-gray, 5%);
+        line-height: 1.5rem;
+        padding-right: 1rem;
+        padding-bottom: 6rem;
+    }
+    
+    &.sedan {
+        background: $bright-orange;
+        border-radius: 0.5rem 0 0 0.5rem;
+    }
+
+    &.suv {
+        background: $dark-cyan;
+    }
+
+    &.luxury {
+        background: $darker-cyan;
+        border-radius: 0 0.5rem 0.5rem 0;
+
+    }
+
+    .card-button {
+        background: transparent;
+        border: none;
+        border-radius: 2rem;
+        width: 150px;
+        padding: 15px;
+        font-size: $default-font-size;
+        background: $lighter-gray;
+        transition: 250ms ease-in-out;
+
+        &:hover {
+            background: transparent;
+            color: $lighter-gray;
+            border: 1px solid $lighter-gray;
+        }
+    }
+}
+
+@media screen and (max-width: 828px) {
+    .container {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        width: 85%;
+    }
+}
