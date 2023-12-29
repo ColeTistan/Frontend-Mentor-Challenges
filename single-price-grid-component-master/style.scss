@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+
+// # Front-end Style Guide
+
+// ## Layout
+
+// The designs were created to the following widths:
+
+// Mobile: 375px
+// Desktop: 1440px
+
+// Color - Primary
+// Cyan: hsl(179, 62%, 43%)
+$cyan: rgb(42, 178, 175);
+
+// Bright Yellow: hsl(71, 73%, 54%)
+$bright-yellow: rgb(192, 223, 52);
+
+// Color - Neutral
+// Light Gray: hsl(204, 43%, 93%)
+$light-gray: rgb(229, 239, 245);
+
+// Grayish Blue: rgb(152, 166, 189);
+$grayish-blue: rgb(152, 166, 189);
+
+// White: rgb(255, 255, 255);
+$white: rgb(255, 255, 255);
+
+// ## Typography
+
+// Body Copy
+
+// Font size: 16px
+$default-font-size: 16px;
+
+// Default Spacing: 1rem
+$default-spacing: 1rem;
+
+// Border Radius: 0.5rem
+$default-border-radius: 0.5rem;
+
+// Family: [Karla](https://fonts.google.com/specimen/Karla)
+$font-family: 'Karla', sans-serif;
+
+// Weights: 400, 700
+$font-weight-regular: 400;
+$font-weight-bold: 700;
+
+@mixin d-flex-group($justify-content, $align-items) {
+    display: flex;
+    justify-content: $justify-content;
+    align-items: $align-items;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: $font-family;
+}
+
+h1 {
+    font-size: $default-font-size * 2;
+}
+
+h3 {
+    color: $white;
+    font-size: $default-font-size + 3px;
+}
+
+body {
+    @include d-flex-group(center, center);
+    min-height: 100vh;
+    width: 40%;
+    margin: 0 auto;
+    background-color: $light-gray;
+}
+
+.card {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+    "a a"
+    "b c";
+    color: $light-gray;
+    background-color: $white;
+    border-radius: 0.5rem;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.section {
+    padding: $default-spacing + 1.25rem;
+
+    &.join {
+        grid-area: a;
+        color: $grayish-blue;
+
+        h1 {
+            font-size: $default-font-size + 9px;
+            color: $cyan;
+            margin-bottom: $default-spacing + 0.5rem;
+        }
+
+        h3 {
+            font-size: $default-font-size + 3px;
+            color: $bright-yellow;
+            margin-bottom: $default-spacing - 0.25rem;
+        }
+
+        p {
+            line-height: 1.75rem;
+            font-size: $default-font-size;
+            padding-right: 3rem;
+        }
+    }
+
+    &.subscription {
+        grid-area: b;
+        background-color: $cyan;
+        border-radius: 0 0 0 0.5rem;
+
+        .price {
+            @include d-flex-group(left, center);
+            color: $light-gray;
+            margin: $default-spacing 0 $default-spacing - 0.6rem 0;
+
+
+            span {
+                font-size: $default-font-size + 15px;
+                font-weight: $font-weight-bold;
+                padding-right: $default-spacing - 0.25rem;
+            }
+        }
+
+        .subscription-cost {
+            font-size: $default-font-size + 1px;
+        }
+
+        button {
+            width: 100%;
+            background-color: $bright-yellow;
+            border: none;
+            border-radius: $default-border-radius - 0.25rem;
+            font-size: $default-font-size;
+            padding: $default-spacing - 0.25rem;
+            margin: $default-spacing + 1rem 0 0 0;
+            color: $white;
+            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+            cursor: pointer;
+        }
+    }
+
+    &.why-us {
+        grid-area: c;
+        background-color: lighten($cyan, 10%);
+        border-bottom-right-radius: $default-border-radius;
+
+        h3 {
+            font-size: $default-font-size + 3px;
+        }
+
+        p {
+            margin-top: 1rem;
+            line-height: 1.5rem;
+            padding-right: 1.5rem;
+        }
+    }
+}
+
+@media screen and (max-width: 475px) {
+    body {
+        width: 85%;
+    }
+    
+    .subscription {
+        border-bottom-left-radius: 0rem;
+    }
+
+    .why-us {
+        border-radius: 0 0 0.5rem 0.5rem;
+    }
+
+    .card {
+        margin: 4rem 0;
+        grid-template-columns: 1fr;
+        grid-template-areas:
+        "a"
+        "b"
+        "c";
+    }
+}
