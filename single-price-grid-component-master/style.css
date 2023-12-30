@@ -1,0 +1,121 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Karla", sans-serif;
+}
+
+h1 {
+  font-size: 32px;
+}
+
+h3 {
+  color: rgb(255, 255, 255);
+  font-size: 19px;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  width: 40%;
+  margin: 0 auto;
+  background-color: rgb(229, 239, 245);
+}
+
+.card {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-areas: "a a" "b c";
+  color: rgb(229, 239, 245);
+  background-color: rgb(255, 255, 255);
+  border-radius: 0.5rem;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.section {
+  padding: 2.25rem;
+}
+.section.join {
+  grid-area: a;
+  color: rgb(152, 166, 189);
+}
+.section.join h1 {
+  font-size: 25px;
+  color: rgb(42, 178, 175);
+  margin-bottom: 1.5rem;
+}
+.section.join h3 {
+  font-size: 19px;
+  color: rgb(192, 223, 52);
+  margin-bottom: 0.75rem;
+}
+.section.join p {
+  line-height: 1.75rem;
+  font-size: 16px;
+  padding-right: 3rem;
+}
+.section.subscription {
+  grid-area: b;
+  background-color: rgb(42, 178, 175);
+  border-radius: 0 0 0 0.5rem;
+}
+.section.subscription .price {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  color: rgb(229, 239, 245);
+  margin: 1rem 0 0.4rem 0;
+}
+.section.subscription .price span {
+  font-size: 31px;
+  font-weight: 700;
+  padding-right: 0.75rem;
+}
+.section.subscription .subscription-cost {
+  font-size: 17px;
+}
+.section.subscription button {
+  width: 100%;
+  background-color: rgb(192, 223, 52);
+  border: none;
+  border-radius: 0.25rem;
+  font-size: 16px;
+  padding: 0.75rem;
+  margin: 2rem 0 0 0;
+  color: rgb(255, 255, 255);
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  cursor: pointer;
+}
+.section.why-us {
+  grid-area: c;
+  background-color: #3ed1ce;
+  border-bottom-right-radius: 0.5rem;
+}
+.section.why-us h3 {
+  font-size: 19px;
+}
+.section.why-us p {
+  margin-top: 1rem;
+  line-height: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+@media screen and (max-width: 475px) {
+  body {
+    width: 85%;
+  }
+  .subscription {
+    border-bottom-left-radius: 0rem;
+  }
+  .why-us {
+    border-radius: 0 0 0.5rem 0.5rem;
+  }
+  .card {
+    margin: 4rem 0;
+    grid-template-columns: 1fr;
+    grid-template-areas: "a" "b" "c";
+  }
+}/*# sourceMappingURL=style.css.map */

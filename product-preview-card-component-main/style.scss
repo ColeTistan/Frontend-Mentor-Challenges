@@ -1,0 +1,190 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&display=swap');
+
+// # Front-end Style Guide
+
+// ## Layout
+
+// The designs were created to the following widths:
+
+// - Mobile: 375px
+// - Desktop: 1440px
+
+// ## Colors
+
+// ### Primary
+// - Dark cyan: hsl(158, 36%, 37%)
+$dark-cyan: hsl(158, 36%, 37%);
+
+// - Cream: hsl(30, 38%, 92%)
+$cream: hsl(30, 38%, 92%);
+
+// ### Neutral
+// - Very dark blue: hsl(212, 21%, 14%)
+$darker-blue: hsl(212, 21%, 14%);
+
+// - Dark grayish blue: hsl(228, 12%, 48%)
+$dark-grayish-blue: hsl(228, 12%, 48%);
+
+// - White: hsl(0, 0%, 100%)
+$white: hsl(0, 0%, 100%);
+
+// ## Typography
+
+// ### Body Copy
+
+// - Font size (paragraph): 14px
+$default-font-size: 14px;
+
+// ### Font
+
+// - Family: [Montserrat](https://fonts.google.com/specimen/Montserrat)
+$font-family-primary: 'Montserrat', sans-serif;
+
+// - Family: [Fraunces](https://fonts.google.com/specimen/Fraunces)
+$font-family-secondary: 'Fraunces', serif;
+
+// - Weights: 500, 700
+$font-weight-regular: 500;
+$font-weight-bold: 700;
+
+@mixin d-flex-group($justify-content, $align-items) {
+    display: flex;
+    justify-content: $justify-content;
+    align-items: $align-items;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: $font-family-primary;
+}
+
+body {
+    @include d-flex-group(center, center);
+    min-height: 100vh;
+    background-color: $cream;
+}
+
+.card {
+    display: grid;
+    place-items: center;
+    grid-template-columns: 1fr;
+    color: $dark-grayish-blue;
+
+    background-color: $white;
+    width: 390px;
+    margin: 0 auto;
+    border-radius: 1rem;
+    overflow: hidden;
+
+    .image-container {
+
+        .mobile-image {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        .desktop-image {
+            display: none;
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+    }
+
+    .card-details {
+        padding: 1.25rem 2rem 1.5rem 2rem;
+
+        .category {
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            padding: 0.5rem 0 1rem 0;
+        }
+        
+        .product-name {
+            line-height: 2.1rem;
+            font-size: $default-font-size + 22px;
+            font-family: $font-family-secondary;
+            color: black;
+        }
+
+        .product-description {
+            line-height: 1.75rem;
+            padding: 1rem 0;
+        }
+
+        .pricing {
+            @include d-flex-group(left, center);
+            margin-bottom: 1rem;
+            .new-price {
+                font-size: $default-font-size + 15px;
+                font-family: $font-family-secondary;
+                color: $dark-cyan;
+            }
+
+            .original-price {
+                text-decoration: line-through;
+                margin-left: 1.5rem;
+            }
+        }
+
+        .cart-button {
+            @include d-flex-group(center, center);
+            font-weight: $font-weight-bold;
+            width: 100%;
+            border: none;
+            border-radius: 0.5rem;
+            padding: 1rem;
+            background-color: $dark-cyan;
+            color: $white;
+            cursor: pointer;
+            transition: all 200ms ease-in-out;
+            
+            &:hover {
+                background-color: darken($dark-cyan, 15%);
+            }
+            
+            img {
+                margin-right: 0.75rem;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 768px) {
+
+    .card {
+        grid-template-columns: repeat(2, 1fr);
+        width: 635px;        
+        .image-container {
+
+            .mobile-image {
+                display: none;
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+            }
+    
+            .desktop-image {
+                display: block;
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+
+        .card-details {
+
+            .category {
+                margin-bottom: 0.3rem;
+            }
+
+            .pricing {
+                margin-bottom: 1.5rem;
+            }
+        }
+    }
+}

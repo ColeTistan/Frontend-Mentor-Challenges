@@ -1,0 +1,80 @@
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap");
+* {
+  font-family: "Lexend Deca", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.container {
+  display: flex;
+  width: 900px;
+  margin: 0 auto;
+}
+
+.card {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  flex-flow: column wrap;
+  padding: 50px;
+  color: rgb(242, 242, 242);
+}
+.card .card-title {
+  font-family: "Big Shoulders Display", sans-serif;
+  font-size: 40px;
+  text-transform: uppercase;
+  margin: 1.9rem 0;
+}
+.card .card-description {
+  font-size: 15px;
+  color: #e5e5e5;
+  line-height: 1.5rem;
+  padding-right: 1rem;
+  padding-bottom: 6rem;
+}
+.card.sedan {
+  background: rgb(227, 136, 38);
+  border-radius: 0.5rem 0 0 0.5rem;
+}
+.card.suv {
+  background: rgb(0, 105, 112);
+}
+.card.luxury {
+  background: rgb(0, 66, 65);
+  border-radius: 0 0.5rem 0.5rem 0;
+}
+.card .card-button {
+  background: transparent;
+  border: none;
+  border-radius: 2rem;
+  width: 150px;
+  padding: 15px;
+  font-size: 15px;
+  background: rgb(242, 242, 242);
+  transition: 250ms ease-in-out;
+}
+.card .card-button:hover {
+  background: transparent;
+  color: rgb(242, 242, 242);
+  border: 1px solid rgb(242, 242, 242);
+}
+
+@media screen and (max-width: 828px) {
+  .container {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    width: 85%;
+  }
+}/*# sourceMappingURL=style.css.map */

@@ -13,6 +13,8 @@ $light-pink: rgb(249, 240, 255);
 $grayish-purple: rgb(140, 105, 145);
 // Dark purple: hsl(292, 42%, 14%)
 $dark-purple: rgb(47, 20, 51);
+// Hot Purple: #ad28eb
+$hot-purple: #ad28eb;
 
 // Font size (paragraphs): 16px
 $default-font-size: 16px;
@@ -45,93 +47,120 @@ body {
     background-position: top;
     background-size: 100%;
     background-color: $light-pink;
+    container-type: inline-size;
 }
 
 main {
     @include d-flex(center, center);
-    width: 85%;
-    margin: 0 auto;
     min-height: 100vh;
+    width: 95%;
+    margin: 0 auto;
 }
 
-.card {
+.accordion {
     background: $white;
-    color: $dark-purple;
     border-radius: 0.5rem;
+    padding: 2rem 1.75rem;
+    margin: 1.5rem 0;
 
-    .card-container {
-        padding: 1.5rem;
-        // gap: 1rem;
+    .accordion-header {
+        display: flex;
+        align-items: center;
+        margin-bottom: 1.75rem;
 
-        .card-header {
-            display: flex;
-            align-items: center;
-            font-size: $default-font-size + 10px;
-            margin: 0rem 1.5rem 1.25rem 0rem;
+        .logo {
+            width: 55px;
+            padding-right: 1.75rem;
+        }
 
-            img {
-                margin-right: 1.5rem;
-                width: 1.5rem;
-                height: auto;
-            }
+        .accordion-heading {
+            font-size: $default-font-size + 15px;
         }
     }
-}
 
-.questions {
-    @include d-flex(center, center);
-    flex-direction: column;
-    gap: 1.5rem;
-
-    .question {
+    .accordion-item {
         @include d-flex(center, center);
         flex-direction: column;
-        gap: 1.25rem;
 
-        .question-box {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+        hr {
+            width: 100%;
+            border: 1px solid darken($white, 10%);
+            margin: 1.75rem 0;
+        }
+
+        .accordion-btn {
+            @include d-flex(space-between, center);
             background: transparent;
             border: none;
-            
-            .question-title {
-                font-size: $default-font-size;
-                margin-right: 5rem;
+            width: 100%;
+            cursor: pointer;
+            transition: 200ms ease-in;
+
+            .accordion-question {
+                font-size: 1.1rem;
+                font-weight: $font-weight-semibold;
                 text-align: left;
             }
 
-            .img-container {
+            &:hover {
+                color: $hot-purple;
+            }
+        }
 
-                img:first-child {
-                    display: block;
+        .img-group {
+            padding-left: 3rem;
+            
+            .plus {
+                display: block;
+
+                &.hidden {
+                    display: none;
                 }
+            }
 
-                img:last-child {
+            .minus {
+                display: block;
+
+                &.hidden {
                     display: none;
                 }
             }
         }
+
+        .answer {
+            margin-top: 1.5rem;
+            line-height: 1.5rem;
+            color: lighten(black, 50%);
+            font-size: $default-font-size + 1px;
+            transition: all 250ms ease-in;
+
+            &.hidden {
+                display: none;
+            }
+        }
     }
+    
 }
 
-.question-box-test {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    text-align: left;
-    background: transparent;
-    border: none;
-
-    .question-title {
-        font-size: $default-font-size + 2px;
-        margin-right: 7.5rem;
+@media screen and (min-width: 900px) {
+    body {
+        background-image: url('./assets/images/background-pattern-desktop.svg');
     }
 
-    .img-container {
+    .accordion {
+        width: 35%;
+        height: auto;
 
-        img:last-child {
-            display: none;
+        .accordion-header {
+    
+            .logo {
+                width: 65px;
+                padding-right: 1.75rem;
+            }
+    
+            .accordion-heading {
+                font-size: $default-font-size + 30px;
+            }
         }
     }
 }
