@@ -1,0 +1,79 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Kumbh Sans", sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: false;
+  align-items: center;
+  min-height: 100vh;
+  background-color: rgb(25, 162, 174);
+  background-image: url("./images/bg-pattern-top.svg"), url("./images/bg-pattern-bottom.svg");
+  background-repeat: no-repeat, no-repeat;
+  background-position: right 50vw bottom 50vh, left 50vw top 50vh;
+}
+
+main {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.card {
+  width: 375px;
+  height: auto;
+  background-color: white;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+.card .card-background {
+  height: 100%;
+  width: 100%;
+}
+.card .card-profile {
+  height: 100px;
+  width: 100px;
+  border: 6px solid white;
+  border-radius: 50%;
+  margin-top: -53px;
+}
+.card .card-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.8rem 0 0.55rem 0;
+}
+.card .card-info .name {
+  font-size: 19px;
+  font-weight: 700;
+}
+.card .card-info .name span {
+  margin-left: 0.65rem;
+  color: rgb(107, 112, 130);
+  font-weight: 400;
+}
+.card .location {
+  font-size: 17px;
+  color: rgb(107, 112, 130);
+  margin-bottom: 1.75rem;
+}
+.card .card-stats {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  border-top: 2px solid #e7e8eb;
+  padding: 1.75rem 0 1.25rem 0;
+  line-height: 1.65rem;
+}
+.card .card-stats .stat-count {
+  font-size: 21px;
+  font-weight: 700;
+}
+.card .card-stats .stat-title {
+  font-size: 12px;
+  color: rgb(107, 112, 130);
+  letter-spacing: 2px;
+}/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+// # Front-end Style Guide
+
+// Layout
+
+// The designs were created to the following widths:
+
+// - Mobile: 375px
+// - Desktop: 1440px
+
+// Colors - Primary
+// Dark cyan: hsl(185, 75%, 39%)
+$dark-cyan: rgb(25, 162, 174);
+
+// Very dark desaturated blue: hsl(229, 23%, 23%)
+$very-dark-desaturated-blue: rgb(45, 50, 72);
+
+// Dark grayish blue: hsl(227, 10%, 46%)
+$dark-grayish-blue: rgb(107, 112, 130);
+
+// Color - Neutral
+// Dark gray: hsl(0, 0%, 59%)
+$dark-gray: rgb(150, 150, 150);
+
+// Typography
+
+// Body Copy
+
+// Font
+// Family: [Kumbh Sans](https://fonts.google.com/specimen/Kumbh+Sans)
+$font-family: 'Kumbh Sans', sans-serif;
+
+// Font size (name and stats): 18px
+$default-font-size: 18px;
+$default-spacing: 1rem;
+
+// Weights: 400, 700
+$font-weight-regular: 400;
+$font-weight-bold: 700;
+
+@mixin d-flex-group($justify-content: false, $align-items: false) {
+    display: flex;
+    justify-content: $justify-content;
+    align-items: $align-items;
+}
+
+@mixin height-width-area($width, $height) {
+    height: $height;
+    width: $width;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: $font-family;
+}
+
+body {
+    @include d-flex-group(false, center);
+    min-height: 100vh;
+    background-color: $dark-cyan;
+    background-image: url("./images/bg-pattern-top.svg"), url("./images/bg-pattern-bottom.svg");
+    background-repeat: no-repeat, no-repeat;
+    background-position: right 50vw bottom 50vh, left 50vw top 50vh;
+}
+
+main {
+    margin: 0 auto;
+    text-align: center;
+}
+
+.card {
+    width: 375px;
+    height: auto;
+    background-color: white;
+    border-radius: $default-spacing;
+    overflow: hidden;
+
+    .card-background {
+        @include height-width-area(100%, 100%);
+    }
+
+    .card-profile {
+        @include height-width-area(100px, 100px);
+        border: 6px solid white;
+        border-radius: 50%;
+        margin-top: -53px;
+    }
+
+    .card-info {
+        @include d-flex-group(center, center);
+        padding: $default-spacing - 0.2rem 0 $default-spacing - 0.45rem 0;
+        
+        .name {
+            font-size: $default-font-size + 1px;
+            font-weight: $font-weight-bold;
+
+            span {
+                margin-left: $default-spacing - 0.35rem;
+                color: $dark-grayish-blue;
+                font-weight: $font-weight-regular;
+            }
+        }
+    }
+
+    .location {
+        font-size: $default-font-size - 1px;
+        color: $dark-grayish-blue;
+        margin-bottom: 1.75rem;
+    }
+    
+    .card-stats {
+        @include d-flex-group(space-evenly, center);
+        border-top: 2px solid lighten($dark-grayish-blue, 45%);
+        padding: 1.75rem 0 1.25rem 0;
+        line-height: 1.65rem;
+
+        .stat-count {
+            font-size: $default-font-size + 3px;
+            font-weight: $font-weight-bold;
+        }
+
+        .stat-title {
+            font-size: $default-font-size - 6px;
+            color: $dark-grayish-blue;
+            letter-spacing: 2px;
+        }
+    }
+}
