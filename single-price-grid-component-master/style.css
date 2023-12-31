@@ -33,6 +33,7 @@ body {
   background-color: rgb(255, 255, 255);
   border-radius: 0.5rem;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  overflow: hidden;
 }
 
 .section {
@@ -60,7 +61,6 @@ body {
 .section.subscription {
   grid-area: b;
   background-color: rgb(42, 178, 175);
-  border-radius: 0 0 0 0.5rem;
 }
 .section.subscription .price {
   display: flex;
@@ -83,6 +83,7 @@ body {
   border: none;
   border-radius: 0.25rem;
   font-size: 16px;
+  font-weight: 700;
   padding: 0.75rem;
   margin: 2rem 0 0 0;
   color: rgb(255, 255, 255);
@@ -92,7 +93,6 @@ body {
 .section.why-us {
   grid-area: c;
   background-color: #3ed1ce;
-  border-bottom-right-radius: 0.5rem;
 }
 .section.why-us h3 {
   font-size: 19px;
@@ -106,12 +106,6 @@ body {
 @media screen and (max-width: 475px) {
   body {
     width: 85%;
-  }
-  .subscription {
-    border-bottom-left-radius: 0rem;
-  }
-  .why-us {
-    border-radius: 0 0 0.5rem 0.5rem;
   }
   .card {
     margin: 4rem 0;
