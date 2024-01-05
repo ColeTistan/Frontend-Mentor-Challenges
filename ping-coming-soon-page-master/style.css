@@ -1,0 +1,119 @@
+@import url("https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Libre Franklin", sans-serif;
+}
+
+body {
+  width: 80%;
+  margin: 4rem auto;
+}
+
+main {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+main .logo {
+  margin-bottom: 2.5rem;
+}
+main .dashboard-img {
+  width: 75%;
+  height: auto;
+  margin: 4.5rem 0;
+}
+main .validation-msg {
+  position: absolute;
+  top: 295px;
+  left: 597px;
+  padding: 0.25rem;
+  font-size: 13px;
+  font-style: italic;
+}
+main .validation-msg.error {
+  color: rgb(255, 82, 99);
+}
+main .subscription {
+  font-size: 20px;
+  color: rgb(150, 150, 150);
+  text-align: center;
+}
+main .subscription .launch {
+  font-size: 40px;
+  font-weight: 300;
+  letter-spacing: 1px;
+}
+main .subscription .launch span {
+  font-weight: 700;
+  color: black;
+}
+main .subscription .subscribe {
+  margin: 0.75rem 0 2rem 0;
+  color: black;
+}
+main .notification {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+main .notification input {
+  width: 375px;
+  padding: 0.9rem 1.5rem;
+  border: 1px solid rgb(194, 211, 255);
+  border-radius: 30px;
+  outline: none;
+  transition: all 200ms ease-in-out;
+}
+main .notification input:focus {
+  border: 1px solid rgb(79, 125, 243);
+}
+main .notification .notification-btn {
+  background-color: rgb(79, 125, 243);
+  border: none;
+  border-radius: 30px;
+  box-shadow: rgb(194, 211, 255) 0px 5px 15px;
+  padding: 0.9rem 3.75rem;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 250ms ease-in;
+}
+main .notification .notification-btn:hover {
+  background-color: #678ff5;
+}
+
+footer {
+  text-align: center;
+  font-size: 20px;
+  color: rgb(150, 150, 150);
+}
+footer .social-media-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+footer .social-media-links .icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  margin: 0.5rem;
+  border: 1px solid rgb(194, 211, 255);
+  border-radius: 50%;
+  width: 2.5rem;
+  height: 2.5rem;
+  color: rgb(79, 125, 243);
+  cursor: pointer;
+  transition: all 200ms ease-in;
+}
+footer .social-media-links .icon i {
+  font-size: 1.25rem;
+}
+footer .social-media-links .icon:hover {
+  background-color: rgb(79, 125, 243);
+  color: white;
+}/*# sourceMappingURL=style.css.map */

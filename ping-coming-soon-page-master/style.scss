@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;600;700&display=swap');
+
+// Color - Primary
+
+// - Blue: hsl(223, 87%, 63%)
+$blue: rgb(79, 125, 243);
+
+// Color - Secondary
+
+// - Pale Blue: hsl(223, 100%, 88%)
+$pale-blue: rgb(194, 211, 255);
+
+// - Light Red: hsl(354, 100%, 66%)
+$light-red: rgb(255, 82, 99);
+// Color - Neutral
+
+// - Gray: hsl(0, 0%, 59%)
+$gray: rgb(150, 150, 150);
+
+// - Very Dark Blue: hsl(209, 33%, 12%)
+$darker-blue: rgb(21, 31, 41);
+
+// White
+$white: lighten($blue, 100%);
+
+// Blackarken($blue, 100%)arken($blue, 100%)arken($blue, 100%)
+$black: darken($blue, 100%);
+
+// Body Copy
+
+// - Font size: 20px
+$default-font-size: 20px;
+$h1-font-size: $default-font-size * 2;
+
+// Fonts
+
+// - Family: [Libre Franklin](https://fonts.google.com/specimen/Libre+Franklin)
+$font-family: 'Libre Franklin', sans-serif;
+
+// - Weights: 300, 600, 700
+$font-weight-light: 300;
+$font-weight-semibold: 600;
+$font-weight-bold: 700;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: $font-family;
+}
+
+body {
+    width: 80%;
+    margin: 4rem auto;
+}
+
+main {
+    display: flex;
+    // justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    .logo {
+        margin-bottom: 2.5rem;
+    }
+
+    .dashboard-img {
+        width: 75%;
+        height: auto;
+        margin: 4.5rem 0;
+    }
+
+    .validation-msg {
+        position: absolute;
+        top: 295px;
+        left: 597px;
+        padding: 0.25rem;
+        font-size: $default-font-size - 7px;
+        font-style: italic;
+
+        &.error {
+            color: $light-red;
+        }
+
+    }
+
+    .subscription {
+        font-size: $default-font-size;
+        color: $gray;
+        text-align: center;
+
+        .launch {
+            font-size: $default-font-size * 2;
+            font-weight: $font-weight-light;
+            letter-spacing: 1px;
+ 
+            span {
+                font-weight: $font-weight-bold;
+                color: $black;
+            }
+        }
+
+        .subscribe {
+            margin: 0.75rem 0 2rem 0;
+            color: $black;
+        }
+    }
+
+    .notification {
+        $border-radius: $default-font-size + 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+
+        input {
+            width: 375px;
+            padding: 0.9rem 1.5rem;
+            border: 1px solid $pale-blue;
+            border-radius: $border-radius;
+            outline: none;
+            transition: all 200ms ease-in-out;
+
+            &:focus {
+                border: 1px solid $blue;
+            }
+        }
+
+        .notification-btn {
+            background-color: $blue;
+            border: none;
+            border-radius: $border-radius;
+            box-shadow: $pale-blue 0px 5px 15px;
+            padding: 0.9rem 3.75rem;
+            color: $white;
+            font-weight: $font-weight-semibold;
+            cursor: pointer;
+            transition: all 250ms ease-in;
+
+            &:hover {
+                background-color: lighten($blue, 5%);
+            }
+        }
+    }
+}
+
+footer {
+    text-align: center;
+    font-size: $default-font-size;
+    color: $gray;
+
+    .social-media-links {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 1.5rem;
+        
+        .icon {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: transparent;
+            margin: 0.5rem;
+            border: 1px solid $pale-blue;
+            border-radius: 50%;
+            width: 2.5rem;
+            height: 2.5rem;
+            color: $blue;
+            cursor: pointer;
+            transition: all 200ms ease-in;
+
+            i {
+                font-size: 1.25rem;
+            }
+
+            &:hover {
+                background-color: $blue;
+                color: $white;
+            }
+        }
+    }
+}
