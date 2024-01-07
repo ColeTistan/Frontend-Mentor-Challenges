@@ -27,19 +27,20 @@
         <p class="subscribe">Subscribe and get notified</p>
       </section>
       <form class="notification">
-        <input
-          type="email"
-          name="email-input"
-          id="email-input"
-          placeholder="Your email address..."
-        />
+        <div class="input-section">
+          <input
+            type="email"
+            name="email-input"
+            class="email-input"
+            id="email-input"
+            placeholder="Your email address..."
+          />
+        </div>
         <button type="button" class="notification-btn" id="notification-btn">
           Notify Me
         </button>
       </form>
-      <!-- <section class="validation">
-        <p class="validation-msg error">Please provided a valid email address</p>
-      </section> -->
+      <small class="validation-msg"></small>
       <img
         class="dashboard-img"
         src="./images/illustration-dashboard.png"

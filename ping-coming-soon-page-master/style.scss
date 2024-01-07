@@ -12,6 +12,10 @@ $pale-blue: rgb(194, 211, 255);
 
 // - Light Red: hsl(354, 100%, 66%)
 $light-red: rgb(255, 82, 99);
+
+// light green: rgb(58, 186, 41)
+$light-green: rgb(58, 186, 41);
+
 // Color - Neutral
 
 // - Gray: hsl(0, 0%, 59%)
@@ -42,6 +46,10 @@ $font-weight-light: 300;
 $font-weight-semibold: 600;
 $font-weight-bold: 700;
 
+@mixin border-group($color) {
+    border: 1px solid $color;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -56,7 +64,6 @@ body {
 
 main {
     display: flex;
-    // justify-content: center;
     align-items: center;
     flex-direction: column;
 
@@ -69,78 +76,89 @@ main {
         height: auto;
         margin: 4.5rem 0;
     }
+}
 
-    .validation-msg {
-        position: absolute;
-        top: 295px;
-        left: 597px;
-        padding: 0.25rem;
-        font-size: $default-font-size - 7px;
-        font-style: italic;
+.subscription {
+    font-size: $default-font-size;
+    color: $gray;
+    text-align: center;
 
-        &.error {
-            color: $light-red;
-        }
+    .launch {
+        font-size: $default-font-size * 2;
+        font-weight: $font-weight-light;
+        letter-spacing: 1px;
 
-    }
-
-    .subscription {
-        font-size: $default-font-size;
-        color: $gray;
-        text-align: center;
-
-        .launch {
-            font-size: $default-font-size * 2;
-            font-weight: $font-weight-light;
-            letter-spacing: 1px;
- 
-            span {
-                font-weight: $font-weight-bold;
-                color: $black;
-            }
-        }
-
-        .subscribe {
-            margin: 0.75rem 0 2rem 0;
+        span {
+            font-weight: $font-weight-bold;
             color: $black;
         }
     }
 
-    .notification {
-        $border-radius: $default-font-size + 10px;
+    .subscribe {
+        margin: 0.75rem 0 2rem 0;
+        color: $black;
+    }
+}
+
+.notification {
+    $border-radius: $default-font-size + 10px;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    .input-section {
         display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 1rem;
+        flex-direction: column;
+    }
 
-        input {
-            width: 375px;
-            padding: 0.9rem 1.5rem;
-            border: 1px solid $pale-blue;
-            border-radius: $border-radius;
-            outline: none;
-            transition: all 200ms ease-in-out;
+    input {
+        width: 375px;
+        padding: 0.9rem 1.5rem;
+        border: 1px solid $pale-blue;
+        border-radius: $border-radius;
+        outline: none;
+        transition: all 200ms ease-in-out;
 
-            &:focus {
-                border: 1px solid $blue;
-            }
+        &:focus {
+            @include border-group($blue);
         }
-
-        .notification-btn {
-            background-color: $blue;
-            border: none;
-            border-radius: $border-radius;
-            box-shadow: $pale-blue 0px 5px 15px;
-            padding: 0.9rem 3.75rem;
-            color: $white;
-            font-weight: $font-weight-semibold;
-            cursor: pointer;
-            transition: all 250ms ease-in;
-
-            &:hover {
-                background-color: lighten($blue, 5%);
-            }
+        
+        &.border-error {
+            @include border-group($light-red);
         }
+        
+        &.border-success {
+            @include border-group($light-green);
+        }
+    }
+
+    .notification-btn {
+        background-color: $blue;
+        border: none;
+        border-radius: $border-radius;
+        box-shadow: $pale-blue 0px 5px 15px;
+        padding: 0.9rem 3.75rem;
+        color: $white;
+        font-weight: $font-weight-semibold;
+        cursor: pointer;
+        transition: all 250ms ease-in;
+
+        &:hover {
+            background-color: lighten($blue, 5%);
+        }
+    }
+}
+
+.validation-msg {
+    margin: 0.5rem 19.5rem 0 0;
+    font-size: $default-font-size - 7px;
+    font-style: italic;
+    &.error {
+        color: $light-red;
+    }
+            
+    &.success {
+        color: $light-green;
     }
 }
 
@@ -177,6 +195,48 @@ footer {
                 background-color: $blue;
                 color: $white;
             }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    main {
+        .dashboard-img {
+            width: 85%;
+            height: auto;
+            margin: 4.5rem 0;
+        }
+    }
+
+    .notification {
+        flex-direction: column;
+    }
+
+    .input-section {
+        width: 100%;
+    }
+
+    .notification-btn {
+        width: 100%;
+    }
+
+    .subscription {
+        .launch {
+            font-size: $default-font-size * 1.25;
+        }
+    }
+
+    .validation-msg {
+        margin: 1rem 0;
+    }
+}
+
+@media screen and (max-width: 385px) {
+    .input-section {
+        width: 100%;
+
+        .email-input {
+            width: 275px;
         }
     }
 }

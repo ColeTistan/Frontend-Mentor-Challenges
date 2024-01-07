@@ -24,42 +24,36 @@ main .dashboard-img {
   height: auto;
   margin: 4.5rem 0;
 }
-main .validation-msg {
-  position: absolute;
-  top: 295px;
-  left: 597px;
-  padding: 0.25rem;
-  font-size: 13px;
-  font-style: italic;
-}
-main .validation-msg.error {
-  color: rgb(255, 82, 99);
-}
-main .subscription {
+
+.subscription {
   font-size: 20px;
   color: rgb(150, 150, 150);
   text-align: center;
 }
-main .subscription .launch {
+.subscription .launch {
   font-size: 40px;
   font-weight: 300;
   letter-spacing: 1px;
 }
-main .subscription .launch span {
+.subscription .launch span {
   font-weight: 700;
   color: black;
 }
-main .subscription .subscribe {
+.subscription .subscribe {
   margin: 0.75rem 0 2rem 0;
   color: black;
 }
-main .notification {
+
+.notification {
   display: flex;
-  justify-content: center;
   align-items: center;
   gap: 1rem;
 }
-main .notification input {
+.notification .input-section {
+  display: flex;
+  flex-direction: column;
+}
+.notification input {
   width: 375px;
   padding: 0.9rem 1.5rem;
   border: 1px solid rgb(194, 211, 255);
@@ -67,10 +61,16 @@ main .notification input {
   outline: none;
   transition: all 200ms ease-in-out;
 }
-main .notification input:focus {
+.notification input:focus {
   border: 1px solid rgb(79, 125, 243);
 }
-main .notification .notification-btn {
+.notification input.border-error {
+  border: 1px solid rgb(255, 82, 99);
+}
+.notification input.border-success {
+  border: 1px solid rgb(58, 186, 41);
+}
+.notification .notification-btn {
   background-color: rgb(79, 125, 243);
   border: none;
   border-radius: 30px;
@@ -81,8 +81,20 @@ main .notification .notification-btn {
   cursor: pointer;
   transition: all 250ms ease-in;
 }
-main .notification .notification-btn:hover {
+.notification .notification-btn:hover {
   background-color: #678ff5;
+}
+
+.validation-msg {
+  margin: 0.5rem 19.5rem 0 0;
+  font-size: 13px;
+  font-style: italic;
+}
+.validation-msg.error {
+  color: rgb(255, 82, 99);
+}
+.validation-msg.success {
+  color: rgb(58, 186, 41);
 }
 
 footer {
@@ -116,4 +128,35 @@ footer .social-media-links .icon i {
 footer .social-media-links .icon:hover {
   background-color: rgb(79, 125, 243);
   color: white;
+}
+
+@media screen and (max-width: 768px) {
+  main .dashboard-img {
+    width: 85%;
+    height: auto;
+    margin: 4.5rem 0;
+  }
+  .notification {
+    flex-direction: column;
+  }
+  .input-section {
+    width: 100%;
+  }
+  .notification-btn {
+    width: 100%;
+  }
+  .subscription .launch {
+    font-size: 25px;
+  }
+  .validation-msg {
+    margin: 1rem 0;
+  }
+}
+@media screen and (max-width: 385px) {
+  .input-section {
+    width: 100%;
+  }
+  .input-section .email-input {
+    width: 275px;
+  }
 }/*# sourceMappingURL=style.css.map */
