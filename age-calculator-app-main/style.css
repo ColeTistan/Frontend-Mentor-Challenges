@@ -17,33 +17,61 @@ body {
 main {
   width: 90%;
   margin: 0 auto;
+  container-type: inline-size;
 }
 
 .card {
-  padding: 40px 25px;
+  padding: 30px;
   background-color: rgb(255, 255, 255);
   border-radius: 20px 20px 125px 20px;
 }
 .card .input-section {
   display: flex;
-  flex-direction: row;
+  justify-content: center;
+  align-items: center;
   gap: 1rem;
 }
 .card .icon-section {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 50px 0 30px 0;
+  margin: 75px 0;
 }
 .card .icon-section .line {
   background-color: rgb(219, 219, 219);
+  width: 100%;
   height: 2px;
-  width: 90%;
 }
-.card .icon-section img {
+.card .icon-section button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
   background-color: rgb(133, 77, 255);
-  padding: 10px;
   border-radius: 50%;
+  position: absolute;
+  width: 75px;
+  height: 75px;
+  cursor: pointer;
+  transition: all 200ms ease-in;
+}
+.card .icon-section button:hover {
+  background-color: rgb(20, 20, 20);
+}
+.card .icon-section button img {
+  width: 30px;
+  height: 30px;
+}
+.card .results-section {
+  font-size: 52px;
+  font-style: italic;
+  font-weight: 800;
+}
+.card .results-section .results {
+  line-height: 3.75rem;
+}
+.card .results-section span {
+  color: rgb(133, 77, 255);
 }
 
 .card-input {
@@ -59,12 +87,12 @@ main {
 .card-input input {
   font-size: 22px;
   padding: 10px 15px;
-  width: 105px;
-  border: 2px solid rgb(219, 219, 219);
+  width: 100px;
+  border: 1px solid rgb(219, 219, 219);
   border-radius: 0.5rem;
   transition: all 200ms ease-in;
 }
 .card-input input:focus {
-  border: 2px solid rgb(133, 77, 255);
+  border: 1px solid rgb(133, 77, 255);
   outline: none;
 }/*# sourceMappingURL=style.css.map */
