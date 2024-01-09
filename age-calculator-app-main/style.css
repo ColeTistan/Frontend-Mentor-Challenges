@@ -50,6 +50,7 @@ main {
   background-color: rgb(133, 77, 255);
   border-radius: 50%;
   position: absolute;
+  outline: none;
   width: 75px;
   height: 75px;
   cursor: pointer;
