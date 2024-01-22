@@ -1,12 +1,19 @@
 // Get HTML tags being used for DOM manipulation
 const resultSection = document.querySelector(".results-section");
 const userInputs = document.querySelectorAll("input");
+const inputLabels = document.querySelectorAll("label");
 const submitButton = document.querySelector("button");
 
 // Get user input tags
 dayInput = userInputs[0];
 monthInput = userInputs[1];
 yearInput = userInputs[2];
+
+// Get label tags
+dayLabel = inputLabels[0];
+monthLabel = inputLabels[1];
+yearLabel = inputLabels[2];
+console.log(dayLabel, monthLabel, yearLabel);
 
 // Get result tags
 let years = resultSection.querySelector("#years span");
@@ -19,11 +26,4 @@ let currDate = dateObj.getDate();
 let currMonth = dateObj.getMonth();
 let currYear = dateObj.getFullYear();
 
-submitButton.addEventListener("click", (evt) => {
-  evt.preventDefault();
-  years.innerText = yearInput.value;
-  months.innerText = monthInput.value;
-  days.innerText = dayInput.value;
-});
-
-
+console.log(currDate, currMonth, currYear);

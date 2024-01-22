@@ -96,4 +96,10 @@ main {
 .card-input input:focus {
   border: 1px solid rgb(133, 77, 255);
   outline: none;
+}
+.card-input .error-message {
+  display: none;
+  font-size: 12px;
+  font-style: italic;
+  color: rgb(255, 87, 87);
 }/*# sourceMappingURL=style.css.map */
