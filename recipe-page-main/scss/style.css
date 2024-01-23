@@ -1,0 +1,153 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&family=Young+Serif&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Outfit", sans-serif;
+  color: #66605c;
+}
+
+img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  padding: 0px;
+}
+
+li {
+  padding-left: 1.25rem;
+}
+
+li::marker {
+  font-weight: 700;
+}
+
+span {
+  font-weight: 600;
+}
+
+.stat {
+  color: hsl(14, 45%, 36%);
+  font-weight: 700;
+  padding-left: 4rem;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: auto;
+}
+table tr {
+  border-bottom: 1px solid #e2e0df;
+  line-height: 3rem;
+}
+table tr td {
+  padding-left: 2.5rem;
+}
+table tr:last-child {
+  border: none;
+}
+
+.prep-item::marker {
+  color: hsl(332, 51%, 32%);
+}
+
+.ingredient::marker,
+.step::marker {
+  color: hsl(14, 45%, 36%);
+}
+
+.card {
+  color: hsl(24, 5%, 18%);
+}
+.card .card-main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 2rem;
+  font-size: 16px;
+}
+.card .card-main .line {
+  background-color: #e2e0df;
+  height: 2px;
+  width: 100%;
+  margin: 1.75rem 0;
+}
+.card .card-main .header .card-title {
+  font-size: 41px;
+  font-family: "Young Serif", serif;
+  line-height: 2.75rem;
+  color: hsl(24, 5%, 18%);
+}
+.card .card-main .header .card-summary {
+  padding: 1.5rem 0;
+  line-height: 1.5rem;
+}
+.card .card-main .prep {
+  background-color: hsl(330, 100%, 98%);
+  border-radius: 1rem;
+  line-height: 2rem;
+  padding: 1rem 0;
+  width: 100%;
+}
+.card .card-main .prep .prep-title {
+  color: hsl(332, 51%, 32%);
+  font-size: 23px;
+  font-weight: 600;
+  text-align: left;
+  padding: 0 1.5rem;
+}
+.card .card-main .prep .prep-list {
+  padding: 1rem 3rem;
+}
+.card .card-main .ingredients {
+  width: 100%;
+}
+.card .card-main .ingredients .ingredient-title {
+  font-family: "Young Serif", serif;
+  color: hsl(14, 45%, 36%);
+  font-size: 31px;
+  font-weight: 400;
+  text-align: left;
+  padding: 1.25rem 0;
+}
+.card .card-main .ingredients .ingredients-list {
+  line-height: 2rem;
+  padding: 0 1.75rem;
+}
+.card .card-main .instructions {
+  width: 100%;
+}
+.card .card-main .instructions .instructions-title {
+  font-family: "Young Serif", serif;
+  color: hsl(14, 45%, 36%);
+  font-size: 31px;
+  font-weight: 400;
+  text-align: left;
+  padding-bottom: 1.25rem;
+}
+.card .card-main .instructions .steps {
+  line-height: 1.75rem;
+  padding: 0 1.75rem;
+}
+.card .card-main .instructions .steps .step {
+  padding-bottom: 0.5rem;
+}
+.card .card-main .nutrition {
+  width: 100%;
+}
+.card .card-main .nutrition .nutrition-title {
+  font-family: "Young Serif", serif;
+  color: hsl(14, 45%, 36%);
+  font-size: 31px;
+  font-weight: 400;
+  text-align: left;
+  padding-bottom: 1.25rem;
+}
+.card .card-main .nutrition .nutrition-summary {
+  padding-bottom: 1.5rem;
+}
+.card .card-main .nutrition .nutrition-stats {
+  text-align: left;
+}/*# sourceMappingURL=style.css.map */
