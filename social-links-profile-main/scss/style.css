@@ -16,7 +16,6 @@ main {
   align-items: center;
   min-height: 100dvh;
   margin: 0 auto;
-  container-type: inline-size;
 }
 
 .card {
@@ -28,7 +27,7 @@ main {
   color: rgb(255, 255, 255);
   padding: 0 29px;
   border-radius: 1rem;
-  width: 85%;
+  width: clamp(18rem, 90%, 24rem);
 }
 .card .profile-img {
   border-radius: 50%;
