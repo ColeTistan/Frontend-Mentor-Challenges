@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+// Mobile: 375px
+// Desktop: 1440px
+
+// Colors - Primary
+
+// Green: hsl(75, 94%, 57%)
+$green: rgb(197, 248, 42);
+
+// Color - Neutral
+
+// White: hsl(0, 0%, 100%)
+$white: rgb(255, 255, 255);
+
+// Grey: hsl(0, 0%, 20%)
+$grey:  rgb(51, 51, 51);
+
+// Dark Grey: hsl(0, 0%, 12%)
+$dark-grey: rgb(31, 31, 31);
+
+// Off Black: hsl(0, 0%, 8%)
+$off-black: rgb(20, 20, 20);
+
+// Font size (paragraph): 14px
+$default-font-size: 14px;
+// Font Styles
+
+// Family: [Inter](https://fonts.google.com/specimen/Inter)
+$font-family: 'Inter', sans-serif;
+
+// Weights: 400, 600, 700
+$font-weight-400: 400;
+$font-weight-600: 600;
+$font-weight-700: 700;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: $font-family;
+}
+
+body {
+    background-color: $off-black;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100dvh;
+    margin: 0 auto;
+    container-type: inline-size;
+}
+
+.card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: $dark-grey;
+    color: $white;
+    padding: 0 $default-font-size + 15px;
+    border-radius: 1rem;
+    width: 85%;
+
+    .profile-img {
+        border-radius: 50%;
+        width: 35%;
+        padding: $default-font-size + 15px 0;
+    }
+
+    .header-section {
+        line-height: 2.5rem;
+        font-weight: $font-weight-700;
+        text-align: center;
+
+        .full-name {
+            font-size: $default-font-size + 15px;
+        }
+
+        .location {
+            font-size: $default-font-size + 3px;
+            color: $green;
+        }
+    }
+
+    .quote-section {
+        padding: $default-font-size + 10px 0;
+        text-align: center;
+    }
+
+    .link-section {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        gap: 1.25rem;
+        padding-bottom: 1.5rem;
+
+        .btn-link {
+            display: block;
+            background-color: $grey;
+            text-decoration: none;
+            color: $white;
+            padding: 1rem;
+            outline: none;
+            border: none;
+            border-radius: 0.5rem;
+            transition: all 200ms ease-in-out;
+            font-size: $default-font-size + 1px;
+            font-weight: $font-weight-600;
+            cursor: pointer;
+
+            &:hover {
+                background-color: $green;
+                color: $off-black;
+            }
+        }
+    }
+}

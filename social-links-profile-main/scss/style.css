@@ -1,0 +1,79 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+body {
+  background-color: rgb(20, 20, 20);
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100dvh;
+  margin: 0 auto;
+  container-type: inline-size;
+}
+
+.card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: rgb(31, 31, 31);
+  color: rgb(255, 255, 255);
+  padding: 0 29px;
+  border-radius: 1rem;
+  width: 85%;
+}
+.card .profile-img {
+  border-radius: 50%;
+  width: 35%;
+  padding: 29px 0;
+}
+.card .header-section {
+  line-height: 2.5rem;
+  font-weight: 700;
+  text-align: center;
+}
+.card .header-section .full-name {
+  font-size: 29px;
+}
+.card .header-section .location {
+  font-size: 17px;
+  color: rgb(197, 248, 42);
+}
+.card .quote-section {
+  padding: 24px 0;
+  text-align: center;
+}
+.card .link-section {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 1.25rem;
+  padding-bottom: 1.5rem;
+}
+.card .link-section .btn-link {
+  display: block;
+  background-color: rgb(51, 51, 51);
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  padding: 1rem;
+  outline: none;
+  border: none;
+  border-radius: 0.5rem;
+  transition: all 200ms ease-in-out;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+}
+.card .link-section .btn-link:hover {
+  background-color: rgb(197, 248, 42);
+  color: rgb(20, 20, 20);
+}/*# sourceMappingURL=style.css.map */
