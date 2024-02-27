@@ -1,0 +1,39 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Lexend+Deca:wght@100..900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+body {
+  background: rgb(9, 11, 26);
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100dvh;
+  width: 75%;
+  margin: 0 auto;
+}
+
+.card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row-reverse;
+  background: rgb(27, 25, 56);
+  color: rgb(255, 255, 255);
+}
+.card .card-main {
+  padding: 90px;
+}
+.card .card-main .card-header {
+  font-size: 37.5px;
+  font-weight: 700;
+}
+.card .card-main .card-header span {
+  color: rgb(170, 92, 219);
+}/*# sourceMappingURL=style.css.map */
