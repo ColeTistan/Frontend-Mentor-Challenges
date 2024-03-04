@@ -1,0 +1,22 @@
+<main>
+  <div class="card">
+    <p class="card-title">Advice #{{ !advice ? 'advice #1' : advice.id }}</p>
+    <p class="card-quote">
+    {{ 
+      !advice ? 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero illo
+      deleniti aspernatur, ea nulla, a perferendis fugiat iusto libero, porro
+      beatae natus dolorem! Sit asperiores eligendi necessitatibus, blanditiis
+      voluptate molestiae.' : advice.advice
+    }}
+    </p>
+    <img
+      class="card-divider"
+      src="../assets/images/pattern-divider-desktop.svg"
+      alt="divider"
+    />
+    <button class="submit-btn" type="submit" (click)="getAdvice()">
+      <img src="../assets/images/icon-dice.svg" alt="dice" />
+    </button>
+  </div>
+</main>
+<router-outlet />

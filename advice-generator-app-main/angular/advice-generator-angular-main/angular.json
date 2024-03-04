@@ -3,11 +3,18 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "advice-generator-angular": {
+    "advice-generator-angular-main": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
-          "style": "scss"
+          "style": "scss",
+          "standalone": false
+        },
+        "@schematics/angular:directive": {
+          "standalone": false
+        },
+        "@schematics/angular:pipe": {
+          "standalone": false
         }
       },
       "root": "",
@@ -17,7 +24,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/advice-generator-angular",
+            "outputPath": "dist/advice-generator-angular-main",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -32,7 +39,12 @@
             "styles": [
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [],
+            "server": "src/main.server.ts",
+            "prerender": true,
+            "ssr": {
+              "entry": "server.ts"
+            }
           },
           "configurations": {
             "production": {
@@ -62,10 +74,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "advice-generator-angular:build:production"
+              "buildTarget": "advice-generator-angular-main:build:production"
             },
             "development": {
-              "buildTarget": "advice-generator-angular:build:development"
+              "buildTarget": "advice-generator-angular-main:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -73,7 +85,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "buildTarget": "advice-generator-angular:build"
+            "buildTarget": "advice-generator-angular-main:build"
           }
         },
         "test": {

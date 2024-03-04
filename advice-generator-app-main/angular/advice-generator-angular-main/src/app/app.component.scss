@@ -1,0 +1,37 @@
+@import "../styles.scss";
+
+.card {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background-color: $dark-grayish-blue;
+    border-radius: 1rem;
+    width: 43rem;
+    padding: 3rem;
+    
+    .card-title {
+        font-size: $default-font-size - 2px;
+        text-align: center;
+        letter-spacing: 4px;
+        text-transform: uppercase;
+        color: $neon-green;
+    }
+
+    .card-quote {
+        margin: 25px 0;
+        font-size: $quote-font-size;
+    }
+
+    .card-divider {
+        margin: 20px 0 50px;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .card {
+        .card-divider {
+            margin: 10px 0 30px;
+        }
+    }
+}
