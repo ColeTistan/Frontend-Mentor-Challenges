@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="./scss/style.css">
+    <title>Frontend Mentor | IP Address Tracker</title>
+  </head>
+  <body>
+    <main>
+      <h2>IP Address Tracker</h2>
+      <section class="input-box">
+        <input type="text" placeholder="Search for any IP address or domain" />
+        <button type="submit">
+          <img src="./images/icon-arrow.svg" alt="arrow button" />
+        </button>
+      </section>
+      <section class="ip-address-info">
+        <div id="ip-address" class="col">
+          <p>IP Address</p>
+        </div>
+        <div id="location" class="col">
+          <p>Location</p>
+        </div>
+        <div id="timezone" class="col">
+          <p>Timezone</p>
+        </div>
+        <!-- add offset value dynamically using the API -->
+        <div id="isp" class="col">
+          <p>ISP</p>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
