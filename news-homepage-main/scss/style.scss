@@ -74,6 +74,7 @@ header {
   .nav-list {
     display: flex;
     justify-content: center;
+    flex-direction: row;
     gap: $default-font-size * 3;
     list-style: none;
   }
@@ -224,6 +225,7 @@ header {
   body {
     width: 90%;
     margin: $default-font-size * 2 auto;
+    // background: darken($grayish-biue, 20%);
   }
 
   header {
@@ -233,13 +235,13 @@ header {
   .main-section {
     grid-template-columns: 1fr;
     grid-template-areas:
-    "main"
-    "heading"
-    "description"
-    "new-articles"
-    "article-one"
-    "article-two"
-    "article-three";
+      "main"
+      "heading"
+      "description"
+      "new-articles"
+      "article-one"
+      "article-two"
+      "article-three";
 
     .top-article {
       justify-content: center;
@@ -261,30 +263,52 @@ header {
   body {
     width: 90%;
     margin: $default-font-size * 2 auto;
+    background: darken($grayish-biue, 15%);
+    z-index: -99;
   }
 
   header {
     margin: 0 0 $default-font-size * 2 0;
 
     .nav-list {
-      display: none;
+      position: fixed;
+      flex-direction: column;
+      justify-content: flex-start;
+      background: $off-white;
+      width: 100%;
+      height: 100%;
+      bottom: 0;
+      right: -30%;
+      padding: 150px 0 0 25px;
+      gap: $default-font-size + 10px;
+      transition: $default-transition;
+      z-index: 99;
+
+      .nav-item a {
+        color: $darker-blue;
+      }
     }
 
     .hamburger-menu {
       display: block;
+    }
+
+    .close-menu {
+      display: block;
+      z-index: 99;
     }
   }
 
   .main-section {
     grid-template-columns: 1fr;
     grid-template-areas:
-    "main"
-    "heading"
-    "description"
-    "new-articles"
-    "article-one"
-    "article-two"
-    "article-three";
+      "main"
+      "heading"
+      "description"
+      "new-articles"
+      "article-one"
+      "article-two"
+      "article-three";
 
     .web-image-desktop {
       display: none;
