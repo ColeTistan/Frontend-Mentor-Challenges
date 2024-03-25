@@ -52,6 +52,12 @@ $default-transition: 250ms all ease-in-out;
 
 a {
   text-decoration: none;
+  color: $dark-grayish-blue;
+  transition: $default-transition;
+
+  &:hover {
+    color: $soft-red;
+  }
 }
 
 body {
@@ -70,15 +76,6 @@ header {
     justify-content: center;
     gap: $default-font-size * 3;
     list-style: none;
-
-    .nav-item a {
-      color: $dark-grayish-blue;
-      transition: $default-transition;
-
-      &:hover {
-        color: $soft-red;
-      }
-    }
   }
 
   .menu {
@@ -90,10 +87,10 @@ header {
   display: grid;
   gap: $default-font-size * 2.5;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-areas: 
-  "main main new-articles"
-  "heading description new-articles"
-  "article-one article-two article-three";
+  grid-template-areas:
+    "main main new-articles"
+    "heading description new-articles"
+    "article-one article-two article-three";
 
   .web-image-desktop {
     grid-area: main;
@@ -115,22 +112,22 @@ header {
     line-height: 1.75rem;
 
     p {
-        margin-bottom: $default-font-size * 2;
+      margin-bottom: $default-font-size * 2;
     }
 
     a {
-        background: $soft-red;
-        border: none;
-        color: $off-white;
-        padding: $default-font-size + 1px $default-font-size + 20px;
-        text-transform: uppercase;
-        letter-spacing: 5px;
-        font-weight: $font-weight-bold;
-        transition: $default-transition;
+      background: $soft-red;
+      border: none;
+      color: $off-white;
+      padding: $default-font-size + 1px $default-font-size + 20px;
+      text-transform: uppercase;
+      letter-spacing: 5px;
+      font-weight: $font-weight-bold;
+      transition: $default-transition;
 
-        &:hover {
-            background: $darker-blue;
-        }
+      &:hover {
+        background: $darker-blue;
+      }
     }
   }
 
@@ -140,51 +137,89 @@ header {
     padding: 2rem 1.5rem;
 
     .new-heading {
-        color: $soft-orange;
-        font-size: $default-font-size * 3;
-        font-weight: $font-weight-bold;
+      color: $soft-orange;
+      font-size: $default-font-size * 3;
+      font-weight: $font-weight-bold;
     }
 
     .new-article {
-        line-height: 2rem;
+      line-height: 2rem;
+      color: $off-white;
+      padding: 2rem 0;
+      border-bottom: 1px solid $dark-grayish-blue;
+
+      &:last-child {
+        border-bottom: none;
+        padding-bottom: 0;
+      }
+
+      .article-title {
         color: $off-white;
-        padding: 2rem 0;
-        border-bottom: 1px solid $dark-grayish-blue;
+        font-size: $default-font-size * 1.75;
+        font-weight: $font-weight-bold;
+        letter-spacing: 1px;
+        transition: $default-transition;
 
-        &:last-child {
-            border-bottom: none;
+        &:hover {
+          color: $soft-orange;
         }
+      }
 
-        .article-title {
-            color: $off-white;
-            font-size: $default-font-size * 1.75;
-            font-weight: $font-weight-bold;
-            letter-spacing: 1px;
-            transition: $default-transition;
-
-            &:hover {
-                color: $soft-orange;
-            }
-        }
-
-        .article-description {
-            color: $grayish-biue;
-            font-size: $default-font-size * 1.2;
-        }
+      .article-description {
+        color: $grayish-biue;
+        font-size: $default-font-size * 1.2;
+      }
     }
   }
 
-  .top-articles {
-    .article-one {
-        grid-area: article-one;
+  .top-article {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+
+    img {
+      padding-right: 2rem;
+      height: $default-font-size * 9.25;
     }
 
-    .article-two {
-        grid-area: article-two;
-    }
+    .article-body {
+      line-height: 2rem;
+      color: $dark-grayish-blue;
 
-    .article-three {
-        grid-area: article-three;
+      .article-number {
+        font-size: $default-font-size * 3;
+        font-weight: $font-weight-bold;
+        color: $grayish-biue;
+        padding-bottom: 0.75rem;
+      }
+
+      .article-title {
+        font-size: $default-font-size * 1.3;
+        font-weight: $font-weight-bold;
+        color: $darker-blue;
+
+        &:hover {
+          color: $soft-red;
+        }
+      }
     }
+  }
+
+  .article-one {
+    grid-area: article-one;
+  }
+
+  .article-two {
+    grid-area: article-two;
+  }
+
+  .article-three {
+    grid-area: article-three;
+  }
+}
+
+@media screen and (max-width: 1008px) {
+  .main-section {
+    grid-template-columns: 1fr;
   }
 }
