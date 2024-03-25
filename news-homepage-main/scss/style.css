@@ -1,0 +1,126 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:slnt,wght@-10..0,100..900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+.web-image-mobile {
+  display: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  width: 80%;
+  margin: 75px auto;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 0 45px 0;
+}
+header .nav-list {
+  display: flex;
+  justify-content: center;
+  gap: 45px;
+  list-style: none;
+}
+header .nav-list .nav-item a {
+  color: hsl(236, 13%, 42%);
+  transition: 250ms all ease-in-out;
+}
+header .nav-list .nav-item a:hover {
+  color: hsl(5, 85%, 63%);
+}
+header .menu {
+  display: none;
+}
+
+.main-section {
+  display: grid;
+  gap: 37.5px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-areas: "main main new-articles" "heading description new-articles" "article-one article-two article-three";
+}
+.main-section .web-image-desktop {
+  grid-area: main;
+  max-width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  background: url("../assets/images/image-web-3-desktop.jpg");
+}
+.main-section .main-heading {
+  grid-area: heading;
+  font-size: 3rem;
+  font-weight: 800;
+  padding-right: 5.5rem;
+}
+.main-section .main-description {
+  grid-area: description;
+  color: hsl(236, 13%, 42%);
+  line-height: 1.75rem;
+}
+.main-section .main-description p {
+  margin-bottom: 30px;
+}
+.main-section .main-description a {
+  background: hsl(5, 85%, 63%);
+  border: none;
+  color: hsl(36, 100%, 99%);
+  padding: 16px 35px;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  font-weight: 700;
+  transition: 250ms all ease-in-out;
+}
+.main-section .main-description a:hover {
+  background: hsl(240, 100%, 5%);
+}
+.main-section .new-articles {
+  grid-area: new-articles;
+  background: hsl(240, 100%, 5%);
+  padding: 2rem 1.5rem;
+}
+.main-section .new-articles .new-heading {
+  color: hsl(35, 77%, 62%);
+  font-size: 45px;
+  font-weight: 700;
+}
+.main-section .new-articles .new-article {
+  line-height: 2rem;
+  color: hsl(36, 100%, 99%);
+  padding: 2rem 0;
+  border-bottom: 1px solid hsl(236, 13%, 42%);
+}
+.main-section .new-articles .new-article:last-child {
+  border-bottom: none;
+}
+.main-section .new-articles .new-article .article-title {
+  color: hsl(36, 100%, 99%);
+  font-size: 26.25px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  transition: 250ms all ease-in-out;
+}
+.main-section .new-articles .new-article .article-title:hover {
+  color: hsl(35, 77%, 62%);
+}
+.main-section .new-articles .new-article .article-description {
+  color: hsl(233, 8%, 79%);
+  font-size: 18px;
+}
+.main-section .top-articles .article-one {
+  grid-area: article-one;
+}
+.main-section .top-articles .article-two {
+  grid-area: article-two;
+}
+.main-section .top-articles .article-three {
+  grid-area: article-three;
+}/*# sourceMappingURL=style.css.map */
