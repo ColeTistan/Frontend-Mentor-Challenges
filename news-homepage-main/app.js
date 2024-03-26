@@ -3,7 +3,7 @@ const hamburgerMenu = document.querySelector(".hamburger-menu");
 const closeMenu = document.querySelector(".close-menu");
 const navList = document.querySelector(".nav-list");
 
-// TODO - add functionality to open and close nav list
+// Open sidebar menu
 hamburgerMenu.addEventListener("click", () => {
   if (navList.classList.contains("hide")) {
     navList.classList.remove("hide");
@@ -12,6 +12,7 @@ hamburgerMenu.addEventListener("click", () => {
   }
 });
 
+// Close sidebar menu
 closeMenu.addEventListener("click", () => {
   if (navList.classList.contains("show")) {
     navList.classList.remove("show");
