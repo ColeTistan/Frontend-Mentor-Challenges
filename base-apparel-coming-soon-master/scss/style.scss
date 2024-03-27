@@ -18,16 +18,18 @@ $dark-grayish-red: rgb(65, 58, 58);
 // - Linear, 135deg, from hsl(0, 0%, 100%), to hsl(0, 100%, 98%)
 $linear-gradient-primary: linear-gradient(
   135deg,
-  hsl(0, 0%, 100%),
-  hsl(0, 100%, 98%)
+  rgb(255, 255, 255),
+  rgb(255, 245, 245)
 );
 
 // - Linear, 135deg, from hsl(0, 80%, 86%), to hsl(0, 74%, 74%)
 $linear-gradient-secondary: linear-gradient(
   135deg,
-  hsl(0, 80%, 86%),
-  hsl(0, 74%, 74%)
+  rgb(248, 191, 191),
+  rgb(238, 140, 140)
 );
+
+$desaturated-pink: rgb(238, 140, 140);
 
 // Body Copy
 
@@ -114,15 +116,32 @@ main {
 
   .input-group {
     margin: 15px 0 0 0;
+    font-size: $default-font-size;
+
+    .error-message {
+      display: none;
+      margin: 0 0 0 20px;
+      line-height: 2.5rem;
+      color: $soft-red;
+    }
   }
 }
 
-input {
+.error-icon {
+  display: none;
+  position: absolute;
+  transform: translate(275px, -2.5rem);
+}
+
+
+
+input[type='text'] {
+  font-size: $default-font-size;
   width: 375px;
   background: transparent;
   border: 1px solid $desaturated-red;
   border-radius: 2rem;
-  color: $desaturated-red;
+  color: $dark-grayish-red;
   padding: 20px;
   outline: none;
 
@@ -137,13 +156,14 @@ button {
   background: $linear-gradient-secondary;
   border: 0;
   border-radius: $default-font-size * 2;
-  padding: $default-font-size;
+  padding: $default-font-size + 1px;
   position: absolute;
   transform: translate(calc(-85% - 5px), 0px);
-  box-shadow: -2px 2px 6px $desaturated-red;
+  box-shadow: -2px 2px 6px $desaturated-pink;
+  transition: 250ms all ease-in-out;
   cursor: pointer;
 
   &:hover {
-    background: $linear-gradient-primary;
+    filter: brightness(1.05);
   }
 }
