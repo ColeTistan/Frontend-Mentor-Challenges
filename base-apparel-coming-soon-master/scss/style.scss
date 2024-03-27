@@ -1,0 +1,149 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap");
+
+// Colors - Primary
+
+// - Desaturated Red: hsl(0, 36%, 70%)
+$desaturated-red: rgb(206, 151, 151);
+
+// - Soft Red: hsl(0, 93%, 68%)
+$soft-red: rgb(249, 98, 98);
+
+// Color - Neutral
+
+// - Dark Grayish Red: hsl(0, 6%, 24%)
+$dark-grayish-red: rgb(65, 58, 58);
+
+// Color - Gradients
+
+// - Linear, 135deg, from hsl(0, 0%, 100%), to hsl(0, 100%, 98%)
+$linear-gradient-primary: linear-gradient(
+  135deg,
+  hsl(0, 0%, 100%),
+  hsl(0, 100%, 98%)
+);
+
+// - Linear, 135deg, from hsl(0, 80%, 86%), to hsl(0, 74%, 74%)
+$linear-gradient-secondary: linear-gradient(
+  135deg,
+  hsl(0, 80%, 86%),
+  hsl(0, 74%, 74%)
+);
+
+// Body Copy
+
+// - Font size: 16px
+$default-font-size: 16px;
+
+// Color - Font
+
+// - Family: [Josefin Sans](https://fonts.google.com/specimen/Josefin+Sans)
+$font-family: "Josefin Sans", sans-serif;
+
+// - Weights: 300, 400, 600
+$font-weight-light: 300;
+$font-weight-regular: 400;
+$font-weight-semibold: 600;
+
+@mixin container($width, $margin) {
+  width: $width;
+  margin: $margin;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: $font-family;
+}
+
+body {
+  background: $linear-gradient-primary;
+  background-repeat: no-repeat;
+  min-height: 100dvh;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+
+  .container {
+    @include container(85%, 30px auto);
+  }
+
+  .hero-mobile {
+    img {
+      width: 100%;
+    }
+  }
+
+  .hero-desktop {
+    display: none;
+  }
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  &.container {
+    @include container(70%, 60px auto);
+  }
+
+  .main-heading {
+    font-size: $default-font-size * 4;
+    letter-spacing: 10px;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 4.25rem;
+
+    span {
+      color: $desaturated-red;
+      font-weight: $font-weight-light;
+    }
+  }
+
+  .main-description {
+    color: $desaturated-red;
+    font-size: $default-font-size;
+    text-align: center;
+    line-height: 1.75rem;
+    margin: 25px auto;
+  }
+
+  .input-group {
+    margin: 15px 0 0 0;
+  }
+}
+
+input {
+  width: 375px;
+  background: transparent;
+  border: 1px solid $desaturated-red;
+  border-radius: 2rem;
+  color: $desaturated-red;
+  padding: 20px;
+  outline: none;
+
+  &::placeholder {
+    color: $desaturated-red;
+    font-size: $default-font-size;
+  }
+}
+
+button {
+  width: 15%;
+  background: $linear-gradient-secondary;
+  border: 0;
+  border-radius: $default-font-size * 2;
+  padding: $default-font-size;
+  position: absolute;
+  transform: translate(calc(-85% - 5px), 0px);
+  box-shadow: -2px 2px 6px $desaturated-red;
+  cursor: pointer;
+
+  &:hover {
+    background: $linear-gradient-primary;
+  }
+}
