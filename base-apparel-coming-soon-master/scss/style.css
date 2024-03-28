@@ -23,9 +23,6 @@ header .container {
 header .hero-mobile img {
   width: 100%;
 }
-header .hero-desktop {
-  display: none;
-}
 
 main {
   display: flex;
@@ -37,12 +34,15 @@ main.container {
   width: 70%;
   margin: 60px auto;
 }
+main .hero-desktop {
+  display: none;
+}
 main .main-heading {
-  font-size: 64px;
+  font-size: 48px;
   letter-spacing: 10px;
   text-transform: uppercase;
   text-align: center;
-  line-height: 4.25rem;
+  line-height: 4rem;
 }
 main .main-heading span {
   color: rgb(206, 151, 151);
@@ -74,7 +74,7 @@ main .input-group .error-message {
 
 input[type=text] {
   font-size: 16px;
-  width: 375px;
+  width: 250px;
   background: transparent;
   border: 1px solid rgb(206, 151, 151);
   border-radius: 2rem;
@@ -105,4 +105,16 @@ button {
 }
 button:hover {
   filter: brightness(1.05);
+}
+
+@media screen and (min-width: 768px) {
+  header .hero-mobile {
+    display: none;
+  }
+  main {
+    flex-direction: row;
+  }
+  main .hero-desktop {
+    display: block;
+  }
 }/*# sourceMappingURL=style.css.map */

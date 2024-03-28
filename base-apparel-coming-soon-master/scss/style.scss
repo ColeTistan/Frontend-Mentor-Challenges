@@ -77,10 +77,6 @@ header {
       width: 100%;
     }
   }
-
-  .hero-desktop {
-    display: none;
-  }
 }
 
 main {
@@ -93,12 +89,16 @@ main {
     @include container(70%, 60px auto);
   }
 
+  .hero-desktop {
+    display: none;
+  }
+
   .main-heading {
-    font-size: $default-font-size * 4;
+    font-size: $default-font-size * 3;
     letter-spacing: 10px;
     text-transform: uppercase;
     text-align: center;
-    line-height: 4.25rem;
+    line-height: 4rem;
 
     span {
       color: $desaturated-red;
@@ -133,11 +133,10 @@ main {
   transform: translate(275px, -2.5rem);
 }
 
-
-
-input[type='text'] {
+input[type="text"] {
   font-size: $default-font-size;
-  width: 375px;
+  width: 250px;
+  // width: clamp(375px, 80%, 200px);
   background: transparent;
   border: 1px solid $desaturated-red;
   border-radius: 2rem;
@@ -165,5 +164,24 @@ button {
 
   &:hover {
     filter: brightness(1.05);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  header {
+    .hero-mobile {
+      display: none;
+    }
+  }
+
+  main {
+    flex-direction: row;
+    .hero-desktop {
+      display: block;
+    }
+  }
+
+  input {
+
   }
 }
