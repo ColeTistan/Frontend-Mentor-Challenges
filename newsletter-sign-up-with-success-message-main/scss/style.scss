@@ -1,0 +1,170 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+// Colors - Primary
+
+// Tomato: hsl(4, 100%, 67%)
+$tomato: rgb(255, 98, 87);
+
+// Color - Neutral
+
+// Dark Slate Grey: hsl(234, 29%, 20%)
+$dark-slate-grey: rgb(36, 39, 66);
+
+// Charcoal Grey: hsl(235, 18%, 26%)
+$charcoal-grey: rgb(54, 56, 78);
+
+// Grey: hsl(231, 7%, 60%)
+$grey: rgb(146, 148, 160);
+
+// White: hsl(0, 0%, 100%)
+$white: rgb(255, 255, 255);
+
+// Font - Font size (paragraph): 16px
+$default-font-size: 16px;
+
+// Font - Family: [Roboto](https://fonts.google.com/specimen/Roboto)
+$font-family: "Roboto", sans-serif;
+
+// Font - Weights: 400, 700
+$font-weight-regular: 400;
+$font-weight--medium: 500;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: $font-family;
+}
+
+body {
+  background: $charcoal-grey;
+}
+
+ul {
+  list-style: none;
+  line-height: 2.5rem;
+  margin-bottom: 35px;
+
+  li {
+    display: flex;
+    align-items: center;
+
+    img {
+      margin-right: 20px;
+      width: 25px;
+      height: auto;
+    }
+  }
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  margin: 0 auto;
+  min-height: 100dvh;
+
+  .card {
+    display: flex;
+    justify-content: center;
+    flex-direction: row-reverse;
+    background: $white;
+    padding: 1.25rem;
+    border-radius: 1.75rem;
+
+    &.card-form {
+      display: none;
+    }
+
+    &.card-success {
+        
+    }
+
+    .card-body {
+      display: flex;
+      justify-content: flex-start;
+      flex-direction: column;
+      padding: 50px;
+      font-size: $default-font-size + 1px;
+
+      .card-title {
+        font-size: $default-font-size * 4;
+        font-weight: $font-weight-regular + 100;
+      }
+
+      .card-subtitle {
+        padding: 25px 0;
+      }
+    }
+  }
+
+  .img-container {
+    .img-desktop {
+      display: block;
+    }
+
+    .img-mobile {
+      display: none;
+    }
+  }
+}
+
+form {
+  $input-font-size: $default-font-size + 1px;
+
+  display: flex;
+  flex-direction: column;
+
+  .label-group {
+    font-size: $default-font-size - 2px;
+    font-weight: $font-weight-regular + 200;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .error-message {
+      display: none;
+      color: $tomato;
+    }
+  }
+
+  button,
+  input {
+    width: 100%;
+    padding: 20px;
+    border: none;
+    border-radius: 0.5rem;
+    outline: none;
+  }
+
+  input[type="text"] {
+    font-size: $input-font-size;
+    margin: 10px 0 25px 0;
+    border: 1.5px solid $grey;
+    transition: 200ms all ease-in-out;
+
+    &::placeholder {
+      font-size: $input-font-size;
+      color: $dark-slate-grey;
+    }
+
+    &:focus {
+      border: 1.5px solid $charcoal-grey;
+    }
+  }
+
+  button {
+    font-size: $input-font-size;
+    font-weight: $font-weight-regular + 100;
+    letter-spacing: 1px;
+    background: $dark-slate-grey;
+    color: $white;
+    transition: 250ms all ease-in-out;
+    cursor: pointer;
+
+    &:hover {
+      background: $tomato;
+      box-shadow: 3px 3px 10px $tomato;
+    }
+  }
+}

@@ -1,0 +1,120 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  background: rgb(54, 56, 78);
+}
+
+ul {
+  list-style: none;
+  line-height: 2.5rem;
+  margin-bottom: 35px;
+}
+ul li {
+  display: flex;
+  align-items: center;
+}
+ul li img {
+  margin-right: 20px;
+  width: 25px;
+  height: auto;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  margin: 0 auto;
+  min-height: 100dvh;
+}
+main .card {
+  display: flex;
+  justify-content: center;
+  flex-direction: row-reverse;
+  background: rgb(255, 255, 255);
+  padding: 1.25rem;
+  border-radius: 1.75rem;
+}
+main .card.card-form {
+  display: none;
+}
+main .card .card-body {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  padding: 50px;
+  font-size: 17px;
+}
+main .card .card-body .card-title {
+  font-size: 64px;
+  font-weight: 500;
+}
+main .card .card-body .card-subtitle {
+  padding: 25px 0;
+}
+main .img-container .img-desktop {
+  display: block;
+}
+main .img-container .img-mobile {
+  display: none;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+form .label-group {
+  font-size: 14px;
+  font-weight: 600;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+form .label-group .error-message {
+  display: none;
+  color: rgb(255, 98, 87);
+}
+form button,
+form input {
+  width: 100%;
+  padding: 20px;
+  border: none;
+  border-radius: 0.5rem;
+  outline: none;
+}
+form input[type=text] {
+  font-size: 17px;
+  margin: 10px 0 25px 0;
+  border: 1.5px solid rgb(146, 148, 160);
+  transition: 200ms all ease-in-out;
+}
+form input[type=text]::-moz-placeholder {
+  font-size: 17px;
+  color: rgb(36, 39, 66);
+}
+form input[type=text]::placeholder {
+  font-size: 17px;
+  color: rgb(36, 39, 66);
+}
+form input[type=text]:focus {
+  border: 1.5px solid rgb(54, 56, 78);
+}
+form button {
+  font-size: 17px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  background: rgb(36, 39, 66);
+  color: rgb(255, 255, 255);
+  transition: 250ms all ease-in-out;
+  cursor: pointer;
+}
+form button:hover {
+  background: rgb(255, 98, 87);
+  box-shadow: 3px 3px 10px rgb(255, 98, 87);
+}/*# sourceMappingURL=style.css.map */
