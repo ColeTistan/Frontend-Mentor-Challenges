@@ -15,28 +15,39 @@
   <body>
     <header>
       <div class="container">
-        <img src="./images/logo.svg" alt="logo" />
+        <img class="logo-mobile" src="./images/logo.svg" alt="logo" />
       </div>
       <div class="hero-mobile">
         <img src="./images/hero-mobile.jpg" alt="main image" />
       </div>
     </header>
     <main class="container">
-      <p class="main-heading"><span>We're</span> coming soon</p>
-      <p class="main-description">
-        Hello fellow shoppers! We're currently building our
-        new fashion store. Add your email below to stay up-to-date with
-        announcements and our launch deals.
-      </p>
-      <div class="input-group">
-        <input class="email-input" type="text" placeholder="Email Address" />
-        <img class="error-icon" src="./images/icon-error.svg" alt="error icon">
-        <button type="submit"><img src="./images/icon-arrow.svg" /></button>
-        <p class="error-message">Please provide a valid email</p>
+      <div class="main-content container">
+        <div class="container">
+          <img class="logo-desktop" src="./images/logo.svg" alt="logo" />
+        </div>
+        <p class="main-heading"><span>We're</span> coming soon</p>
+        <p class="main-description">
+          Hello fellow shoppers! We're currently building our new fashion store.
+          Add your email below to stay up-to-date with announcements and our
+          launch deals.
+        </p>
+        <div class="input-group">
+          <input class="email-input" type="text" placeholder="Email Address" />
+          <img
+            class="error-icon"
+            src="./images/icon-error.svg"
+            alt="error icon"
+          />
+          <button type="submit"><img src="./images/icon-arrow.svg" /></button>
+          <p class="error-message">Please provide a valid email</p>
+        </div>
       </div>
-      <div class="hero-desktop">
-        <img src="./images/hero-desktop.jpg" alt="main image" />
-      </div>
+      <section class="hero-desktop-section">
+        <div class="hero-desktop">
+          <img src="./images/hero-desktop.jpg" alt="main image" />
+        </div>
+      </section>
     </main>
   </body>
   <script src="./app.js"></script>

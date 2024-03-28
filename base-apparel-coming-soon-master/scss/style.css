@@ -6,10 +6,14 @@
   font-family: "Josefin Sans", sans-serif;
 }
 
+html {
+  min-height: 100%;
+}
+
 body {
   background: linear-gradient(135deg, rgb(255, 255, 255), rgb(255, 245, 245));
   background-repeat: no-repeat;
-  min-height: 100dvh;
+  min-height: 100%;
 }
 
 header {
@@ -35,6 +39,9 @@ main.container {
   margin: 60px auto;
 }
 main .hero-desktop {
+  display: none;
+}
+main .logo-desktop {
   display: none;
 }
 main .main-heading {
@@ -74,7 +81,7 @@ main .input-group .error-message {
 
 input[type=text] {
   font-size: 16px;
-  width: 250px;
+  width: 280px;
   background: transparent;
   border: 1px solid rgb(206, 151, 151);
   border-radius: 2rem;
@@ -108,13 +115,52 @@ button:hover {
 }
 
 @media screen and (min-width: 768px) {
-  header .hero-mobile {
+  header {
     display: none;
   }
   main {
+    display: flex;
+    justify-content: space-between;
     flex-direction: row;
   }
-  main .hero-desktop {
+  main.container {
+    width: 100%;
+    margin: 0 auto;
+  }
+  main .main-content {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    padding-right: 550px;
+  }
+  main .main-content p {
+    text-align: left;
+  }
+  main .main-content.container {
+    width: 50%;
+    margin: 0 auto;
+  }
+  main .logo-desktop {
     display: block;
+    margin-bottom: 175px;
+  }
+  main .input-group input {
+    width: 450px;
+  }
+  main .input-group button {
+    width: 100px;
+  }
+  .logo-mobile {
+    display: none;
+  }
+  section .hero-desktop {
+    display: block;
+  }
+  section .hero-desktop img {
+    height: 100%;
+  }
+  p {
+    text-align: left;
   }
 }/*# sourceMappingURL=style.css.map */
