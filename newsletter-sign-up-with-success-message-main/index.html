@@ -52,21 +52,35 @@
           </ul>
           <form>
             <div class="label-group">
-              <label for="email_address" class="input-title">Email address</label>
+              <label for="email_address" class="input-title"
+                >Email address</label
+              >
               <p class="error-message">Valid email required</p>
             </div>
             <input type="text" placeholder="email@company.com" />
-            <button type="submit">Subscribe to monthly newsletter</button>
+            <button class="subscribe-button" type="submit">Subscribe to monthly newsletter</button>
           </form>
           <!-- Sign-up form end -->
         </div>
       </article>
       <article class="card card-success">
         <!-- Success message start -->
-        Thanks for subscribing! A confirmation email has been sent to
-        ash@loremcompany.com. Please open it and click the button inside to
-        confirm your subscription. Dismiss message
-
+        <div class="card-body">
+          <img
+            class="success-img"
+            src="./assets/images/icon-list.svg"
+            alt="check mark"
+          />
+          <p class="card-title">Thanks for subscribing!</p>
+          <p class="card-subtitle">
+            A confirmation email has been sent to
+            <span></span>. Please open it and click the
+            button inside to confirm your subscription.
+          </p>
+          <form>
+            <button class="dismiss-button" type="submit">Dismiss message</button>
+          </form>
+        </div>
         <!-- Success message end -->
       </article>
     </main>

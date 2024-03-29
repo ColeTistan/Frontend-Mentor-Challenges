@@ -25,6 +25,10 @@ ul li img {
   height: auto;
 }
 
+span {
+  font-weight: 600;
+}
+
 main {
   display: flex;
   justify-content: center;
@@ -42,21 +46,33 @@ main .card {
   border-radius: 1.75rem;
 }
 main .card.card-form {
+  display: flex;
+}
+main .card.card-success {
   display: none;
+  width: 60%;
+  flex-direction: column;
+}
+main .card.card-success .success-img {
+  width: 60px;
+  height: auto;
+  margin-bottom: 25px;
 }
 main .card .card-body {
   display: flex;
   justify-content: flex-start;
   flex-direction: column;
-  padding: 50px;
+  padding: 35px;
   font-size: 17px;
 }
 main .card .card-body .card-title {
   font-size: 64px;
   font-weight: 500;
+  line-height: 4rem;
 }
 main .card .card-body .card-subtitle {
   padding: 25px 0;
+  line-height: 1.5rem;
 }
 main .img-container .img-desktop {
   display: block;

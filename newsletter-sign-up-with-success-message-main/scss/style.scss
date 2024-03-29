@@ -56,6 +56,10 @@ ul {
   }
 }
 
+span {
+  font-weight: $font-weight-regular + 200;
+}
+
 main {
   display: flex;
   justify-content: center;
@@ -73,27 +77,37 @@ main {
     border-radius: 1.75rem;
 
     &.card-form {
-      display: none;
+      display: flex;
     }
 
     &.card-success {
-        
+      display: none;
+      width: 60%;
+      flex-direction: column;
+
+      .success-img {
+        width: 60px;
+        height: auto;
+        margin-bottom: 25px;
+      }
     }
 
     .card-body {
       display: flex;
       justify-content: flex-start;
       flex-direction: column;
-      padding: 50px;
+      padding: 35px;
       font-size: $default-font-size + 1px;
 
       .card-title {
         font-size: $default-font-size * 4;
         font-weight: $font-weight-regular + 100;
+        line-height: 4rem;
       }
 
       .card-subtitle {
         padding: 25px 0;
+        line-height: 1.5rem;
       }
     }
   }
