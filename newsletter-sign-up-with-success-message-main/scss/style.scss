@@ -50,8 +50,6 @@ ul {
 
     img {
       margin-right: 20px;
-      width: 25px;
-      height: auto;
     }
   }
 }
@@ -64,8 +62,6 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 50%;
-  margin: 0 auto;
   min-height: 100dvh;
 
   .card {
@@ -179,6 +175,49 @@ form {
     &:hover {
       background: $tomato;
       box-shadow: 3px 3px 10px $tomato;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    background: $white;
+  }
+
+  ul {
+    line-height: 1.75rem;
+
+    li {
+      align-items: flex-start;
+
+      img {
+        width: 25px;
+        text-align: center;
+      }
+    }
+  }
+
+  main {
+    .card {
+      padding: 0px;
+      flex-direction: column;
+
+      .card-body {
+        .card-subtitle {
+          padding: 25px;
+        }
+      }
+
+      .img-container {
+        .img-desktop {
+          display: none;
+        }
+
+        .img-mobile {
+          width: 100%;
+          display: block;
+        }
+      }
     }
   }
 }
