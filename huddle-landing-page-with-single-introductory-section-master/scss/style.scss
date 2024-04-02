@@ -1,0 +1,178 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+// Colors - Primary
+
+// Violet: hsl(257, 40%, 49%)
+$violet: rgb(103, 75, 175);
+
+// Soft Magenta: hsl(300, 69%, 71%)
+$soft-magenta: rgb(232, 130, 232);
+
+// White
+$white: lighten($violet, 100%);
+
+// Headings
+
+// Family: [Poppins](https://fonts.google.com/specimen/Poppins)
+$font-family-primary: "Poppins", sans-serif;
+
+// Font Family: [Open Sans](https://fonts.google.com/specimen/Open+Sans)
+$font-family-secondary: "Open Sans", sans-serif;
+
+// Font Weights: 400, 600
+$font-weight-400: 400;
+$font-weight-600: 600;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: $font-family-secondary;
+}
+
+body {
+  background-image: url("../images/bg-mobile.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-color: $violet;
+  padding: 30px;
+  min-height: 100dvh;
+}
+
+header {
+  .logo {
+    height: 35px;
+  }
+}
+
+button {
+  padding: 10px 80px;
+  outline: none;
+  font-weight: $font-weight-600;
+  border: none;
+  border-radius: 2rem;
+  background: $white;
+  color: lighten($violet, 15%);
+  box-shadow: darken($violet, 5%) 0px 8px 24px;
+  transition: 250ms all ease-in-out;
+  cursor: pointer;
+
+  &:hover {
+    background: $soft-magenta;
+    color: $white;
+  }
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  .main-img {
+    height: 175px;
+    object-fit: cover;
+    margin: 40px 0;
+  }
+
+  .main-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 0px;
+    text-align: center;
+    color: $white;
+
+    p {
+      padding: 25px 0;
+      line-height: 1.75rem;
+    }
+  }
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  padding-top: 40px;
+
+  ion-icon {
+    color: $white;
+    border: 1px solid $white;
+    border-radius: 50%;
+    font-size: 25px;
+    padding: 8px;
+    margin: 0 10px;
+    transition: 200ms all ease-in-out;
+
+    &:hover {
+      color: darken($soft-magenta, 5%);
+      border: 1px solid $soft-magenta;
+    }
+  }
+}
+
+@media screen and (min-width: 375px) {
+  header {
+    .logo {
+      height: 40px;
+    }
+  }
+
+  main {
+    .main-img {
+      height: 225px;
+      object-fit: cover;
+      margin: 40px 0;
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  main {
+    .main-img {
+      height: 300px;
+    }
+  }
+}
+
+@media screen and (min-width: 1128px) {
+  h1,
+  p {
+    text-align: left;
+  }
+
+  h1 {
+    font-size: 2.4rem;
+    margin-right: 3rem;
+  }
+
+  p {
+    margin-right: 2.25rem;
+  }
+
+  button {
+    padding: 15px 60px;
+  }
+
+  body {
+    background-image: url("../images/bg-desktop.svg");
+  }
+
+  main {
+    flex-direction: row;
+    gap: 3rem;
+
+    .main-content {
+      align-items: flex-start;
+    }
+
+    .main-img {
+      height: 560px;
+    }
+  }
+
+  footer {
+    justify-content: right;
+  }
+}
