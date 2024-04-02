@@ -7,147 +7,76 @@
   color: #66605c;
 }
 
+main {
+  margin: 0 auto;
+}
+
 img {
+  width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  width: 100%;
-  padding: 0px;
-}
-
-li {
-  padding-left: 1.25rem;
-}
-
-li::marker {
-  font-weight: 700;
 }
 
 span {
-  font-weight: 600;
-}
-
-.stat {
-  color: hsl(14, 45%, 36%);
   font-weight: 700;
-  padding-left: 4rem;
-}
-
-table {
-  border-collapse: collapse;
-  width: 100%;
-  margin: auto;
-}
-table tr {
-  border-bottom: 1px solid #e2e0df;
-  line-height: 3rem;
-}
-table tr td {
-  padding-left: 2.5rem;
-}
-table tr:last-child {
-  border: none;
-}
-
-.prep-item::marker {
-  color: hsl(332, 51%, 32%);
-}
-
-.ingredient::marker,
-.step::marker {
-  color: hsl(14, 45%, 36%);
 }
 
 .card {
-  color: hsl(24, 5%, 18%);
-}
-.card .card-main {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  padding: 2rem;
-  font-size: 16px;
 }
-.card .card-main .line {
-  background-color: #e2e0df;
-  height: 2px;
-  width: 100%;
-  margin: 1.75rem 0;
+.card .card-body {
+  padding: 45px;
 }
-.card .card-main .header .card-title {
-  font-size: 41px;
+.card .card-body .card-header h1 {
+  padding-bottom: 25px;
+  line-height: 2.5rem;
   font-family: "Young Serif", serif;
-  line-height: 2.75rem;
+  font-size: 40px;
+  font-weight: 400;
   color: hsl(24, 5%, 18%);
 }
-.card .card-main .header .card-summary {
-  padding: 1.5rem 0;
-  line-height: 1.5rem;
-}
-.card .card-main .prep {
-  background-color: hsl(330, 100%, 98%);
-  border-radius: 1rem;
-  line-height: 2rem;
-  padding: 1rem 0;
-  width: 100%;
-}
-.card .card-main .prep .prep-title {
-  color: hsl(332, 51%, 32%);
-  font-size: 23px;
-  font-weight: 600;
-  text-align: left;
-  padding: 0 1.5rem;
-}
-.card .card-main .prep .prep-list {
-  padding: 1rem 3rem;
-}
-.card .card-main .ingredients {
-  width: 100%;
-}
-.card .card-main .ingredients .ingredient-title {
-  font-family: "Young Serif", serif;
-  color: hsl(14, 45%, 36%);
-  font-size: 31px;
-  font-weight: 400;
-  text-align: left;
-  padding: 1.25rem 0;
-}
-.card .card-main .ingredients .ingredients-list {
-  line-height: 2rem;
-  padding: 0 1.75rem;
-}
-.card .card-main .instructions {
-  width: 100%;
-}
-.card .card-main .instructions .instructions-title {
-  font-family: "Young Serif", serif;
-  color: hsl(14, 45%, 36%);
-  font-size: 31px;
-  font-weight: 400;
-  text-align: left;
-  padding-bottom: 1.25rem;
-}
-.card .card-main .instructions .steps {
+.card .card-body .card-header p {
   line-height: 1.75rem;
-  padding: 0 1.75rem;
+  padding-bottom: 40px;
+  font-size: 19px;
 }
-.card .card-main .instructions .steps .step {
-  padding-bottom: 0.5rem;
+.card .card-body .preparation {
+  border-radius: 1rem;
+  background: hsl(330, 100%, 98%);
+  line-height: 2rem;
 }
-.card .card-main .nutrition {
-  width: 100%;
+.card .card-body .preparation h3 {
+  padding: 20px 30px 10px 30px;
+  font-size: 24px;
+  font-weight: 600;
+  color: hsl(332, 51%, 32%);
 }
-.card .card-main .nutrition .nutrition-title {
+.card .card-body .preparation ul {
+  display: flex;
+  justify-content: space-around;
+  align-items: left;
+  flex-direction: column;
+  font-size: 18px;
+  padding: 0 60px 20px;
+}
+.card .card-body .preparation ul li {
+  padding-left: 15px;
+}
+.card .card-body .preparation ul li::marker {
+  font-size: 16px;
+  color: hsl(332, 51%, 32%);
+}
+.card .card-body .ingredients {
+  padding: 40px 0;
+}
+.card .card-body .ingredients h1 {
+  padding-bottom: 0;
+  line-height: 2.5rem;
   font-family: "Young Serif", serif;
-  color: hsl(14, 45%, 36%);
-  font-size: 31px;
+  font-size: 40px;
   font-weight: 400;
-  text-align: left;
-  padding-bottom: 1.25rem;
-}
-.card .card-main .nutrition .nutrition-summary {
-  padding-bottom: 1.5rem;
-}
-.card .card-main .nutrition .nutrition-stats {
-  text-align: left;
+  color: hsl(14, 45%, 36%);
 }/*# sourceMappingURL=style.css.map */

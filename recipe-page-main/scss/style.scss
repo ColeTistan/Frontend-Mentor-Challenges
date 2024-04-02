@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&family=Young+Serif&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&family=Young+Serif&display=swap");
 
 // Colors - Primary
 
@@ -42,188 +42,106 @@ $default-font-size: 16px;
 // Fonts
 
 // Family: [Young Serif](https://fonts.google.com/specimen/Young+Serif)
-$font-family-primary: 'Outfit', sans-serif;
+$font-family-primary: "Outfit", sans-serif;
 
 // Family: [Outfit](https://fonts.google.com/specimen/Outfit)
-$font-family-secondary: 'Young Serif', serif;
+$font-family-secondary: "Young Serif", serif;
 
 // Weights: 400, 600, 700
 $font-weight-400: 400;
 $font-weight-600: 600;
 $font-weight-700: 700;
 
+@mixin heading-styling($text-color, $padding-bottom: 0) {
+  h1 {
+    padding-bottom: $padding-bottom;
+    line-height: 2.5rem;
+    font-family: $font-family-secondary;
+    font-size: $default-font-size * 2.5;
+    font-weight: $font-weight-400;
+    color: $text-color;
+  }
+}
+
+@mixin list-styling($list-color) {
+  ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: left;
+    flex-direction: column;
+    font-size: $default-font-size + 2px;
+    padding: 0 60px 20px;
+
+    li {
+      padding-left: 15px;
+
+      &::marker {
+        font-size: $default-font-size;
+        color: $list-color;
+      }
+    }
+  }
+}
+
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: $font-family-primary;
-    color: lighten($dark-charcoal, 20%);
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: $font-family-primary;
+  color: lighten($dark-charcoal, 20%);
+}
+
+main {
+  margin: 0 auto;
 }
 
 img {
-    object-fit: cover;
-    width: 100%;
-    padding: 0px;
-}
-
-li {
-    padding-left: 1.25rem;
-}
-
-li::marker {
-    font-weight: $font-weight-700;
+  width: 100%;
+  object-fit: cover;
 }
 
 span {
-    font-weight: $font-weight-600;
-}
-
-.stat {
-    color: $nutmeg;
-    font-weight: $font-weight-700;
-    padding-left: 4rem;
-}
-
-table {
-    border-collapse: collapse;
-    width: 100%;
-    margin: auto;
-
-    tr {
-        border-bottom: 1px solid $line-color;
-        line-height: 3rem;
-
-        td {
-            padding-left: 2.5rem;
-        }
-    }
-
-    tr:last-child {
-        border: none;
-    }
-}
-
-.prep-item::marker {
-    color: $dark-raspberry
-}
-
-.ingredient::marker,
-.step::marker {
-    color: $nutmeg;
+  font-weight: $font-weight-700;
 }
 
 .card {
-    color: $dark-charcoal;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 
-    .card-main {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        padding: 2rem;
-        font-size: $default-font-size;
+  .card-body {
+    padding: 45px;
 
-        .line {
-            background-color: $line-color;
-            height: 2px;
-            width: 100%;
-            margin: 1.75rem 0;
-        }
+    .card-header {
+      @include heading-styling($dark-charcoal, 25px);
 
-        .header {
-
-            .card-title {
-                font-size: $default-font-size + 25px;
-                font-family: $font-family-secondary;
-                line-height: 2.75rem;
-                color: $dark-charcoal;
-            }
-
-            .card-summary {
-                padding: 1.5rem 0;
-                line-height: 1.5rem;
-            }
-        }
-
-        .prep {
-            background-color: $rose-white;
-            border-radius: 1rem;
-            line-height: 2rem;
-            padding: 1rem 0;
-            width: 100%;
-
-            .prep-title {
-                color: $dark-raspberry;
-                font-size: $default-font-size + 7px;
-                font-weight: $font-weight-600;
-                text-align: left;
-                padding: 0 1.5rem;
-            }
-
-            .prep-list {
-                padding: 1rem 3rem;
-            }
-        }
-
-        .ingredients {
-            width: 100%;
-
-            .ingredient-title {
-                font-family: $font-family-secondary;
-                color: $nutmeg;
-                font-size: $default-font-size + 15px;
-                font-weight: $font-weight-400;
-                text-align: left;
-                padding: 1.25rem 0;
-            }
-
-            .ingredients-list {
-                line-height: 2rem;
-                padding: 0 1.75rem;
-            }
-        }
-
-        .instructions {
-            width: 100%;
-
-            .instructions-title {
-                font-family: $font-family-secondary;
-                color: $nutmeg;
-                font-size: $default-font-size + 15px;
-                font-weight: $font-weight-400;
-                text-align: left;
-                padding-bottom: 1.25rem;
-            }
-
-            .steps {
-                line-height: 1.75rem;
-                padding: 0 1.75rem;
-
-                .step {
-                    padding-bottom: 0.5rem;
-                }
-            }
-        }
-
-        .nutrition {
-            width: 100%;
-
-            .nutrition-title {
-                font-family: $font-family-secondary;
-                color: $nutmeg;
-                font-size: $default-font-size + 15px;
-                font-weight: $font-weight-400;
-                text-align: left;
-                padding-bottom: 1.25rem;
-            }
-
-            .nutrition-summary {
-                padding-bottom: 1.5rem;
-            }
-
-            .nutrition-stats {
-                text-align: left;
-            }
-        }
+      p {
+        line-height: 1.75rem;
+        padding-bottom: 40px;
+        font-size: $default-font-size + 3px;
+      }
     }
+
+    .preparation {
+      border-radius: 1rem;
+    //   padding: 25px 50px;
+      background: $rose-white;
+      line-height: 2rem;
+
+      h3 {
+        padding: 20px 30px 10px 30px;
+        font-size: $default-font-size * 1.5;
+        font-weight: $font-weight-600;
+        color: $dark-raspberry;
+      }
+
+      @include list-styling($dark-raspberry);
+    }
+
+    .ingredients {
+        padding: 40px 0;
+        @include heading-styling($nutmeg);
+    }
+  }
 }
