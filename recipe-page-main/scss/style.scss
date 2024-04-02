@@ -63,17 +63,17 @@ $font-weight-700: 700;
   }
 }
 
-@mixin list-styling($list-color) {
+@mixin list-styling($list-color, $top, $right, $bottom, $left, $item-left) {
   ul {
     display: flex;
     justify-content: space-around;
     align-items: left;
     flex-direction: column;
     font-size: $default-font-size + 2px;
-    padding: 0 60px 20px;
+    padding: $top $right $bottom $left;
 
     li {
-      padding-left: 15px;
+      padding-left: $item-left;
 
       &::marker {
         font-size: $default-font-size;
@@ -104,11 +104,18 @@ span {
   font-weight: $font-weight-700;
 }
 
+hr {
+  border: 1px solid $light-grey;
+  margin: 35px 0;
+}
+
 .card {
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  background: $white;
 
   .card-body {
     padding: 45px;
@@ -125,7 +132,7 @@ span {
 
     .preparation {
       border-radius: 1rem;
-    //   padding: 25px 50px;
+      //   padding: 25px 50px;
       background: $rose-white;
       line-height: 2rem;
 
@@ -136,12 +143,86 @@ span {
         color: $dark-raspberry;
       }
 
-      @include list-styling($dark-raspberry);
+      @include list-styling($dark-raspberry, 0, 20px, 15px, 55px, 15px);
     }
 
     .ingredients {
-        padding: 40px 0;
-        @include heading-styling($nutmeg);
+      padding-top: 40px;
+      line-height: 2.25rem;
+      @include heading-styling($nutmeg, 30px);
+      @include list-styling($nutmeg, 0, 0, 0, 25px, 15px);
+    }
+
+    .instructions {
+      @include heading-styling($nutmeg, 30px);
+
+      ol {
+        font-size: $default-font-size + 2px;
+        line-height: 1.6rem;
+
+        li {
+          padding: 0 0 10px 25px;
+          margin-left: 25px;
+        }
+
+        li::marker {
+          font-weight: $font-weight-700;
+          color: $nutmeg;
+        }
+      }
+    }
+
+    .nutrition {
+      @include heading-styling($nutmeg, 25px);
+
+      p {
+        font-size: $default-font-size + 3px;
+      }
+
+      table {
+        border-collapse: collapse;
+        padding-top: 25px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: $default-font-size * 1.25;
+
+        tr {
+          border-bottom: 1px solid $light-grey;
+
+          &:last-child {
+            border-bottom: none;
+          }
+
+          td {
+            padding: 15px 50px;
+
+            &:nth-child(2n) {
+              font-weight: $font-weight-700;
+              color: $nutmeg;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 800px) {
+  body {
+    background: $eggshell;
+    padding: 45px;
+  }
+
+  .card {
+    padding: 25px;
+    width: 50%;
+    margin: 0 auto;
+    border-radius: 1rem;
+    overflow: hidden;
+
+    img {
+      border-radius: 0.75rem;
     }
   }
 }
