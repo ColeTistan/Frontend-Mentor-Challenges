@@ -10,7 +10,7 @@ $tablet-breakpoint: 768px;
 // Desktop: 1440px
 $desktop-breakpoint: 1440px;
 
-// XL Desktop:
+// XL Desktop: 1640px
 $xl-desktop-breakpoint: $desktop-breakpoint + 200px;
 
 // Colors - Primary
@@ -64,6 +64,12 @@ $font-weight-bold: 700;
 @mixin border-styling($border, $border-radius) {
   border: $border;
   border-radius: $border-radius;
+}
+
+@mixin form-message($font-size, $color, $margin) {
+  font-size: $font-size;
+  color: $color;
+  margin: $margin;
 }
 
 *,
@@ -129,17 +135,22 @@ form {
     margin-bottom: $default-font-size;
 
     .icon-error {
+      display: none;
       position: absolute;
       right: 70px;
-      transform: translate(-50%, 50%);
+      transform: translate(-50%, 60%);
     }
 
     .error-message {
       @include text-alignment(right);
-      font-size: $default-font-size - 4;
-      color: $red;
-      margin: 7px 0 0 0;
+      @include form-message($default-font-size - 4px, $red, 7px 0 0 0);
+      display: none;
     }
+  }
+
+  .success-message {
+    @include form-message($default-font-size - 4px, $green, 7px 0 0 0);
+    display: none;
   }
 }
 
@@ -262,7 +273,7 @@ button {
   form {
     .input-group {
       .icon-error {
-        right: 180px;
+        right: 220px;
       }
     }
   }
