@@ -1,0 +1,269 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+// Layout - The designs were created to the following widths:
+// Mobile: 375px
+$mobile-breakpoint: 375px;
+
+// Tablet: 768px
+$tablet-breakpoint: 768px;
+
+// Desktop: 1440px
+$desktop-breakpoint: 1440px;
+
+// XL Desktop:
+$xl-desktop-breakpoint: $desktop-breakpoint + 200px;
+
+// Colors - Primary
+
+// Red: hsl(0, 100%, 74%)
+$red: rgb(255, 122, 122);
+
+// Green: hsl(154, 59%, 51%)
+$green: rgb(56, 204, 140);
+
+// Colors - Accent
+
+// blue: hsl(248, 32%, 49%)
+$blue: rgb(96, 85, 165);
+
+// Colors - Neutral
+
+// Dark Blue: hsl(249, 10%, 26%)
+$dark-blue: rgb(62, 60, 73);
+
+// Transparent Dark blue: rgba($dark-blue, 0.5)
+$transparent-dark-blue: rgba($dark-blue, 0.2);
+
+// Grayish Blue: hsl(246, 25%, 77%)
+$grayish-blue: rgb(185, 182, 211);
+
+// White: lighten($grayish-blue, 100%)
+$white: lighten($grayish-blue, 100%);
+
+// Fonts - Font size: 16px
+$default-font-size: 16px;
+
+// Fonts - Font Family: [Poppins](https://fonts.google.com/specimen/Poppins)
+$font-family: "Poppins", sans-serif;
+
+// Fonts - Font Weights: 400, 500, 600, 700
+$font-weight-regular: 400;
+$font-weight-medium: 500;
+$font-weight-semibold: 600;
+$font-weight-bold: 700;
+
+// box shadow mixin
+@mixin box-shadow-styling($vertical-offset, $shadow-color) {
+  box-shadow: 0 $vertical-offset $shadow-color;
+}
+
+@mixin text-alignment($text-align) {
+  text-align: $text-align;
+}
+
+@mixin border-styling($border, $border-radius) {
+  border: $border;
+  border-radius: $border-radius;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: $font-family;
+}
+
+body {
+  background-image: url("../images/bg-intro-mobile.png");
+  background-color: $red;
+  color: $white;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 85%;
+  margin: 70px auto;
+
+  .main-info-section {
+    @include text-alignment(center);
+  }
+
+  .form-section {
+    width: 100%;
+  }
+}
+
+h1,
+p {
+  margin: 30px auto;
+}
+
+h1 {
+  font-size: $default-font-size * 1.6;
+}
+
+small {
+  @include text-alignment(center);
+  font-size: $default-font-size - 4px;
+  color: $grayish-blue;
+  padding: 0 5px;
+}
+
+form {
+  @include border-styling(none, $default-font-size - 1px);
+  @include box-shadow-styling(9px, $transparent-dark-blue);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: $white;
+  padding: 25px;
+
+  .input-group {
+    width: 100%;
+    margin-bottom: $default-font-size;
+
+    .icon-error {
+      position: absolute;
+      right: 70px;
+      transform: translate(-50%, 50%);
+    }
+
+    .error-message {
+      @include text-alignment(right);
+      font-size: $default-font-size - 4;
+      color: $red;
+      margin: 7px 0 0 0;
+    }
+  }
+}
+
+a {
+  text-decoration: none;
+  font-weight: $font-weight-bold;
+  color: $red;
+}
+
+span {
+  font-weight: $font-weight-semibold;
+}
+
+input,
+button {
+  width: 100%;
+  padding: $default-font-size - 2px;
+  outline: none;
+}
+
+input {
+  @include border-styling(1px solid $grayish-blue, $default-font-size - 8px);
+  padding: 15px 20px;
+  &::placeholder {
+    color: lighten($dark-blue, 10%);
+    font-weight: $font-weight-semibold;
+  }
+}
+
+button {
+  @include border-styling(none, $default-font-size - 10px);
+  @include box-shadow-styling(4px, darken($green, 5%));
+  @include text-alignment(center);
+  margin-bottom: $default-font-size;
+  font-size: $default-font-size - 2px;
+  letter-spacing: 1px;
+  display: inline-block;
+  color: $white;
+  font-weight: $font-weight-medium;
+  text-transform: uppercase;
+  background: $green;
+  padding: 15px 25px;
+  transition: 200ms all ease-in-out;
+  cursor: pointer;
+
+  &:hover {
+    background: lighten($green, 15%);
+  }
+}
+
+.subscription-banner {
+  @include box-shadow-styling(7px, $transparent-dark-blue);
+  background: $blue;
+
+  @include border-styling(none, $default-font-size - 5px);
+  p {
+    @include text-alignment(center);
+    padding: $default-font-size 40px;
+  }
+}
+
+@media screen and (min-width: $tablet-breakpoint) {
+  form {
+    .input-group {
+      .icon-error {
+        right: 110px;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: $desktop-breakpoint) {
+  main {
+    flex-direction: row;
+    min-height: 80dvh;
+    gap: 8rem;
+
+    h1 {
+      font-size: $default-font-size * 3.5;
+      line-height: 3.75rem;
+    }
+
+    .main-info-section {
+      @include text-alignment(left);
+    }
+
+    .form-section {
+      width: 80%;
+    }
+  }
+
+  form {
+    .input-group {
+      .icon-error {
+        right: 150px;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: $xl-desktop-breakpoint) {
+  main {
+    flex-direction: row;
+    min-height: 80dvh;
+
+    h1 {
+      font-size: $default-font-size * 3.5;
+      line-height: 3.75rem;
+    }
+
+    .main-info-section {
+      @include text-alignment(left);
+    }
+
+    .form-section {
+      width: 50%;
+    }
+  }
+
+  form {
+    .input-group {
+      .icon-error {
+        right: 180px;
+      }
+    }
+  }
+}
