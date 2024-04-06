@@ -10,7 +10,8 @@ let errorColor = "rgb(255, 122, 122)";
 let successColor = "rgb(56, 204, 140)";
 
 // regex pattern for email input value
-const emailRegex = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+const emailRegex =
+  /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
 
 const createErrorIcon = (input) => {
   const errorIcon = document.createElement("img");
@@ -45,14 +46,20 @@ const validateEmailInput = (input) => {
   if (input.type === "email" && emailRegex.test(inputValue) === false) {
     createErrorIcon(input);
     createErrorMessage(input, "Looks like this is not an email");
-    input.style.border = `2px solid ${errorColor}`;      
+    input.style.border = `2px solid ${errorColor}`;
   } else {
     input.style.border = `2px solid ${successColor}`;
   }
-}
+};
 
 submitButton.addEventListener("click", (evt) => {
   evt.preventDefault();
+  const errorIcons = document.querySelectorAll(".icon-error");
+  const errorMessages = document.querySelectorAll(".error-message");
+  if (errorIcons && errorMessages) {
+    errorIcons.forEach((element) => element.remove());
+    errorMessages.forEach((element) => element.remove());
+  }
   validateInput(firstNameInput, "First Name cannot be empty");
   validateInput(lastNameInput, "Last Name cannot be empty");
   validateEmailInput(emailInput);
