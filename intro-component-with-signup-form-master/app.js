@@ -1,35 +1,60 @@
 // Get HTML elements from DOM
-const form = document.querySelector("form");
-const inputs = form.querySelectorAll("input");
-const errorIcons = form.querySelectorAll(".icon-error");
-const errorMessages = form.querySelectorAll(".error-message");
-const successMessage = form.querySelector(".success-message");
-const submitButton = form.querySelector("button");
+const firstNameInput = document.getElementById("first-name");
+const lastNameInput = document.getElementById("last-name");
+const emailInput = document.getElementById("email-address");
+const passwordInput = document.getElementById("password");
+const submitButton = document.querySelector("button");
 
 // set color(s) for DOM manipulation
 let errorColor = "rgb(255, 122, 122)";
 let successColor = "rgb(56, 204, 140)";
 
+// regex pattern for email input value
+const emailRegex = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+
+const createErrorIcon = (input) => {
+  const errorIcon = document.createElement("img");
+  errorIcon.classList.add("icon-error");
+  errorIcon.src = "./images/icon-error.svg";
+  errorIcon.alt = "error icon";
+  input.insertAdjacentElement("beforebegin", errorIcon);
+};
+
+const createErrorMessage = (input, errorMessageText) => {
+  const errorMessage = document.createElement("p");
+  errorMessage.classList.add("error-message");
+  errorMessage.innerText = errorMessageText;
+  input.insertAdjacentElement("afterend", errorMessage);
+};
+
 // Validate user input and handle input errors if
 // empty or email format is invalid
-const validateInput = (index) => {
-  let input = inputs[index];
-  if (!input.value) {
-    errorIcons[index].style.display = "block";
-    errorMessages[index].style.display = "block";
+const validateInput = (input, errorMessageText) => {
+  let inputValue = input.value;
+  if (!inputValue) {
+    createErrorIcon(input);
+    createErrorMessage(input, errorMessageText);
     input.style.border = `2px solid ${errorColor}`;
   } else {
     input.style.border = `2px solid ${successColor}`;
   }
 };
-const validateForm = () => {
-  validateInput(3);
-  //   for (let i = 0; i <= inputGroups.length; i++) {
-  //     console.log(inputGroups[i]);
-  //   }
-};
+
+const validateEmailInput = (input) => {
+  let inputValue = input.value;
+  if (input.type === "email" && emailRegex.test(inputValue) === false) {
+    createErrorIcon(input);
+    createErrorMessage(input, "Looks like this is not an email");
+    input.style.border = `2px solid ${errorColor}`;      
+  } else {
+    input.style.border = `2px solid ${successColor}`;
+  }
+}
 
 submitButton.addEventListener("click", (evt) => {
   evt.preventDefault();
-  validateForm();
+  validateInput(firstNameInput, "First Name cannot be empty");
+  validateInput(lastNameInput, "Last Name cannot be empty");
+  validateEmailInput(emailInput);
+  validateInput(passwordInput, "Password cannot be empty");
 });

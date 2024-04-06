@@ -135,7 +135,6 @@ form {
     margin-bottom: $default-font-size;
 
     .icon-error {
-      display: none;
       position: absolute;
       right: 70px;
       transform: translate(-50%, 60%);
@@ -144,13 +143,7 @@ form {
     .error-message {
       @include text-alignment(right);
       @include form-message($default-font-size - 4px, $red, 7px 0 0 0);
-      display: none;
     }
-  }
-
-  .success-message {
-    @include form-message($default-font-size - 4px, $green, 7px 0 0 0);
-    display: none;
   }
 }
 
