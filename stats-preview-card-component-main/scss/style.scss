@@ -1,5 +1,4 @@
-
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Lexend+Deca:wght@100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Lexend+Deca:wght@100..900&display=swap");
 
 // Colors - Primary
 
@@ -27,8 +26,6 @@ $transparent-white-stat: rgba(255, 255, 255, 0.6);
 
 // Body Copy
 
-// Font 
-
 // Font size: 15px
 $default-font-size: 15px;
 
@@ -36,49 +33,96 @@ $default-font-size: 15px;
 $font-family-primary: "Inter", sans-serif;
 $font-family-secondary: "Lexend Deca", sans-serif;
 
-
 // Font Weights: 400, 700
 $font-weight-400: 400;
 $font-weight-700: 700;
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: $font-family-primary;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: $font-family-primary;
 }
 
 body {
-    background: $darker-blue;
+  background: $darker-blue;
 }
 
 main {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100dvh;
-    width: 75%;
-    margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100dvh;
+  max-width: 90%;
+  margin: 100px auto;
 }
 
-.card {
+article {
+  display: flex;
+  flex-direction: column;
+  background: $dark-saturated-blue;
+  color: $white;
+  border-radius: 0.5rem;
+  width: 100%;
+
+  .main-content {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row-reverse;
-    background: $dark-saturated-blue;
-    color: $white;
+    flex-direction: column;
+    gap: 1.25rem;
+    padding: 2.5rem 2.5rem 1.75rem 2.5rem;
+    text-align: center;
+    font-size: $default-font-size;
 
-    .card-main {
-        padding: $default-font-size * 6;
-    
-        .card-header {
-            font-size: $default-font-size * 2.5;
-            font-weight: $font-weight-700;
+    h1 {
+      font-size: $default-font-size * 1.75;
 
-            span {
-                color: $soft-violet;
-            }
-        }
+      span {
+        color: $soft-violet;
+      }
     }
+
+    .main-description {
+      color: $transparent-white-main;
+      line-height: 1.6rem;
+    }
+  }
+
+  .img-content {
+    overflow: hidden;
+    border-radius: 0.5rem 0.5rem 0 0;
+    width: 100%;
+    height: 250px;
+    background-image: url("../images/image-header-mobile.jpg");
+    background-size: cover;
+
+    .img {
+      width: 100%;
+      height: 100%;
+      background-color: darken($soft-violet, 20%);
+      opacity: 0.5;
+    }
+  }
+}
+
+.stats {
+  display: flex;
+  flex-direction: column;
+  padding-top: 1.25rem;
+  gap: 1rem;
+
+  .stats-section {
+    line-height: 1.75rem;
+    .stats-number {
+      font-size: $default-font-size * 1.5;
+      font-weight: $font-weight-700;
+    }
+
+    .stats-header {
+      color: $transparent-white-stat;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-size: $default-font-size - 3px;
+      font-weight: $font-weight-400;
+    }
+  }
 }
