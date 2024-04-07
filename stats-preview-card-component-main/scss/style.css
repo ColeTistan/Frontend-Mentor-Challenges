@@ -79,4 +79,37 @@ article .img-content .img {
   letter-spacing: 1px;
   font-size: 12px;
   font-weight: 400;
+}
+
+@media screen and (min-width: 1440px) {
+  main {
+    max-width: 85%;
+  }
+  .card {
+    flex-direction: row-reverse;
+  }
+  .card .main-content {
+    text-align: left;
+    padding: 4rem 6rem;
+  }
+  .card .main-content h1 {
+    font-size: 2.75rem;
+  }
+  .card .main-content .main-description {
+    font-size: 20px;
+    line-height: 2.25rem;
+  }
+  .card .main-content .stats {
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 0 5rem;
+    padding-top: 3rem;
+  }
+  .card .img-content {
+    height: auto;
+    width: 100%;
+    border-radius: 0 0.5rem 0.5rem 0;
+    background-image: url("../images/image-header-desktop.jpg");
+  }
 }/*# sourceMappingURL=style.css.map */
