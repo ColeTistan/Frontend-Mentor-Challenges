@@ -3,130 +3,117 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="scss/style.css" />
     <link
       rel="icon"
       type="image/png"
       sizes="32x32"
       href="./images/favicon-32x32.png"
     />
-    <link rel="stylesheet" href="./scss/style.css" />
     <title>Frontend Mentor | Time tracking dashboard</title>
   </head>
   <body>
     <main>
-      <div class="card card-primary">
-        <div class="profile-section">
-          <div class="profile-img">
-            <img src="./images/image-jeremy.png" alt="profile img" />
-          </div>
-          <div class="profile-body">
-            <p>Report for<br /><span>Jeremy Robson</span></p>
-          </div>
+      <article class="grid-item user">
+        <div class="profile-header card-section">
+          <img
+            class="profile-img"
+            src="./images/image-jeremy.png"
+            alt="profile"
+          />
+          <p class="profile-info">
+            Report for <br /><span>Jeremy Robson</span>
+          </p>
         </div>
-        <div class="toggle-menu">
-          <ul class="toggle-list">
-            <li class="toggle-item">
-              <button type="submit" class="toggle-btn">Daily</button>
-            </li>
-            <li class="toggle-item">
-              <button type="submit" class="toggle-btn">Weekly</button>
-            </li>
-            <li class="toggle-item">
-              <button type="submit" class="toggle-btn">Monthly</button>
-            </li>
-          </ul>
+        <div class="menu card-section">
+          <button type="submit" class="menu-option">Daily</button
+          ><button type="submit" class="menu-option is-active">Weekly</button
+          ><button type="submit" class="menu-option">Monthly</button>
         </div>
-      </div>
-      <div class="card card-secondary">
-        <div class="background-section"></div>
-        <div class="card-body">
-          <div class="card-details">
-            <p class="current-time">32hrs</p>
-            <p class="previous-time">Last Week &hyphen; 36hrs</p>
-          </div>
-          <div class="card-top">
-            <p class="card-title">Work</p>
-            <a href="#" class="nav-link"
-              ><img src="./images/icon-ellipsis.svg" alt="ellipsis"
-            /></a>
-          </div>
-        </div>
-      </div>
-      <div class="card card-secondary">
-        <div class="background-section"></div>
-        <div class="card-body">
-          <div class="card-details">
-            <p class="workout-time">10hrs</p>
-            <p class="previous-time">Last Week &hyphen; 8hrs</p>
-          </div>
-          <div class="card-top">
-            <p>Play</p>
-            <a href="#" class="nav-link"
-              ><img src="./images/icon-ellipsis.svg" alt="ellipsis"
-            /></a>
-          </div>
-        </div>
-      </div>
-      <div class="card card-secondary">
-        <div class="background-section"></div>
-        <div class="card-body">
-          <div class="card-details">
-            <p class="workout-time">4hrs</p>
-            <p class="previous-time">Last Week &hyphen; 7hrs</p>
-          </div>
-          <div class="card-top">
-            <p>Study</p>
-            <a href="#" class="nav-link"
-              ><img src="./images/icon-ellipsis.svg" alt="ellipsis"
-            /></a>
-          </div>
-        </div>
-      </div>
-      <div class="card card-secondary">
-        <div class="background-section"></div>
-        <div class="card-body">
-          <div class="card-details">
-            <p class="workout-time">4hrs</p>
-            <p class="previous-time">Last Week &hyphen; 5hrs</p>
-          </div>
-          <div class="card-top">
-            <p>Exercise</p>
-            <a href="#" class="nav-link"
-              ><img src="./images/icon-ellipsis.svg" alt="ellipsis"
-            /></a>
-          </div>
-        </div>
-      </div>
-      <div class="card card-secondary">
-        <div class="background-section"></div>
-        <div class="card-body">
-          <div class="card-details">
-            <p class="workout-time">5hrs</p>
-            <p class="previous-time">Last Week &hyphen; 10hrs</p>
-          </div>
-          <div class="card-top">
-            <p>Social</p>
-            <a href="#" class="nav-link"
-              ><img src="./images/icon-ellipsis.svg" alt="ellipsis"
-            /></a>
-          </div>
-        </div>
-      </div>
-      <div class="card card-secondary">
-        <div class="background-section"></div>
-        <div class="card-body">
-          <div class="card-details">
-            <p class="workout-time">2hrs</p>
-            <p class="previous-time">Last Week &hyphen; 2hrs</p>
-          </div>
-          <div class="card-top">
-            <p>Self Care</p>
-            <a href="#" class="nav-link"
-              ><img src="./images/icon-ellipsis.svg" alt="ellipsis"
-            /></a>
-          </div>
-        </div>
-      </div>
+      </article>
+      <article class="grid-item work">
+        Work
+        <a href="#"><img src="./images/icon-ellipsis.svg" alt="ellipsis" /></a>
+        32hrs Last Week &hyphen; 36hrs
+      </article>
+      Work
+      <!-- daily -->
+      Previous - 7hrs
+      <!-- daily -->
+      32hrs
+      <!-- weekly -->
+      Previous - 36hrs
+      <!-- weekly -->
+      103hrs
+      <!-- monthly -->
+      Previous - 128hrs
+      <!-- monthly -->
+
+      Play 1hr
+      <!-- daily -->
+      Previous - 2hrs
+      <!-- daily -->
+      10hrs
+      <!-- weekly -->
+      Previous - 8hrs
+      <!-- weekly -->
+      23hrs
+      <!-- monthly -->
+      Previous - 29hrs
+      <!-- monthly -->
+
+      Study 0hrs
+      <!-- daily -->
+      Previous - 1hr
+      <!-- daily -->
+      4hrs
+      <!-- weekly -->
+      Previous - 7hrs
+      <!-- weekly -->
+      13hrs
+      <!-- monthly -->
+      Previous - 19hrs
+      <!-- monthly -->
+
+      Exercise 1hr
+      <!-- daily -->
+      Previous - 1hr
+      <!-- daily -->
+      4hrs
+      <!-- weekly -->
+      Previous - 5hrs
+      <!-- weekly -->
+      11hrs
+      <!-- monthly -->
+      Previous - 18hrs
+      <!-- monthly -->
+
+      Social 1hr
+      <!-- daily -->
+      Previous - 3hrs
+      <!-- daily -->
+      5hrs
+      <!-- weekly -->
+      Previous - 10hrs
+      <!-- weekly -->
+      21hrs
+      <!-- monthly -->
+      Previous - 23hrs
+      <!-- monthly -->
+
+      Self Care 0hrs
+      <!-- daily -->
+      Previous - 1hr
+      <!-- daily -->
+      2hrs
+      <!-- weekly -->
+      Previous - 2hrs
+      <!-- weekly -->
+      7hrs
+      <!-- monthly -->
+      Previous - 11hrs
+      <!-- monthly -->
     </main>
   </body>
+  <script src="app.js"></script>
 </html>

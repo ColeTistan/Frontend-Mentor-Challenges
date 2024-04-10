@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
 // Layout
 
 // The designs were created to the following widths:
@@ -46,6 +46,9 @@ $desaturated-blue: hsl(235, 45%, 61%);
 // Pale Blue: hsl(236, 100%, 87%)
 $pale-blue: hsl(236, 100%, 87%);
 
+// White
+$white: lighten($pale-blue, 15%);
+
 // Body Copy
 
 // Font size: 18px (card titles e.g. Work, Play)
@@ -60,8 +63,90 @@ $font-weight-regular: 400;
 $font-weight-medium: 500;
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: $font-family;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: $font-family;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: $darker-blue;
+  color: $white;
+}
+
+main {
+  display: grid;
+  justify-items: center;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+  width: 85%;
+  margin: 75px auto;
+}
+
+article {
+  width: 100%;
+  background: $dark-blue;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+span {
+  font-size: $default-font-size + 5px;  
+  font-weight: $font-weight-light;
+  color: $white;     
+}
+
+.is-active {
+  color: $white;
+}
+
+button {
+  background: transparent;
+  border: none;
+  outline: none;
+  color: $desaturated-blue;
+  font-size: $default-font-size;
+  transition: 200ms all ease-in;
+  cursor: pointer;
+
+  &:hover {
+    color: $white;
+  }
+}
+
+.card-section {
+  padding: 25px;
+}
+
+.user {
+  .profile-header {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    background: $blue;
+    border-radius: 0rem 0 1rem 1rem;
+
+    .profile-img {
+      width: 65px;
+      height: auto;
+      border: 3px solid $white;
+      border-radius: 50%;
+    }
+
+    .profile-info {
+      line-height: 1.5rem;
+      color: $pale-blue;
+      font-size: $default-font-size - 3px;
+    }
+  }
+
+  .menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+  }
 }

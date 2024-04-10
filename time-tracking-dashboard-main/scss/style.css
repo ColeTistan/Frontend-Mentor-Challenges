@@ -4,4 +4,80 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Rubik", sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: hsl(226, 43%, 10%);
+  color: white;
+}
+
+main {
+  display: grid;
+  justify-items: center;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+  width: 85%;
+  margin: 75px auto;
+}
+
+article {
+  width: 100%;
+  background: hsl(235, 46%, 20%);
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+span {
+  font-size: 23px;
+  font-weight: 300;
+  color: white;
+}
+
+.is-active {
+  color: white;
+}
+
+button {
+  background: transparent;
+  border: none;
+  outline: none;
+  color: hsl(235, 45%, 61%);
+  font-size: 18px;
+  transition: 200ms all ease-in;
+  cursor: pointer;
+}
+button:hover {
+  color: white;
+}
+
+.card-section {
+  padding: 25px;
+}
+
+.user .profile-header {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  background: rgb(88, 71, 235);
+  border-radius: 0rem 0 1rem 1rem;
+}
+.user .profile-header .profile-img {
+  width: 65px;
+  height: auto;
+  border: 3px solid white;
+  border-radius: 50%;
+}
+.user .profile-header .profile-info {
+  line-height: 1.5rem;
+  color: hsl(236, 100%, 87%);
+  font-size: 15px;
+}
+.user .menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
 }/*# sourceMappingURL=style.css.map */
