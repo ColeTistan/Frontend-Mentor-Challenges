@@ -1,0 +1,138 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap");
+
+// The designs were created to the following widths:
+
+// - Mobile: 375px
+$mobile-breakpoint: 375px;
+
+// - Desktop: 1440px
+$desktop-breakpoint: 1440px;
+
+// Color - Primary
+
+// Strong cyan: hsl(172, 67%, 45%)
+$strong-cyan: hsl(172, 67%, 45%);
+
+// Color - Neutral
+
+// Very dark cyan: hsl(183, 100%, 15%)
+$darker-cyan: hsl(183, 100%, 15%);
+
+// Dark grayish cyan: hsl(186, 14%, 43%)
+$dark-grayish-cyan: hsl(186, 14%, 43%);
+
+// Grayish cyan: hsl(184, 14%, 56%)
+$grayish-cyan: hsl(184, 14%, 56%);
+
+// Light grayish cyan: hsl(185, 41%, 84%)
+$light-grayish-cyan: hsl(185, 41%, 84%);
+
+// Very light grayish cyan: hsl(189, 41%, 97%)
+$lighter-grayish-cyan: hsl(189, 41%, 97%);
+
+// White: hsl(0, 0%, 100%)
+$white: hsl(0, 0%, 100%);
+
+// Body Copy
+
+// Font size (form inputs): 24px
+$form-font-size: 24px;
+
+// Font Family: [Space Mono](https://fonts.google.com/specimen/Space+Mono)
+$font-family: "Space mono", monospace;
+
+// Font Weights: 700
+$font-weight-bold: 700;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: $font-family;
+}
+
+body {
+  background: $light-grayish-cyan;
+  width: 100%;
+  margin: 0 auto;
+}
+
+label {
+  padding-bottom: 0.75rem;
+  color: $dark-grayish-cyan;
+}
+
+input {
+  background: $lighter-grayish-cyan;
+  padding: 0.3rem 0.75rem;
+  border: none;
+  border-radius: 0.5rem;
+  outline: none;
+  font-size: $form-font-size;
+
+  &:focus {
+    color: $darker-cyan;
+  }
+
+  &::placeholder {
+    line-height: normal !important;
+    text-align: right;
+    color: $dark-grayish-cyan;
+  }
+}
+
+button {
+  border: none;
+  border-radius: 0.25rem;
+  outline: none;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 35px auto;
+}
+
+article {
+  background: $white;
+  border-radius: 1rem 1rem 0 0;
+  padding: 35px;
+  min-height: 100dvh;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 1.5rem;
+
+  .button-group {
+    display: grid;
+    justify-items: center;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
+
+    .tip-input {
+      background: $darker-cyan;
+      color: $white;
+      padding: 0.5rem 1rem;
+      font-size: $form-font-size - 5px;
+      width: 100%;
+
+      &.active {
+        background: $strong-cyan;
+        color: $darker-cyan;
+      }
+    }
+
+    .custom {
+      width: 100%;
+    }
+  }
+}
+
+.result-group {
+  background: $darker-cyan;
+  padding: 35px 25px;
+  border-radius: 1rem;
+}
