@@ -11,27 +11,30 @@ $desktop-breakpoint: 1440px;
 // Color - Primary
 
 // Strong cyan: hsl(172, 67%, 45%)
-$strong-cyan: hsl(172, 67%, 45%);
+$strong-cyan: rgb(38, 192, 171);
+
+// Strong red
+$strong-red: rgb(201, 136, 117);
 
 // Color - Neutral
 
 // Very dark cyan: hsl(183, 100%, 15%)
-$darker-cyan: hsl(183, 100%, 15%);
+$darker-cyan: rgb(0, 73, 77);
 
 // Dark grayish cyan: hsl(186, 14%, 43%)
-$dark-grayish-cyan: hsl(186, 14%, 43%);
+$dark-grayish-cyan: rgb(94, 122, 125);
 
 // Grayish cyan: hsl(184, 14%, 56%)
-$grayish-cyan: hsl(184, 14%, 56%);
+$grayish-cyan: rgb(127, 156, 159);
 
 // Light grayish cyan: hsl(185, 41%, 84%)
-$light-grayish-cyan: hsl(185, 41%, 84%);
+$light-grayish-cyan: rgb(197, 228, 231);
 
 // Very light grayish cyan: hsl(189, 41%, 97%)
-$lighter-grayish-cyan: hsl(189, 41%, 97%);
+$lighter-grayish-cyan: rgb(244, 250, 250);
 
 // White: hsl(0, 0%, 100%)
-$white: hsl(0, 0%, 100%);
+$white: rgb(255, 255, 255);
 
 // Body Copy
 
@@ -43,6 +46,15 @@ $font-family: "Space mono", monospace;
 
 // Font Weights: 700
 $font-weight-bold: 700;
+
+@mixin form-icon($width, $bottom) {
+  width: $width;
+  height: auto;
+  position: absolute;
+  bottom: $bottom;
+  left: 50px;
+  transform: translate(50%, -50%);
+}
 
 * {
   margin: 0;
@@ -62,6 +74,10 @@ label {
   color: $dark-grayish-cyan;
 }
 
+small {
+  color: $dark-grayish-cyan;
+}
+
 input {
   background: $lighter-grayish-cyan;
   padding: 0.3rem 0.75rem;
@@ -69,6 +85,15 @@ input {
   border-radius: 0.5rem;
   outline: none;
   font-size: $form-font-size;
+  text-align: right;
+
+  &:focus {
+    border: 1px solid $strong-cyan;
+  }
+
+  &.error {
+    border: 1px solid $strong-red;
+  }
 
   &:focus {
     color: $darker-cyan;
@@ -85,6 +110,7 @@ button {
   border: none;
   border-radius: 0.25rem;
   outline: none;
+  cursor: pointer;
 }
 
 header {
@@ -117,7 +143,14 @@ article {
       color: $white;
       padding: 0.5rem 1rem;
       font-size: $form-font-size - 5px;
+      transition: 200ms all ease-in;
       width: 100%;
+
+
+      &:hover {
+        background-color: lighten($strong-cyan, 30%);
+        color: $darker-cyan;
+      }
 
       &.active {
         background: $strong-cyan;
@@ -132,7 +165,51 @@ article {
 }
 
 .result-group {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
   background: $darker-cyan;
-  padding: 35px 25px;
+  padding: 35px 25px 20px 25px;
   border-radius: 1rem;
+
+  .result-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    color: $white;
+
+    .result-label {
+      line-height: 1.3rem;
+    }
+
+    .result-amount {
+      font-size: $form-font-size;
+      font-weight: $font-weight-bold;
+      color: $strong-cyan;
+    }
+  }
+
+  .reset-button {
+    font-size: $form-font-size - 5px;
+    text-transform: uppercase;
+    background: $strong-cyan;
+    color: $darker-cyan;
+    transition: 200ms all ease-in;
+    padding: 0.5rem;
+
+
+    &:hover {
+      background-color: lighten($strong-cyan, 30%);
+      color: $darker-cyan;
+    }
+  }
+}
+
+.dollar-icon {
+  @include form-icon(0.75rem, 150px);
+}
+
+.person-icon {
+  @include form-icon(1rem, -175px);
 }

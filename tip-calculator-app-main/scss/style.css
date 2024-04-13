@@ -7,42 +7,54 @@
 }
 
 body {
-  background: hsl(185, 41%, 84%);
+  background: rgb(197, 228, 231);
   width: 100%;
   margin: 0 auto;
 }
 
 label {
   padding-bottom: 0.75rem;
-  color: hsl(186, 14%, 43%);
+  color: rgb(94, 122, 125);
+}
+
+small {
+  color: rgb(94, 122, 125);
 }
 
 input {
-  background: hsl(189, 41%, 97%);
+  background: rgb(244, 250, 250);
   padding: 0.3rem 0.75rem;
   border: none;
   border-radius: 0.5rem;
   outline: none;
   font-size: 24px;
+  text-align: right;
 }
 input:focus {
-  color: hsl(183, 100%, 15%);
+  border: 1px solid rgb(38, 192, 171);
+}
+input.error {
+  border: 1px solid rgb(201, 136, 117);
+}
+input:focus {
+  color: rgb(0, 73, 77);
 }
 input::-moz-placeholder {
   line-height: normal !important;
   text-align: right;
-  color: hsl(186, 14%, 43%);
+  color: rgb(94, 122, 125);
 }
 input::placeholder {
   line-height: normal !important;
   text-align: right;
-  color: hsl(186, 14%, 43%);
+  color: rgb(94, 122, 125);
 }
 
 button {
   border: none;
   border-radius: 0.25rem;
   outline: none;
+  cursor: pointer;
 }
 
 header {
@@ -53,7 +65,7 @@ header {
 }
 
 article {
-  background: hsl(0, 0%, 100%);
+  background: rgb(255, 255, 255);
   border-radius: 1rem 1rem 0 0;
   padding: 35px;
   min-height: 100dvh;
@@ -71,22 +83,75 @@ article {
   gap: 0.75rem;
 }
 .input-group .button-group .tip-input {
-  background: hsl(183, 100%, 15%);
-  color: hsl(0, 0%, 100%);
+  background: rgb(0, 73, 77);
+  color: rgb(255, 255, 255);
   padding: 0.5rem 1rem;
   font-size: 19px;
+  transition: 200ms all ease-in;
   width: 100%;
 }
+.input-group .button-group .tip-input:hover {
+  background-color: #95eade;
+  color: rgb(0, 73, 77);
+}
 .input-group .button-group .tip-input.active {
-  background: hsl(172, 67%, 45%);
-  color: hsl(183, 100%, 15%);
+  background: rgb(38, 192, 171);
+  color: rgb(0, 73, 77);
 }
 .input-group .button-group .custom {
   width: 100%;
 }
 
 .result-group {
-  background: hsl(183, 100%, 15%);
-  padding: 35px 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  background: rgb(0, 73, 77);
+  padding: 35px 25px 20px 25px;
   border-radius: 1rem;
+}
+.result-group .result-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  color: rgb(255, 255, 255);
+}
+.result-group .result-row .result-label {
+  line-height: 1.3rem;
+}
+.result-group .result-row .result-amount {
+  font-size: 24px;
+  font-weight: 700;
+  color: rgb(38, 192, 171);
+}
+.result-group .reset-button {
+  font-size: 19px;
+  text-transform: uppercase;
+  background: rgb(38, 192, 171);
+  color: rgb(0, 73, 77);
+  transition: 200ms all ease-in;
+  padding: 0.5rem;
+}
+.result-group .reset-button:hover {
+  background-color: #95eade;
+  color: rgb(0, 73, 77);
+}
+
+.dollar-icon {
+  width: 0.75rem;
+  height: auto;
+  position: absolute;
+  bottom: 150px;
+  left: 50px;
+  transform: translate(50%, -50%);
+}
+
+.person-icon {
+  width: 1rem;
+  height: auto;
+  position: absolute;
+  bottom: -175px;
+  left: 50px;
+  transform: translate(50%, -50%);
 }/*# sourceMappingURL=style.css.map */
