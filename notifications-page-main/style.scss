@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+
+// Front-end Style Guide
+
+// Layout
+
+// The designs were created to the following widths:
+
+// Mobile: 375px
+$mobile-breakpoint: 375px;
+
+// Desktop: 1440px
+$desktop-breakpoint: 1440px;
+
+// Colors - Primary
+
+// Red: hsl(1, 90%, 64%)
+$red: hsl(1, 90%, 64%);
+
+// Blue: hsl(219, 85%, 26%)
+$blue: hsl(219, 85%, 26%);
+
+// Colors - Neutral
+
+// White: hsl(0, 0%, 100%)
+$white: hsl(0, 0%, 100%);
+
+// Very light grayish blue: hsl(210, 60%, 98%)
+$lighter-grayish-blue: hsl(210, 60%, 98%);
+
+// Light grayish blue 1: hsl(211, 68%, 94%)
+$light-grayish-blue-primary: hsl(211, 68%, 94%);
+
+// Light grayish blue 2: hsl(205, 33%, 90%)
+$light-grayish-blue-secondary: hsl(205, 33%, 90%);
+
+// Grayish blue: hsl(219, 14%, 63%)
+$grayish-blue: hsl(219, 14%, 63%);
+
+// Dark grayish blue: hsl(219, 12%, 42%)
+$dark-grayish-blue: hsl(219, 12%, 42%);
+
+// Very dark blue: hsl(224, 21%, 14%)
+$darker-blue: hsl(224, 21%, 14%);
+
+// Typography - Body Copy
+
+// Font size (paragraph): 16px
+$default-font-size: 16px;
+
+// Font Family: [Plus Jakarta Sans](https://fonts.google.com/specimen/Plus+Jakarta+Sans)
+$font-family: "Plus Jakarta Sans", sans-serif;
+
+// Weights: 500, 800
+$font-weight-medium: 500;
+$font-weight-extrabold: 800;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: $font-family;
+}
+
+body {
+    width: 90%;
+    margin: 0 auto;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    margin: 22px auto;
+
+    h2 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: $default-font-size + 3px;
+        font-weight: $font-weight-extrabold;
+
+        .notification-badge {
+            font-size: $default-font-size;
+            color: $white;
+            background-color: $blue;
+            margin-left: 7px;
+            padding: 2px 10px;
+            border-radius: 0.25rem;
+        }
+    }
+
+    .read-all-button {
+        border: none;
+        outline: none;
+        background: transparent;
+        font-size: $default-font-size;
+        font-weight: $font-weight-medium;
+        color: $dark-grayish-blue;
+        transition: 200ms all ease-in-out;
+        cursor: pointer;
+
+        &:hover {
+            color: $blue;
+        }
+    }
+}
