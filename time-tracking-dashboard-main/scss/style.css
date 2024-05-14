@@ -14,70 +14,43 @@ body {
   color: white;
 }
 
-main {
+.grid-container {
   display: grid;
-  justify-items: center;
-  grid-template-columns: 1fr;
+  grid-template-areas: "user work play study" "user exercise social self-care";
   gap: 1.25rem;
-  width: 85%;
-  margin: 75px auto;
 }
 
-article {
-  width: 100%;
-  background: hsl(235, 46%, 20%);
-  border-radius: 1rem;
-  overflow: hidden;
+.user {
+  grid-area: user;
+  background-color: rgb(88, 71, 235);
 }
 
-span {
-  font-size: 23px;
-  font-weight: 300;
-  color: white;
+.work {
+  grid-area: work;
+  background-color: hsl(15, 100%, 70%);
 }
 
-.is-active {
-  color: white;
+.play {
+  grid-area: play;
+  background-color: hsl(195, 74%, 62%);
 }
 
-button {
-  background: transparent;
-  border: none;
-  outline: none;
-  color: hsl(235, 45%, 61%);
-  font-size: 18px;
-  transition: 200ms all ease-in;
-  cursor: pointer;
-}
-button:hover {
-  color: white;
+.study {
+  grid-area: study;
+  background-color: hsl(348, 100%, 68%);
 }
 
-.card-section {
-  padding: 25px;
+.exercise {
+  grid-area: exercise;
+  background-color: hsl(145, 58%, 55%);
 }
 
-.user .profile-header {
-  display: flex;
-  align-items: center;
-  gap: 1.25rem;
-  background: rgb(88, 71, 235);
-  border-radius: 0rem 0 1rem 1rem;
+.social {
+  grid-area: social;
+  background-color: hsl(264, 64%, 52%);
 }
-.user .profile-header .profile-img {
-  width: 65px;
-  height: auto;
-  border: 3px solid white;
-  border-radius: 50%;
-}
-.user .profile-header .profile-info {
-  line-height: 1.5rem;
-  color: hsl(236, 100%, 87%);
-  font-size: 15px;
-}
-.user .menu {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 3rem;
+
+.self-care {
+  grid-area: self-care;
+  background-color: hsl(43, 84%, 65%);
 }/*# sourceMappingURL=style.css.map */

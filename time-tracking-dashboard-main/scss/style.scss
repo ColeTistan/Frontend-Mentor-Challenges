@@ -15,22 +15,22 @@ $desktop-breakpoint: 1440px;
 $blue: rgb(88, 71, 235);
 
 // Light red (work): hsl(15, 100%, 70%)
-$light-red: hsl(15, 100%, 70%);
+$work: hsl(15, 100%, 70%);
 
 // Soft blue (play): hsl(195, 74%, 62%)
-$soft-blue: hsl(195, 74%, 62%);
+$play: hsl(195, 74%, 62%);
 
 // Light red (study): hsl(348, 100%, 68%)
-$light-red: hsl(348, 100%, 68%);
+$study: hsl(348, 100%, 68%);
 
 // Lime green (exercise): hsl(145, 58%, 55%)
-$lime-green: hsl(145, 58%, 55%);
+$exercise: hsl(145, 58%, 55%);
 
 // Violet (social): hsl(264, 64%, 52%)
-$violet: hsl(264, 64%, 52%);
+$social: hsl(264, 64%, 52%);
 
 // Soft orange (self care): hsl(43, 84%, 65%)
-$soft-orange: hsl(43, 84%, 65%);
+$self-care: hsl(43, 84%, 65%);
 
 // Colors - Neutral
 
@@ -77,76 +77,111 @@ body {
   color: $white;
 }
 
-main {
+.grid-container {
   display: grid;
-  justify-items: center;
-  grid-template-columns: 1fr;
+  grid-template-areas: 
+  "user work play study"
+  "user exercise social self-care";
   gap: 1.25rem;
-  width: 85%;
-  margin: 75px auto;
-}
-
-article {
-  width: 100%;
-  background: $dark-blue;
-  border-radius: 1rem;
-  overflow: hidden;
-}
-
-span {
-  font-size: $default-font-size + 5px;  
-  font-weight: $font-weight-light;
-  color: $white;     
-}
-
-.is-active {
-  color: $white;
-}
-
-button {
-  background: transparent;
-  border: none;
-  outline: none;
-  color: $desaturated-blue;
-  font-size: $default-font-size;
-  transition: 200ms all ease-in;
-  cursor: pointer;
-
-  &:hover {
-    color: $white;
-  }
-}
-
-.card-section {
-  padding: 25px;
 }
 
 .user {
-  .profile-header {
-    display: flex;
-    align-items: center;
-    gap: 1.25rem;
-    background: $blue;
-    border-radius: 0rem 0 1rem 1rem;
-
-    .profile-img {
-      width: 65px;
-      height: auto;
-      border: 3px solid $white;
-      border-radius: 50%;
-    }
-
-    .profile-info {
-      line-height: 1.5rem;
-      color: $pale-blue;
-      font-size: $default-font-size - 3px;
-    }
-  }
-
-  .menu {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 3rem;
-  }
+  grid-area: user;
+  background-color: $blue;
 }
+
+.work {
+  grid-area: work;
+  background-color: $work;
+}
+
+.play {
+  grid-area: play;
+  background-color: $play;
+}
+
+.study {
+  grid-area: study;
+  background-color: $study;
+}
+
+.exercise {
+  grid-area: exercise;
+  background-color: $exercise;
+}
+
+.social {
+  grid-area: social;
+  background-color: $social;
+}
+
+.self-care {
+  grid-area: self-care;
+  background-color: $self-care;
+}
+
+
+// Play 1hr
+//         <!-- daily -->
+//         Previous - 2hrs
+//         <!-- daily -->
+//         10hrs
+//         <!-- weekly -->
+//         Previous - 8hrs
+//         <!-- weekly -->
+//         23hrs
+//         <!-- monthly -->
+//         Previous - 29hrs
+//         <!-- monthly -->
+
+//         Study 0hrs
+//         <!-- daily -->
+//         Previous - 1hr
+//         <!-- daily -->
+//         4hrs
+//         <!-- weekly -->
+//         Previous - 7hrs
+//         <!-- weekly -->
+//         13hrs
+//         <!-- monthly -->
+//         Previous - 19hrs
+//         <!-- monthly -->
+
+//         Exercise 1hr
+//         <!-- daily -->
+//         Previous - 1hr
+//         <!-- daily -->
+//         4hrs
+//         <!-- weekly -->
+//         Previous - 5hrs
+//         <!-- weekly -->
+//         11hrs
+//         <!-- monthly -->
+//         Previous - 18hrs
+//         <!-- monthly -->
+
+//         Social 1hr
+//         <!-- daily -->
+//         Previous - 3hrs
+//         <!-- daily -->
+//         5hrs
+//         <!-- weekly -->
+//         Previous - 10hrs
+//         <!-- weekly -->
+//         21hrs
+//         <!-- monthly -->
+//         Previous - 23hrs
+//         <!-- monthly -->
+
+//         Self Care 0hrs
+//         <!-- daily -->
+//         Previous - 1hr
+//         <!-- daily -->
+//         2hrs
+//         <!-- weekly -->
+//         Previous - 2hrs
+//         <!-- weekly -->
+//         7hrs
+//         <!-- monthly -->
+//         Previous - 11hrs
+//         <!-- monthly -->
