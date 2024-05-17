@@ -15,6 +15,11 @@ body {
   color: white;
 }
 
+main {
+  width: 90%;
+  margin: 0 auto;
+}
+
 p {
   font-size: 18px;
 }
@@ -47,7 +52,7 @@ button.active {
   gap: 2rem;
 }
 .grid-container .grid-item {
-  width: 275px;
+  width: 100%;
   height: auto;
 }
 
@@ -69,6 +74,7 @@ button.active {
 .user .user-section {
   display: flex;
   flex-direction: column;
+  height: 100%;
   padding: 25px 25px 75px 25px;
   border-radius: 1rem;
   background-color: rgb(88, 71, 235);
@@ -109,6 +115,7 @@ button.active {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
+  padding-bottom: 50px;
 }
 
 .work {
@@ -181,4 +188,58 @@ button.active {
   flex-direction: column;
   flex: 1;
   border-radius: 1rem;
+}
+
+@media screen and (max-width: 600px) {
+  .card-section .card-top-section {
+    margin-bottom: 10px;
+  }
+  .card-section .card-bottom-section {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .grid-container {
+    display: grid;
+    grid-template-areas: "user" "work" "play" "study" "exercise" "social" "self-care";
+    gap: 2rem;
+  }
+  .user {
+    grid-area: user;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    border-radius: 1rem;
+    background-color: hsl(235, 46%, 20%);
+  }
+  .user img {
+    height: auto;
+    width: 75px;
+    border: 3px solid white;
+    border-radius: 50%;
+    margin-bottom: 50px;
+  }
+  .user .user-section {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 0 1rem;
+    padding: 25px;
+  }
+  .user .user-section img {
+    margin: 0;
+  }
+  .user .user-section .user-detail {
+    display: flex;
+    flex-direction: column;
+  }
+  .user .user-section .user-detail .heading {
+    font-size: 27px;
+    transition: 200ms all ease-in;
+  }
+  ul {
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+  }
 }/*# sourceMappingURL=style.css.map */
