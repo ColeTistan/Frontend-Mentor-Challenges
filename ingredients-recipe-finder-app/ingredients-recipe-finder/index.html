@@ -7,19 +7,40 @@
     <title>Ingredients Recipe Finder</title>
   </head>
   <body>
-    <div id="app">
-      <nav>
+    <header>
+      <div class="logo">
         <h2>Rice<span>Perfetta</span></h2>
-        <ul class="nav-list">
-          <li class="nav-item">
-            <input type="text" name="ingredients" id="ingredient-input" placeholder="Enter some ingredients...">
-          </li>
-          <li class="nav-item">
-            <a href="https://github.com/ColeTistan" class="nav-link">Github</a>
-          </li>
-        </ul>
-      </nav>
-    </div>
+      </div>
+      <div class="input-group">
+        <input
+          type="text"
+          name="ingredients"
+          class="ingredient-input"
+          id="ingredient-input"
+          placeholder="Enter some ingredients..."
+        />
+        <button class="search-btn">Search</button>
+      </div>
+    </header>
+    <main id="app">
+      <div class="card">
+        <div class="card-img">
+          <img src="/Margherita-pizza_1500x1500-scaled.jpg" alt="marghertia" />
+        </div>
+        <div class="card-body">
+          <p class="card-title">Margherita Pizza</p>
+          <ul class="ingredients-list">
+            <li class="ingredient-item">Ingredients:</li>
+            <li class="ingredient-item">Pizza dough</li>
+            <li class="ingredient-item">Tomato sauce</li>
+            <li class="ingredient-item">Fresh mozzarella cheese</li>
+            <li class="ingredient-item">Fresh basil leaves</li>
+            <li class="ingredient-item">Olive oil</li>
+            <li class="ingredient-item">Salt and pepper to taste</li>
+          </ul>
+        </div>
+      </div>
+    </main>
     <script type="module" src="/main.js"></script>
   </body>
 </html>
