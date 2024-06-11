@@ -1,0 +1,63 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+
+$primary-color: #ffc529;
+$secondary-color: #fe724c;
+$tertiary-color: #ffe8c8;
+$success-color: #acd793;
+$white-color: #ffffff;
+$light-color: #d7d7d7;
+$dark-color: #272d2f;
+
+@mixin d-flex($justify-content, $align-items) {
+  display: flex;
+  justify-content: $justify-content;
+  align-items: $align-items;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+}
+
+body {
+  max-width: 80%;
+  margin: 0 auto;
+  background-color: $tertiary-color;
+}
+
+nav {
+  @include d-flex(space-around, center);
+  padding: 1rem;
+
+  .nav-list {
+    @include d-flex(center, center);
+    gap: 2rem;
+  }
+}
+
+ul {
+  list-style: none;
+}
+
+input {
+  width: 250px;
+  padding: 8px 16px;
+  outline: none;
+  border: none;
+  border-radius: 2rem;
+  background-color: $white-color;
+}
+
+a {
+  text-decoration: none;
+  letter-spacing: 1px;
+  background-color: $primary-color;
+  color: $dark-color;
+  font-weight: 700;
+  font-size: 0.9rem;
+  border-radius: 2rem;
+  padding: 0.5rem 1.25rem;
+  text-align: center;
+}
