@@ -1,50 +1,156 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap");
+
 // # Front-end Style Guide
 
-// ## Layout
+// Layout
 
 // The designs were created to the following widths:
 
-// - Mobile: 375px
-// - Desktop: 1440px
+// Mobile: 375px
+// Desktop: 1440px
 
 // > 💡 These are just the design sizes. Ensure content is responsive and meets WCAG requirements by testing the full range of screen sizes from 320px to large screens.
 
-// ## Colors
+// Colors
 
-// ### Primary
+// Primary
 
-// - Green 200 (lighter): hsl(148, 38%, 91%)
-// - Green 600 (medium): hsl(169, 82%, 27%)
-// - Red: hsl(0, 66%, 54%)
+// Green 200 (lighter): hsl(148, 38%, 91%)
+$green-light: rgb(223, 241, 231);
 
-// ### Neutral
+// Green 600 (medium): hsl(169, 82%, 27%)
+$green-medium: rgb(12, 125, 105);
 
-// - White: hsl(0, 0%, 100%)
-// - Grey 500 (medium): hsl(186, 15%, 59%)
-// - Grey 900 (darker): hsl(187, 24%, 22%)
+// Red: hsl(0, 66%, 54%)
+$red: rgb(215, 60, 60);
 
-// ## Typography
+// Neutral
 
-// ### Body Copy
+// White: hsl(0, 0%, 100%)
+$white: rgb(255, 255, 255);
 
-// - Font size (labels): 16px
+// Grey 500 (medium): hsl(186, 15%, 59%)
+$grey-medium: rgb(135, 163, 166);
 
-// ### Font
+// Grey 900 (darker): hsl(187, 24%, 22%)
+$grey-darker: rgb(43, 66, 70);
 
-// - Family: [Karla](https://fonts.google.com/specimen/Karla)
-// - Weights: 400, 700
+// Typography
 
-// > 💎 [Upgrade to Pro](https://www.frontendmentor.io/pro?ref=style-guide) for design file access to see all design details and get hands-on experience using a professional workflow with tools like Figma.
-@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap');
+// Body Copy
+
+// Font size (labels): 16px
+$default-font-size: 16px;
+
+// Font Family: [Karla](https://fonts.google.com/specimen/Karla)
+$font-family: "Karla", sans-serif;
+
+// Weights: 400, 700
+$font-weight-regular: 400;
+$font-weight-bold: $font-weight-regular + 300;
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Karla", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Karla", sans-serif;
 }
 
 textarea {
-    text-align: left;
-    resize: none;
+  text-align: left;
+  resize: none;
+  border: 1px solid $grey-medium;
+  border-radius: 0.5rem;
+  outline: none;
+  padding: 1rem;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: $default-font-size + 15px;
+  background: $green-light;
+}
+
+article {
+  background: $white;
+  padding: 0 $default-font-size + 5px;
+  border-radius: 0.8rem;
+
+  .form-heading {
+    padding: $default-font-size + 5px 0;
+    font-size: $default-font-size + 10px;
+    font-weight: $font-weight-bold;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+
+    .form-input {
+      display: flex;
+      flex-direction: column;
+      line-height: 2.5rem;
+      padding: 0 0 1rem 0;
+    }
+
+    .form-option {
+      border: 1px solid $grey-medium;
+      border-radius: 0.5rem;
+      padding: 0.8rem;
+      margin: 20px 0;
+    }
+
+    .form-message {
+        display: flex;
+        flex-direction: column;
+        line-height: 2.5rem;
+    }
+
+    .form-consent {
+        line-height: 5rem;
+        font-size: $default-font-size;
+    }
+  }
+}
+
+input {
+  padding: 1rem;
+  border-radius: 0.5rem;
+  outline: none;
+  border: 1px solid $grey-medium;
+  font-size: $default-font-size;
+
+  &[type='radio'],
+  &[type='checkbox'] {
+    transform: scale(1.5);
+    display: inline-block;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    margin: 0 10px 0 10px;
+  }
+}
+
+p,
+label {
+  color: $grey-darker;
+}
+
+span {
+  color: $green-medium;
+}
+
+button {
+    color: $white;
+    outline: none;
+    border: none;
+    border-radius: 0.5rem;
+    padding: $default-font-size + 2px;
+    font-size: $default-font-size + 1px;
+    font-weight: $font-weight-bold;
+    background: $green-medium;
+    margin: 0 0 $default-font-size + 5px 0;
 }

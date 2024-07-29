@@ -9,4 +9,90 @@
 textarea {
   text-align: left;
   resize: none;
+  border: 1px solid rgb(135, 163, 166);
+  border-radius: 0.5rem;
+  outline: none;
+  padding: 1rem;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 31px;
+  background: rgb(223, 241, 231);
+}
+
+article {
+  background: rgb(255, 255, 255);
+  padding: 0 21px;
+  border-radius: 0.8rem;
+}
+article .form-heading {
+  padding: 21px 0;
+  font-size: 26px;
+  font-weight: 700;
+}
+article form {
+  display: flex;
+  flex-direction: column;
+}
+article form .form-input {
+  display: flex;
+  flex-direction: column;
+  line-height: 2.5rem;
+  padding: 0 0 1rem 0;
+}
+article form .form-option {
+  border: 1px solid rgb(135, 163, 166);
+  border-radius: 0.5rem;
+  padding: 0.8rem;
+  margin: 20px 0;
+}
+article form .form-message {
+  display: flex;
+  flex-direction: column;
+  line-height: 2.5rem;
+}
+article form .form-consent {
+  line-height: 5rem;
+  font-size: 16px;
+}
+
+input {
+  padding: 1rem;
+  border-radius: 0.5rem;
+  outline: none;
+  border: 1px solid rgb(135, 163, 166);
+  font-size: 16px;
+}
+input[type=radio], input[type=checkbox] {
+  transform: scale(1.5);
+  display: inline-block;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  margin: 0 10px 0 10px;
+}
+
+p,
+label {
+  color: rgb(43, 66, 70);
+}
+
+span {
+  color: rgb(12, 125, 105);
+}
+
+button {
+  color: rgb(255, 255, 255);
+  outline: none;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 18px;
+  font-size: 17px;
+  font-weight: 700;
+  background: rgb(12, 125, 105);
+  margin: 0 0 21px 0;
 }/*# sourceMappingURL=style.css.map */
