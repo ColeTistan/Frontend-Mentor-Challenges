@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="style.css" />
+
+    <title>Frontend Mentor | Contact form</title>
+  </head>
+  <body>
+    <main>
+      <article>
+        <p>Contact Us</p>
+        <form>
+          <div class="form-input">
+            <label for="first-name">First Name&nbsp;<span>*</span></label>
+            <input type="text" name="first-name" id="first-name" />
+          </div>
+          <div class="form-input">
+            <label for="last-name">Last Name&nbsp;<span>*</span></label>
+            <input type="text" name="last-name" id="last-name" />
+          </div>
+          <div class="form-input">
+            <label for="email-address">Email Address&nbsp;<span>*</span></label>
+            <input type="email" name="email-address" id="email-address" />
+          </div>
+          <div class="form-select">
+            <label for="query-type">Query Type&nbsp;<span>*</span></label>
+            <div class="form-option">
+              <input
+                type="radio"
+                name="general-inquiry-option"
+                id="general-inquiry-option"
+                value="general-inquiry"
+              />
+              <label for="general-inquiry">General Inquiry</label>
+            </div>
+            <div class="form-input">
+              <input
+                type="radio"
+                name="support-request-option"
+                id="support-request-option"
+                value="support-request"
+              />
+              <label for="support-request">Support Request</label>
+            </div>
+          </div>
+          <div class="form-input">
+            <label for="message-input">Message&nbsp;<span>*</span></label>
+            <textarea
+              name="message-input"
+              id="message-input"
+              rows="15"
+              cols="50"
+            >
+            </textarea>
+          </div>
+          <div class="form-input">
+            <input
+              type="checkbox"
+              name="form-checkbox"
+              id="form-checkbox"
+              value="consent"
+            />
+            <label for="consent-checkbox"
+              >I consent to being contacted by the team&nbsp;<span
+                >*</span
+              ></label
+            >
+          </div>
+          <button>Submit</button>
+        </form>
+      </article>
+    </main>
+    Contact Us First Name This field is required Last Name This field is
+    required Email Address Please enter a valid email address This field is
+    required Query Type General Enquiry Support Request Please select a query
+    type Message This field is required I consent to being contacted by the team
+    To submit this form, please consent to being contacted Submit Message Sent!
+    Thanks for completing the form. We'll be in touch soon!
+  </body>
+</html>
