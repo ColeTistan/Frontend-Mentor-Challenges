@@ -97,21 +97,26 @@ article {
     }
 
     .form-option {
-      border: 1px solid $grey-medium;
+      border: 2px solid $grey-medium;
       border-radius: 0.5rem;
       padding: 0.8rem;
       margin: 20px 0;
+
+      &:checked {
+        background-color: $green-medium;
+        border: 2px solid $green-medium;
+      }
     }
 
     .form-message {
-        display: flex;
-        flex-direction: column;
-        line-height: 2.5rem;
+      display: flex;
+      flex-direction: column;
+      line-height: 2.5rem;
     }
 
     .form-consent {
-        line-height: 5rem;
-        font-size: $default-font-size;
+      padding: 2rem 0;
+      font-size: $default-font-size;
     }
   }
 }
@@ -120,19 +125,28 @@ input {
   padding: 1rem;
   border-radius: 0.5rem;
   outline: none;
-  border: 1px solid $grey-medium;
+  border: 2px solid $grey-medium;
   font-size: $default-font-size;
+  cursor: pointer;
+  transition: 250ms all ease-in-out;
 
-  &[type='radio'],
-  &[type='checkbox'] {
+  &:focus {
+    border: 2px solid $green-medium;
+  }
+
+  &[type="radio"],
+  &[type="checkbox"] {
     transform: scale(1.5);
     display: inline-block;
     text-align: center;
     align-items: center;
     justify-content: center;
     margin: 0 10px 0 10px;
+    accent-color: $green-medium;
   }
 }
+
+
 
 p,
 label {
@@ -144,13 +158,23 @@ span {
 }
 
 button {
-    color: $white;
-    outline: none;
-    border: none;
-    border-radius: 0.5rem;
-    padding: $default-font-size + 2px;
-    font-size: $default-font-size + 1px;
-    font-weight: $font-weight-bold;
-    background: $green-medium;
-    margin: 0 0 $default-font-size + 5px 0;
+  color: $white;
+  outline: none;
+  border: none;
+  border-radius: 0.5rem;
+  padding: $default-font-size + 2px;
+  font-size: $default-font-size + 1px;
+  font-weight: $font-weight-bold;
+  background: $green-medium;
+  margin: 0 0 $default-font-size + 5px 0;
+  transition: 250ms all ease-in-out;
+  cursor: pointer;
+
+  &:hover {
+    background: lighten($green-medium, 5%)
+  }
+}
+
+.error-message {
+  color: $red;
 }
