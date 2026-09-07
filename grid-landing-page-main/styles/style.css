@@ -1,0 +1,88 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  color: hsl(0, 0%, 100%);
+  background-color: hsl(228, 100%, 60%);
+}
+
+header {
+  border-bottom: 1px solid hsl(224, 100%, 95%);
+}
+header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  padding: 1rem 2rem;
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  font-size: 18px;
+  font-weight: 500;
+}
+.logo .circle {
+  background-color: hsl(0, 0%, 100%);
+  width: 0.65rem;
+  height: 0.65rem;
+  border-radius: 50%;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem;
+}
+.grid .hero {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  height: 100%;
+  grid-row: span 2;
+  font-size: 17px;
+}
+.grid .hero span:first-child {
+  font-size: 34px;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+.grid .grid-item {
+  padding: 1rem;
+}
+
+footer {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  margin: 3rem;
+}
+footer .footer-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+}
+footer .attribution {
+  margin-top: 1rem;
+  font-size: 14px;
+}
+footer .attribution a {
+  color: hsl(0, 0%, 100%);
+  text-decoration: underline;
+}/*# sourceMappingURL=style.css.map */

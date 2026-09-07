@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+
+// ## Colors palette
+$purple-100: hsl(254, 88%, 90%);
+$purple-500: hsl(256, 67%, 59%);
+
+$yellow-100: hsl(31, 66%, 93%);
+$yellow-500: hsl(39, 100%, 71%);
+
+$white: hsl(0, 0%, 100%);
+$black: hsl(0, 0%, 7%);
+
+// Font Assets
+$font-size: 18px;
+$font-family: 'DM Sans', sans-serif;
+$weight-400: 400;
+$weight-500: 500;
+
+body {
+  font-family: $font-family;
+  line-height: 1.5;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: $weight-400 + 200;
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: $weight-500 + 100;
+}
+
+p {
+  font-size: 1rem;
+  font-weight: $weight-400;
+}
+K
+.grid {
+    // responsive grid layout
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 1rem;
+
+    &.col {
+        background-color: $white;
+        padding: 1rem;
+        border-radius: 0.5rem;
+        box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+
+        &.col-1 {
+            grid-column: 1 / 2;
+            grid-row: 1 / 2;
+        }
+    }
+}

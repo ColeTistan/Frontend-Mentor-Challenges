@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "svelte-material-ui": "^8.0.3"
+  }
+}

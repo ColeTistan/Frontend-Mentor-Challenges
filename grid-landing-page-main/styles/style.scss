@@ -1,0 +1,115 @@
+// import Google Fonts
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+// device resolutions
+$mobile-width: 375px;
+$desktop-width: 1440px;
+
+// Color Variables
+$white-color: hsl(0, 0%, 100%);
+$dark-color: hsl(0, 0%, 0%);
+$blue-200: hsl(224, 100%, 95%);
+$blue-400: hsl(220, 100%, 64%);
+$blue-600: hsl(228, 100%, 60%);
+$blue-700: hsl(228, 99%, 58%);
+
+// font variables
+$font-family: 'Inter', sans-serif;
+$font-weight-regular: 400;
+$font-weight-medium: $font-weight-regular + 100;
+$font-size-default: 14px;
+$font-size-paragraph: $font-size-default + 3px;
+
+// Global Styles
+@mixin display-flex($justify: flex-start, $align: stretch, $direction: row) {
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+    flex-direction: $direction;
+}
+
+@mixin display-grid($columns: 1fr, $rows: auto, $justify: start, $align: stretch) {
+    display: grid;
+    grid-template-columns: $columns;
+    grid-template-rows: $rows;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+$border-bottom: 1px solid $blue-200;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: $font-family;
+    font-weight: $font-weight-regular;
+    font-size: $font-size-default;
+    color: $white-color;
+    background-color: $blue-600;
+}
+
+header {
+    border-bottom: $border-bottom;
+    nav {
+        @include display-flex(space-between, center);
+        padding: 1rem 2rem;
+    }
+}
+
+.logo {
+    @include display-flex(center, center);
+    font-size: $font-size-default + 4px;
+    font-weight: $font-weight-medium;
+    .circle {
+        background-color: $white-color;
+        width: 0.65rem;
+        height: 0.65rem;
+        border-radius: 50%;
+    }
+}
+
+.grid {
+    @include display-grid(repeat(3, 1fr), auto, center, center);
+    margin: 2rem;
+
+    .hero {
+        @include display-flex(flex-start, flex-start, column);
+        height: 100%;
+        grid-row: span 2;
+        font-size: $font-size-paragraph;
+
+        span:first-child {
+            font-size: $font-size-paragraph * 2;
+            font-weight: $font-weight-medium;
+            margin-bottom: 1rem;
+        }
+    }
+
+    .grid-item {
+        padding: 1rem;
+        
+    }
+}
+
+footer {
+    @include display-flex(flex-start, center, column);
+    margin: 3rem;
+    // min-height: 100vh;
+    
+    .footer-info {
+        @include display-flex(space-between, center);
+    }
+
+    .attribution {
+        margin-top: 1rem;
+        font-size: $font-size-default;
+        a {
+            color: $white-color;
+            text-decoration: underline;
+        }
+    }
+}

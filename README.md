@@ -10,6 +10,4 @@ I have mostly worked with backend development for almost a year now, but I decid
 5) Blog Preview Card Component - https://unrivaled-pavlova-3b2842.netlify.app/
 
 ## Challenges In Progress
-1) FAQ Accordion Component
-2) 3-Column Preview Card Component
-
+1) Bento Grid
